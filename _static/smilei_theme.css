@@ -1,29 +1,9 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @import url("basic.css");
+
+/* -- Fonts ----------------------------------------------------------- */
 
 @font-face {
 	font-family: "BPreplay";
@@ -49,7 +29,6 @@
 	font-weight: bold;
 	font-style: italic;
 }
-
 @font-face {
 	font-family: "BPmonoRound";
 	src: url("BPmonoRound.otf");
@@ -61,7 +40,7 @@ body {
 	font-family: tahoma, sans-serif;
 	font-size: 1em;
 	background-color: white;
-	color: #000;
+	color: #3E4349;
 	margin: 0;
 	padding: 0;
 }
@@ -75,19 +54,10 @@ div.documentwrapper {
 	margin: 12mm auto 0 auto;
 }
 
-div.bodywrapper {
-	margin: 0 0 0 0;
-}
-
-hr {
-	border: 1px solid #B1B4B6;
-}
-
 div.body {
-	background-color: #ffffff;
+	background-color: white;
 	color: #3E4349;
 	padding: 0 30px 0 30px;
-	min-width:300px !important;
 }
 
 div.footer {
@@ -107,26 +77,6 @@ div.footer > div {
 	display: inline-block;
 }
 
-div.related {
-	display: none;
-}
-
-div.sphinxsidebar a {
-	text-decoration: none;
-}
-
-div.sphinxsidebar {
-	font-size: 1em;
-	line-height: 1.5;
-	margin:0;
-	width:100% !important;
-	padding-bottom:3em;
-}
-
-div.sphinxsidebarwrapper {
-	padding: 0;
-}
-
 div.logo {
 	padding-right: 2em;
 	margin: 0;
@@ -134,82 +84,16 @@ div.logo {
 	height:12mm;
 }
 
-div.sphinxsidebarwrapper h1.logo {
-	margin-top: -10px;
-	text-align: center;
-	margin-bottom: 5px;
-	text-align: left;
-}
-
-div.sphinxsidebarwrapper h1.logo-name {
-	margin-top: 0px;
-}
-
-div.sphinxsidebarwrapper p.blurb {
-	margin-top: 0;
-	font-style: normal;
-}
-
-div.sphinxsidebar h3,
-div.sphinxsidebar h4 {
-	font-family: "BPreplay", sans-serif;
-	color: #444;
-	font-size: 1.5em;
-	font-weight: normal;
-	margin: 0 0 5px 0;
-	padding: 0;
-}
-
-div.sphinxsidebar h4 {
-	font-size: 1.2eù;
-}
-
-div.sphinxsidebar h3 a {
-	color: #444;
-}
-
 div.logo a,
-div.sphinxsidebar h3 a,
-div.logo a:hover,
-div.sphinxsidebar h3 a:hover {
+div.logo a:hover {
 	border: none;
-}
-
-div.sphinxsidebar p {
-	color: #555;
-	margin: 10px 0;
-}
-
-div.sphinxsidebar ul li.toctree-l1 > a {
-	font-size: 120%;
-}
-
-div.sphinxsidebar ul li.toctree-l2 > a {
-	font-size: 110%;
-}
-
-div.sphinxsidebar input {
-	border: 1px solid #CCC;
-	font-family: tahoma, sans-serif;
-	font-size: 1em;
-}
-
-div.sphinxsidebar hr {
-	border: none;
-	height: 1px;
-	color: #999;
-	background: #999;
-
-	text-align: left;
-	margin-left: 0;
-	width: 50%;
 }
 
 /* -- body styles ----------------------------------------------------------- */
 
 a {
 	color: #0672BA;
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 a:hover {
@@ -227,6 +111,7 @@ div.body h6 {
 	font-weight: bold;
 	margin: 30px 0px 10px 0px;
 	padding: 0;
+	color: #0672BA;
 }
 
 div.body h1 {
@@ -243,6 +128,11 @@ div.body h4 { font-size: 130%; }
 div.body h5 { font-size: 100%; }
 div.body h6 { font-size: 100%; }
 
+.section {
+	padding-top:6.0mm;
+	margin-top:-12mm;
+}
+
 a.headerlink {
 	color: #DDD;
 	padding: 0 4px;
@@ -251,7 +141,7 @@ a.headerlink {
 
 a.headerlink:hover {
 	color: #444;
-	background: #EAEAEA;
+	background: transparent;
 }
 
 div.body p, div.body dd, div.body li {
@@ -259,32 +149,30 @@ div.body p, div.body dd, div.body li {
 }
 
 div.admonition {
-	margin: 20px 0px;
-	padding: 10px 30px;
-	background-color: #FCC;
-	border: 1px solid #FAA;
-}
-
-div.admonition tt.xref, div.admonition a tt {
-	border-bottom: 1px solid #fafafa;
-}
-
-dd div.admonition {
-	margin-left: -60px;
-	padding-left: 60px;
+	padding:7px;
+	background-color: #EAF4FD;
+	border: 1px solid #0672BA;
+	overflow: hidden;
 }
 
 div.admonition p.admonition-title {
 	font-family: "BPreplay", sans-serif;
-	font-weight: normal;
-	font-size: 1.5em;
-	margin: 0 0 10px 0;
+	font-weight: bold;
+	font-size: 1.2em;
+	margin: 0;
 	padding: 0;
 	line-height: 1;
+	display: inline;
+	float: inherit;
+}
+
+p.admonition-title:after {
+	content: ":";
 }
 
 div.admonition p.last {
-	margin-bottom: 0;
+	margin:5px 0;
+	float: right;
 }
 
 div.highlight {
@@ -292,7 +180,7 @@ div.highlight {
 }
 
 dt:target, .highlight {
-	background: #FAF3E8;
+	background: #EAF4FD;
 }
 
 div.note {
@@ -305,19 +193,7 @@ div.seealso {
 	border: 1px solid #CCC;
 }
 
-div.topic {
-	background-color: #eee;
-}
-
-p.admonition-title {
-	display: inline;
-}
-
-p.admonition-title:after {
-	content: ":";
-}
-
-pre, tt, code {
+pre, code {
 	font-family: 'Consolas', "BPmonoRound", 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
 	font-size: 0.9em;
 }
@@ -325,12 +201,12 @@ pre, tt, code {
 img.screenshot {
 }
 
-tt.descname, tt.descclassname, code.descname, code.descclassname {
+code.descname, code.descclassname {
 	font-size: 0.95em;
 	color: #05baa8;
 }
 
-tt.descname, code.descname {
+code.descname {
 	padding-right: 0.08em;
 }
 
@@ -342,9 +218,9 @@ img.screenshot {
 
 table.docutils {
 	border: 1px solid #888;
-	-moz-box-shadow: 2px 2px 4px #eee;
-	-webkit-box-shadow: 2px 2px 4px #eee;
-	box-shadow: 2px 2px 4px #eee;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
 
 table.docutils td, table.docutils th {
@@ -352,11 +228,12 @@ table.docutils td, table.docutils th {
 	padding: 0.25em 0.7em;
 }
 
+table.docutils thead {
+	background-color: #EAF4FD;
+}
+
 table.field-list, table.footnote {
 	border: none;
-	-moz-box-shadow: none;
-	-webkit-box-shadow: none;
-	box-shadow: none;
 }
 
 table.footnote {
@@ -389,6 +266,22 @@ table.footnote td {
 	padding: 0.3em 0.5em;
 }
 
+table.nowrap {
+	white-space: nowrap;
+}
+
+table.docutils div.line-block {
+	margin-bottom:0;
+}
+
+table.noborder, table.noborder td {
+	border:0 !important;
+}
+
+table.noborder td:first-child > .reference {
+	border-bottom:0 !important;
+}
+
 dl {
 	margin: 0;
 	padding: 0;
@@ -415,25 +308,18 @@ pre {
 	line-height: 1.3em;
 }
 
-dl pre, blockquote pre, li pre {
-	margin-left: -60px;
-	padding-left: 60px;
+div.highlight > pre {
+	padding-left:0.3em;
 }
 
-dl dl pre {
-	margin-left: -90px;
-	padding-left: 90px;
-}
-
-tt, code {
-	background-color: #ecf0f3;
+code {
+	background-color: #EEE;
 	color: #222;
-	/* padding: 1px 2px; */
 }
 
-tt.xref, code.xref, a tt {
-	background-color: #FBFBFB;
-	border-bottom: 1px solid white;
+code.xref {
+	background-color: #EEE;
+	border-bottom: 1px solid transparent;
 }
 
 a.reference {
@@ -455,7 +341,7 @@ a.footnote-reference:hover {
 	border-bottom: 1px solid #409ddb;
 }
 
-a:hover tt, a:hover code {
+a:hover code {
 	background: #EEE;
 }
 
@@ -478,16 +364,8 @@ table.docutils.citation, table.docutils.citation td, table.docutils.citation th 
   border:none;
 }
 
+/* ----  Header bar -------------------------------------------------------*/
 
-
-
-/*----------------------*/
-/* ADDED FOR SMILEI
-/*----------------------*/
-
-
-/* --------------------------------------------------------------------*/
-/* Header bar */
 #hcontainer {
 	position: fixed;
 	width: 100%;
@@ -527,19 +405,12 @@ div.header > * {
 	float:left;
 }
 
-.menu, #nav_positioner{
-	position:relative;
-	display: block;
-	height: 100%;
-	margin:0;
-}
-.menu {
-	height: 12mm;
-}
 #nav_positioner {
 	position: fixed;
-	top: 0;
+	display: block;
+	margin:0;
 	height: 100%;
+	top: 0;
 	left: 50%;
 }
 
@@ -606,20 +477,17 @@ div.header > * {
 	border-bottom-right-radius: 4px;
 }
 
-
-.menuButton {
-	cursor:pointer;
-	padding: 0 2em;
-	line-height: 12mm;
-	height: 100%;
+.menu {
+	position:relative;
+	display: block;
+	height: 12mm;
+	margin:0;
 }
 
-.menuButton > span {
-	font-size: 5.76mm;
-}
-
-.menuButton.pushed {
-	background-color: #409ddb;
+.menu > div > a,
+.menu > div > a:hover {
+	color: white;
+	text-decoration: none;
 }
 
 .menu > div + div {
@@ -634,6 +502,26 @@ div.header > * {
 	box-shadow: 0 6px 12px rgba(0,0,0,0.175);
 }
 
+.last.menu > div + div {
+    left:unset;
+    right: -1px;
+}
+
+.menuButton {
+	cursor:pointer;
+	padding: 0 2em;
+	line-height: 12mm;
+	height: 100%;
+}
+
+.menuButton span {
+	font-size: 5.76mm;
+}
+
+.menuButton.pushed {
+	background-color: #409ddb;
+}
+
 .menu div.toctree-smilei {
 	border-left:   1px solid #0672BA;
 	border-right:  1px solid #0672BA;
@@ -642,7 +530,7 @@ div.header > * {
 	border-bottom-right-radius: 4px;
 }
 
-.menu a {
+.menu div.toctree-smilei a {
 	padding: 0.4em 1em !important;
 }
 
@@ -717,16 +605,6 @@ div.header > * {
 	color:orange;
 }
 
-/* --------------------------------------------------------------------*/
-/* Style for the "In progress" block */
-.inprogress {
-	text-align:center;
-	padding:5px;
-	margin:0 30%;
-	background-color: #EAF4FD;
-	border: 1px solid #0672BA;
-}
-
 /* Style for an emphasized link */
 .emphlink {
 	text-align:center;
@@ -734,52 +612,30 @@ div.header > * {
 }
 
 /* --------------------------------------------------------------------*/
-/* Prevent tables to wrap lines */
-table.nowrap {
-	white-space: nowrap;
-}
-/* Remove bottom margin in table cells with line-blocks */
-table.docutils div.line-block {
-	margin-bottom:0;
-}
-
-table.noborder, table.noborder td {
-	border:0 !important;
-	-moz-box-shadow: none;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
-/* Make nicer table header */
-table.docutils thead {
-	background-color: #EAF4FD;
-}
-
-/* --------------------------------------------------------------------*/
 /* Logos and icons */
 img.logo {
 	height:12mm;
 }
-.icon {
+a.icon {
 	display:inline-block;
 	text-align:center;
 	margin:0.3em;
 	width:100px;
+	text-decoration:none;
+	color:#3E4349;
 }
-.icon * {
+a.icon * {
 	margin:0 auto;
 	display:block;
 }
-.icon img {
+a.icon img {
 	height:3em;
 }
-.icon, .icon:hover {
-	text-decoration:none;
-	color:#333;
-}
-.icon:hover {
+a.icon:hover {
+	color:#3E4349;
 	background-color:#EAF4FD;
 }
-.icon:active {
+a.icon:active {
 	background-color:#409ddb;
 }
 
@@ -847,13 +703,6 @@ div.toctree-smilei > ul > li > ul > li > ul {
 
 /* --------------------------------------------------------------------*/
 /* Some tricks for the citations */
-/* Remove the weird shadows */
-table.docutils.citation, table.docutils.citation * {
-	-moz-box-shadow: none;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
-/* Remove the back-reference links when there are several back-references */
 table.citation td.label + td > em {
 	display:none;
 }
@@ -869,62 +718,22 @@ table.citation td.label a {
 }
 /* Make a "bigcitation" class for citations with several lines */
 table.bigcitation td.label {
-	max-width: 3px;
+	max-width: 0;
 }
 table.bigcitation td.label + td {
-	padding-top: 25px;
-}
-
-/* --------------------------------------------------------------------*/
-/* Adjust code blocks */
-dl pre, blockquote pre, li pre {
-	margin-left:0;
-}
-div.highlight > pre {
-	padding-left:0.3em;
+	padding-top: 1.5em;
 }
 
 /* --------------------------------------------------------------------*/
 /* Adjust horizontal lines */
 hr {
 	margin-top:1em;
-	border-color: #0672BA;
-}
-.toctree-smilei hr {
-	margin: 0.2em 0;
-	background: #0672BA !important;
-	width:100% !important;
-}
-
-/* --------------------------------------------------------------------*/
-/* titles */
-h1, h2, h3, h4, h5, h6 {
-	color: #0672BA;
-	font-weight:bold !important;
-}
-.section {
-	padding-top:6.0mm;
-	margin-top:-12mm;
-}
-
-/* --------------------------------------------------------------------*/
-/* Smaller admonition box */
-div.admonition {
-	padding:7px !important;
-	margin:2px 30px !important;
-	background-color: #EAF4FD;
 	border: 1px solid #0672BA;
-	overflow: hidden;
 }
-div.admonition p.admonition-title {
-	font-size: 18px;
-	font-weight: bold;
-	margin:0;
-	float: inherit;
-}
-div.admonition p {
-	margin:5px 0;
-	float: right;
+div.toctree-smilei hr {
+	margin: 0.2em 0;
+	background: #0672BA;
+	width:100%;
 }
 
 /* --------------------------------------------------------------------*/
@@ -941,12 +750,8 @@ div.admonition p {
 	margin-top:0;
 	margin-bottom:0;
 }
-.image-reference, table.noborder td:first-child > .reference {
+.image-reference {
 	border-bottom:0 !important;
-}
-
-.c1 {
-	color: #aab8c1 !important;
 }
 
 /* --------------------------------------------------------------------*/
@@ -1024,11 +829,6 @@ div.admonition p {
 	div.documentwrapper {
 		float: none;
 		background: white;
-	}
-	
-	div.sphinxsidebar h3, div.sphinxsidebar h4, div.sphinxsidebar p,
-	div.sphinxsidebar h3 a {
-		color: white;
 	}
 	
 	div.document {

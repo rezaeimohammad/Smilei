@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Run &#8212; Smilei v4.1-250-g7f68ece1 documentation</title>
+    <title>More &#8212; Smilei v4.1-250-g7f68ece1 documentation</title>
     <link rel="stylesheet" href="_static/smilei_theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -18,8 +18,8 @@
     <link rel="shortcut icon" href="_static/smileiIcon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Post-process" href="post-processing.html" />
-    <link rel="prev" title="Write a namelist" href="namelist.html" />
+    <link rel="next" title="Publications" href="material.html" />
+    <link rel="prev" title="Contribute" href="contribute.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
@@ -91,21 +91,9 @@
                 <li class="outer">
                     <a href="namelist.html">Write a namelist</a>
                 </li>
-            </ul>
-                <ul>
-<li><a class="reference internal" href="#">Run</a><ul>
-<li><a class="reference internal" href="#the-smilei-executable">The <code class="docutils literal notranslate"><span class="pre">smilei</span></code> executable</a></li>
-<li><a class="reference internal" href="#running-in-test-mode">Running in <em>test mode</em></a></li>
-<li><a class="reference internal" href="#directory-management">Directory management</a></li>
-<li><a class="reference internal" href="#using-the-provided-script">Using the provided script</a></li>
-<li><a class="reference internal" href="#running-on-large-clusters">Running on large clusters</a></li>
-<li><a class="reference internal" href="#debugging">Debugging</a></li>
-<li><a class="reference internal" href="#known-issues">Known issues</a></li>
-</ul>
-</li>
-</ul>
-
-            <ul>
+                <li class="outer">
+                    <a href="run.html">Run</a>
+                </li>
                 <li class="outer">
                     <a href="post-processing.html">Post-process</a>
                 </li>
@@ -136,18 +124,9 @@
                 Sections
             </div>
             <div id="nav_list" class="toctree-smilei">
-                <div id="nav_title"><a href="#">Run</a></div>
+                <div id="nav_title"><a href="#">More</a></div>
                 <ul>
-<li><a class="reference internal" href="#">Run</a><ul>
-<li><a class="reference internal" href="#the-smilei-executable">The <code class="docutils literal notranslate"><span class="pre">smilei</span></code> executable</a></li>
-<li><a class="reference internal" href="#running-in-test-mode">Running in <em>test mode</em></a></li>
-<li><a class="reference internal" href="#directory-management">Directory management</a></li>
-<li><a class="reference internal" href="#using-the-provided-script">Using the provided script</a></li>
-<li><a class="reference internal" href="#running-on-large-clusters">Running on large clusters</a></li>
-<li><a class="reference internal" href="#debugging">Debugging</a></li>
-<li><a class="reference internal" href="#known-issues">Known issues</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">More</a></li>
 </ul>
 
             </div>
@@ -247,7 +226,7 @@
         </div>
         <div class="menu"
             id="menu_Use"
-            style="font-weight:bold"
+            
         >
             <div id="menuButton_Use" class="menuButton"
                  onmouseenter="prepareMenu('menu_Use')"
@@ -266,8 +245,8 @@
                         <li class="outer">
                             <a href="namelist.html">Write a namelist</a>
                         </li>
-                        <li >
-                            <a href="#">Run</a>
+                        <li class="outer">
+                            <a href="run.html">Run</a>
                         </li>
                         <li class="outer">
                             <a href="post-processing.html">Post-process</a>
@@ -288,7 +267,7 @@
                  onmouseenter="prepareMenu('menu_More')"
                  onmousedown="event.preventDefault()"
             >
-                <a href="more.html">
+                <a href="#">
                     <span>More</span>
                 </a>
             </div>
@@ -395,127 +374,17 @@
     <div class="documentwrapper">
         <div class="body" role="main">
           
-  <div class="section" id="run">
-<span id="id1"></span><h1>Run<a class="headerlink" href="#run" title="Permalink to this headline">¶</a></h1>
-<p>Before you launch <strong class="program">Smilei</strong>, <a class="reference internal" href="namelist.html"><span class="doc">write a namelist file</span></a>
-containing all the information of your simulation (grid shape, particles, lasers, diagnostics, etc.).</p>
-<p>You can also start from an example provided in the <code class="docutils literal notranslate"><span class="pre">benchmarks</span></code> directory.</p>
-<hr class="docutils" />
-<div class="section" id="the-smilei-executable">
-<h2>The <code class="docutils literal notranslate"><span class="pre">smilei</span></code> executable<a class="headerlink" href="#the-smilei-executable" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="compile">Compiling Smilei</a> creates an executable file <code class="docutils literal notranslate"><span class="pre">smilei</span></code> in the source directory.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>smilei arg1 arg2 arg3 ...
-</pre></div>
-</div>
-<p>The command-line arguments <code class="docutils literal notranslate"><span class="pre">arg1</span></code>, <code class="docutils literal notranslate"><span class="pre">arg2</span></code>, <code class="docutils literal notranslate"><span class="pre">arg3</span></code> (etc.) can be:</p>
-<ul class="simple">
-<li>the path to a namelist</li>
-<li>any <em>python</em> instruction that you want to execute during the namelist reading.</li>
-</ul>
-<p>The simplest example, to run your namelist <code class="docutils literal notranslate"><span class="pre">my_namelist.py</span></code>, is</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./smilei  my_namelist.py
-</pre></div>
-</div>
-<p>You may also add an additional instruction to be appended at the end of the namelist:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./smilei  my_namelist.py  <span class="s2">&quot;Main.print_every=10&quot;</span>
-</pre></div>
-</div>
-<p>Note that, in addition, you will generally use the <code class="docutils literal notranslate"><span class="pre">mpirun</span></code> or <code class="docutils literal notranslate"><span class="pre">mpiexec</span></code> command
-to run <strong class="program">Smilei</strong> on several MPI processes:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mpirun -n <span class="m">4</span> ./smilei  my_namelist.py  <span class="s2">&quot;Main.print_every=10&quot;</span>
-</pre></div>
-</div>
-<p>If you want to run several openMP threads per MPI processes, you usually have to set
-the following environment variable to the desired number of threads before running
-<code class="docutils literal notranslate"><span class="pre">mpirun</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">OMP_NUM_THREADS</span><span class="o">=</span><span class="m">4</span>
-</pre></div>
-</div>
-<p>When running <strong class="program">Smilei</strong>, the output log will remind you how many MPI processes and openMP threads
-your simulation is using.</p>
-</div>
-<hr class="docutils" />
-<div class="section" id="running-in-test-mode">
-<h2>Running in <em>test mode</em><a class="headerlink" href="#running-in-test-mode" title="Permalink to this headline">¶</a></h2>
-<p>A second executable <code class="docutils literal notranslate"><span class="pre">smilei_test</span></code> is available (after the usual compilation)
-to run in the <em>test mode</em>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./smilei_test my_namelist.py
-</pre></div>
-</div>
-<p>This <em>test mode</em> does the same initialization as the normal mode,
-except it only loads the first patch of the full simulation. After initialization,
-the test mode exits so that the PIC loop is <em>not</em> computed.</p>
-<p>This mode may be used to check the consistency of the namelist, and to make sure
-simple errors will not occur. It does not check all possible errors, but it runs fast.</p>
-<p>Running in <strong>test mode requires to run on 1 MPI process only</strong>. However, it is possible
-to indicate what is the partition of MPI processes and OpenMP threads intended for the
-actual simulation. For instance, to test your namelist that is intended to run on 1024 MPI
-processes, each hosting 12 OpenMP threads, use the following syntax:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./smilei_test <span class="m">1024</span> <span class="m">12</span> my_namelist.py
-</pre></div>
-</div>
-</div>
-<hr class="docutils" />
-<div class="section" id="directory-management">
-<h2>Directory management<a class="headerlink" href="#directory-management" title="Permalink to this headline">¶</a></h2>
-<p>Let us assume you have written your namelist <code class="docutils literal notranslate"><span class="pre">my_namelist.py</span></code>, and that you placed it
-inside your home directory. Also, we assume that the <code class="docutils literal notranslate"><span class="pre">Smilei</span></code> directory is also there,
-so that the <code class="docutils literal notranslate"><span class="pre">smilei</span></code> executable is located in <code class="docutils literal notranslate"><span class="pre">~/Smilei/</span></code>.</p>
-<p>Knowing that <strong class="program">Smilei</strong> generally writes out all the results in the current directory,
-it is recommended to create a new directory to store these results. For instance:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ mkdir ~/my_simulation                     <span class="c1"># New directory to store results</span>
-$ cp ~/my_namelist.py ~/my_simulation       <span class="c1"># Copies the namelist there</span>
-$ <span class="nb">cd</span> ~/my_simulation                        <span class="c1"># Goes there</span>
-$ mpirun -n <span class="m">4</span> ~/Smilei/smilei my_namelist   <span class="c1"># Run with 4 processors</span>
-</pre></div>
-</div>
-</div>
-<hr class="docutils" />
-<div class="section" id="using-the-provided-script">
-<h2>Using the provided script<a class="headerlink" href="#using-the-provided-script" title="Permalink to this headline">¶</a></h2>
-<p>For simple cases such as the previous one, use the script <code class="docutils literal notranslate"><span class="pre">smilei.sh</span></code>, provided in
-the <cite>Smilei</cite> directory. You only have to run</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./smilei.sh <span class="m">4</span> my_namelist.py
-</pre></div>
-</div>
-<p>where the number 4 says that the code will run 4 MPI processes. A directory with all
-the results will automatically be created next to your namelist.</p>
-</div>
-<hr class="docutils" />
-<div class="section" id="running-on-large-clusters">
-<h2>Running on large clusters<a class="headerlink" href="#running-on-large-clusters" title="Permalink to this headline">¶</a></h2>
-<p>We do not provide instructions to run on super-computers yet. Please refer to your
-administrators.</p>
-</div>
-<hr class="docutils" />
-<div class="section" id="debugging">
-<h2>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h2>
-<p>In case of problems, the code can be compiled with additional debugging flags (usual <code class="docutils literal notranslate"><span class="pre">-g</span></code> and <code class="docutils literal notranslate"><span class="pre">-O0</span></code>) and internal
-checks by compiling it with</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make <span class="nv">config</span><span class="o">=</span>debug
-</pre></div>
-</div>
-<p>Compiling the whole code with this command will make it very slow to run.
-But to check only a particular file for errors, first compile the code with <code class="docutils literal notranslate"><span class="pre">make</span></code>, then
-modify the file, and recompile in debug mode.</p>
-<p>In debug mode, these C++ macros are activated:</p>
-<ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">DEBUG(&quot;some</span> <span class="pre">text&quot;</span> <span class="pre">[&lt;&lt;</span> <span class="pre">other</span> <span class="pre">streamable])</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">HEREIAM(&quot;some</span> <span class="pre">text&quot;</span> <span class="pre">[&lt;&lt;</span> <span class="pre">other</span> <span class="pre">streamable])</span></code></li>
-</ul>
-</div>
-<hr class="docutils" />
-<div class="section" id="known-issues">
-<h2>Known issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="more">
+<h1>More<a class="headerlink" href="#more" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
 <ul>
-<li><p class="first">OpenMPI <code class="docutils literal notranslate"><span class="pre">2.*</span></code> often causes unstable behavior in Smilei.
-For instance, with <code class="docutils literal notranslate"><span class="pre">openmpi</span> <span class="pre">2.1</span></code>, the <cite>vader</cite> protocol seems to interfere with Smilei’s
-memory management and comunications. We therefore recommend to disable this
-protocol when running <code class="docutils literal notranslate"><span class="pre">mpirun</span></code>, as follows:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ mpirun --mca btl ^vader -n <span class="m">4</span> ~/Smilei/smilei my_namelist   <span class="c1"># Disable vader</span>
-</pre></div>
-</div>
+<li class="toctree-l1"><a class="reference internal" href="material.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="partners.html">Partners</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="partners.html#related-projects">Related projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="partners.html#acknowledgments">Acknowledgments</a></li>
+</ul>
 </li>
+<li class="toctree-l1"><a class="reference external" href="https://smileipic.github.io/tutorials">Smilei tutorials</a></li>
 </ul>
 </div>
 </div>
