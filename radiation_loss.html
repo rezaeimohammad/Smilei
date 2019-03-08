@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Synchrotron-like radiation reaction &#8212; Smilei v4.1-250-g7f68ece1 documentation</title>
+    <title>Synchrotron-like radiation reaction &#8212; Smilei v4.1-255-g20836f69 documentation</title>
     <link rel="stylesheet" href="_static/smilei_theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -523,7 +523,7 @@ description of discrete high-energy photon emissions
 small with respect to that of the emitting electrons, but for which the
 stochastic nature of photon emission cannot be neglected, the electron dynamics
 is described by the addition of a stochastic term derived from a Fokker-Planck
-expansion ([Niel2017]).</p>
+expansion (<a class="reference internal" href="material.html#niel2018" id="id6">[Niel2018]</a>).</p>
 <p>Use <a class="reference internal" href="#radiationregimes"><span class="std std-numref">Table 1</span></a> to choose properly
 the most appropriate radiation reaction model
 in <strong class="program">Smilei</strong> (see <a class="reference internal" href="namelist.html#species"><span class="std std-ref">the radiation configuration in Species</span></a>).</p>
@@ -623,7 +623,7 @@ the emitting electron. This is the subject of the next section.</p>
 <h3>Fokker-Planck stochastic model<a class="headerlink" href="#fokker-planck-stochastic-model" title="Permalink to this headline">¶</a></h3>
 <p>The Fokker-Planck approach is an extension of the corrected Landau-Lifshitz
 model with an operator that takes into account diffusive stochastic effects
-([Niel2017]):</p>
+(<a class="reference internal" href="material.html#niel2018" id="id9">[Niel2018]</a>):</p>
 <div class="math notranslate nohighlight" id="equation-nielstochasticforce">
 <span class="eqno">(19)<a class="headerlink" href="#equation-nielstochasticforce" title="Permalink to this equation">¶</a></span>\[F_{rad} dt = \left[ -P_{cl} g \left( \chi \right) dt + mc^2
 \sqrt{R\left( \chi, \gamma \right)} dW \right]
@@ -643,10 +643,12 @@ model with an operator that takes into account diffusive stochastic effects
 <p>The Monte-Carlo treatment of the emission is more complex process than
 the previous ones and can be divided into several steps (<a class="reference internal" href="#duclous2011" id="id10">[Duclous2011]</a>,
 <a class="reference internal" href="#lobet2013" id="id11">[Lobet2013]</a>, <a class="reference internal" href="#lobet2015" id="id12">[Lobet2015]</a>):</p>
-<p>1. An incremental optical depth <span class="math notranslate nohighlight">\(\tau\)</span>, initially set to 0, is assigned to the particle.
+<ol class="arabic">
+<li><p class="first">An incremental optical depth <span class="math notranslate nohighlight">\(\tau\)</span>, initially set to 0, is assigned to the particle.
 Emission occurs when it reaches the final optical depth <span class="math notranslate nohighlight">\(\tau_f\)</span>
 sampled from <span class="math notranslate nohighlight">\(\tau_f = -\log{\xi}\)</span> where <span class="math notranslate nohighlight">\(\xi\)</span> is a random number in <span class="math notranslate nohighlight">\(\left]0,1\right]\)</span>.</p>
-<p>2. The optical depth <span class="math notranslate nohighlight">\(\tau\)</span> evolves according to the field and particle
+</li>
+<li><p class="first">The optical depth <span class="math notranslate nohighlight">\(\tau\)</span> evolves according to the field and particle
 energy variations following this integral:</p>
 <div class="math notranslate nohighlight" id="equation-mcdtaudt">
 <span class="eqno">(22)<a class="headerlink" href="#equation-mcdtaudt" title="Permalink to this equation">¶</a></span>\[  \frac{d\tau}{dt} = \int_0^{\chi_{\pm}}{ \frac{d^2N}{d\chi dt}  d\chi }
@@ -656,7 +658,8 @@ energy variations following this integral:</p>
 (integration of Eq. <a class="reference internal" href="#equation-photonprodrate">(14)</a>).
 Here, <span class="math notranslate nohighlight">\(\chi_{\pm}\)</span> is the emitting electron (or positron) quantum parameter and
 <span class="math notranslate nohighlight">\(\chi\)</span> the integration variable.</p>
-<p>3. The emitted photon’s quantum parameter <span class="math notranslate nohighlight">\(\chi_{\gamma}\)</span> is computed by
+</li>
+<li><p class="first">The emitted photon’s quantum parameter <span class="math notranslate nohighlight">\(\chi_{\gamma}\)</span> is computed by
 inverting the cumulative distribution function:</p>
 <div class="math notranslate nohighlight" id="equation-cumulativedistr">
 <span class="eqno">(23)<a class="headerlink" href="#equation-cumulativedistr" title="Permalink to this equation">¶</a></span>\[  \xi = P(\chi_\pm,\chi_{\gamma}) = \frac{\displaystyle{\int_0^{\chi_\gamma}{S(\chi_\pm, \chi) / \chi
@@ -669,10 +672,12 @@ a second random number
 <span class="math notranslate nohighlight">\(\phi \in \left[ 0,1\right]\)</span> to find <span class="math notranslate nohighlight">\(\chi_{\gamma}\)</span> by solving :</p>
 <div class="math notranslate nohighlight" id="equation-inverse-xi">
 <span class="eqno">(25)<a class="headerlink" href="#equation-inverse-xi" title="Permalink to this equation">¶</a></span>\[\xi^{-1} = P^{-1}(\chi_\pm, \chi_{\gamma}) = \phi\]</div>
-<p>4. The energy of the emitted photon is then computed:
+</li>
+<li><p class="first">The energy of the emitted photon is then computed:
 <span class="math notranslate nohighlight">\(\varepsilon_\gamma = mc^2 \gamma_\gamma =
 mc^2 \gamma_\pm \chi_\gamma / \chi_\pm\)</span>.</p>
-<p>5. The particle momentum is then updated using momentum conservation
+</li>
+<li><p class="first">The particle momentum is then updated using momentum conservation
 considering forward emission (valid when <span class="math notranslate nohighlight">\(\gamma_\pm \gg 1\)</span>).</p>
 <div class="math notranslate nohighlight" id="equation-momentumupdate">
 <span class="eqno">(26)<a class="headerlink" href="#equation-momentumupdate" title="Permalink to this equation">¶</a></span>\[  F_{rad} = - \frac{\varepsilon_\gamma}{c} \frac{\mathbf{p_\pm}}{\| \mathbf{p_\pm} \|}\]</div>
@@ -686,6 +691,8 @@ Between emission events, the electron dynamics is still governed by the
 Lorentz force.</p>
 <p>If the photon is emitted as a macro-photon, initial position is the same as
 for the emitting particle. The weight is also conserved.</p>
+</li>
+</ol>
 </div>
 </div>
 <hr class="docutils" />
@@ -703,7 +710,7 @@ classes for each model.</li>
 <li>Class <code class="docutils literal notranslate"><span class="pre">RadiationFactory</span></code>: manages the choice of the radiation model among the following.</li>
 <li>Class <code class="docutils literal notranslate"><span class="pre">RadiationLandauLifshitz</span></code>: classical Landau-Lifshitz radiation process.</li>
 <li>Class <code class="docutils literal notranslate"><span class="pre">RadiationCorrLandauLifshitz</span></code>: corrected Landau-Lifshitz radiation process.</li>
-<li>Class <code class="docutils literal notranslate"><span class="pre">RadiationNiel</span></code>: stochastic diffusive model of [Niel2017].</li>
+<li>Class <code class="docutils literal notranslate"><span class="pre">RadiationNiel</span></code>: stochastic diffusive model of <a class="reference internal" href="material.html#niel2018" id="id14">[Niel2018]</a>.</li>
 <li>Class <code class="docutils literal notranslate"><span class="pre">RadiationMonteCarlo</span></code>: Monte-Carlo model.</li>
 </ul>
 <p>As explained below, many functions have been tabulated because of
@@ -834,7 +841,7 @@ follow the same trajectories.
 The stochastic nature of the emission for high <span class="math notranslate nohighlight">\(\chi\)</span> values can
 have consequences in term of final spatial and energy distributions.
 Not shown here, the Niel stochastic model does not reproduce correctly the
-moment of order 3 as explained in [Niel2017].</p>
+moment of order 3 as explained in <a class="reference internal" href="material.html#niel2018" id="id17">[Niel2018]</a>.</p>
 </div>
 <div class="section" id="synchrotron-2d">
 <h3>Synchrotron, 2D<a class="headerlink" href="#synchrotron-2d" title="Permalink to this headline">¶</a></h3>
@@ -1087,6 +1094,54 @@ Haswell (Jureca)</td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="39%" />
+<col width="13%" />
+<col width="11%" />
+<col width="15%" />
+<col width="22%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Radiation model</th>
+<th class="head">None</th>
+<th class="head">LL</th>
+<th class="head">CLL</th>
+<th class="head">MC</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Counter-propagating Plane Wave 1D</td>
+<td>0.25s</td>
+<td>0.3s</td>
+<td>0.32s</td>
+<td>0.63s</td>
+</tr>
+<tr class="row-odd"><td>Synchrotron 2D Haswell
+<span class="math notranslate nohighlight">\(\chi=0.5\)</span>,  <span class="math notranslate nohighlight">\(B=100\)</span></td>
+<td>3.9s</td>
+<td>4.2s</td>
+<td>4.7s</td>
+<td>5.6s</td>
+</tr>
+<tr class="row-even"><td>Synchrotron 2D KNL
+<span class="math notranslate nohighlight">\(\chi=0.5\)</span>,  <span class="math notranslate nohighlight">\(B=100\)</span></td>
+<td>3s</td>
+<td>3.2s</td>
+<td>3.3s</td>
+<td>10s</td>
+</tr>
+<tr class="row-odd"><td>Interaction with a carbon thin foil
+2D</td>
+<td>6.5s</td>
+<td>6.5s</td>
+<td>6.6s</td>
+<td>6.8s</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
 <p>Descriptions of the cases:</p>
 <ul class="simple">
 <li><strong>Counter-propagating Plane Wave 1D</strong>: run on a single node of <em>Jureca</em> with 2 MPI ranks and 12 OpenMP
@@ -1098,6 +1153,10 @@ The first case has been run on a single Haswell node of <em>Jureca</em> with 2 M
 12 OpenMP threads per rank. the second one has been run on a single KNL node of <em>Frioul</em>
 configured in quadrant cache using 1 MPI rank and 64 OpenMP threads.
 On KNL, the <code class="docutils literal notranslate"><span class="pre">KMP_AFFINITY</span></code> is set to <code class="docutils literal notranslate"><span class="pre">fine</span></code> and <code class="docutils literal notranslate"><span class="pre">scatter</span></code>.</li>
+</ul>
+<blockquote>
+<div>Only the Niel model provides better performance with a <code class="docutils literal notranslate"><span class="pre">compact</span></code> affinity.</div></blockquote>
+<ul class="simple">
 <li><strong>Thin foil 2D</strong>:
 The domain has a discretization of 64 cells per <span class="math notranslate nohighlight">\(\mu\mathrm{m}\)</span> in
 both directions, with 64 particles per cell.
@@ -1184,7 +1243,7 @@ in the synchrotron case run on KNL.</p>
       <a href="site.html">Site index</a>
       </div>
       <div>
-        Last updated on Mar 05, 2019
+        Last updated on Mar 08, 2019
       </div>
       
       <div>
