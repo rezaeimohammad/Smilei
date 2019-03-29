@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Units &#8212; Smilei v4.1-260-g8702acbe documentation</title>
+    <title>Units &#8212; Smilei v4.1-297-gcf0ca2f3 documentation</title>
     <link rel="stylesheet" href="_static/smilei_theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -437,20 +437,24 @@ Or it could be the electron plasma frequency.</p>
 </ul>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">Counter-intuitively, the reference density <span class="math notranslate nohighlight">\(N_r\)</span> is <strong>not equal</strong> to <span class="math notranslate nohighlight">\(L_r^{-3}\)</span>.</p>
+<p class="last"><span class="math notranslate nohighlight">\(1/N_r\)</span> is a volume, but counter-intuitively, it is <strong>not equal</strong> to <span class="math notranslate nohighlight">\(L_r^{3}\)</span>.</p>
 </div>
 <p>Normalizing all quantities to these references is convenient for resolving Maxwell’s equations,
-as it converts them into a dimension-less set of equations:</p>
+and the charges equation of motion, as it converts them into a dimension-less set of equations:</p>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}\mathbf{\nabla}\cdot\mathbf{E} = \rho
+\[ \begin{align}\begin{aligned}\begin{split}\mathbf{\nabla}\cdot\mathbf{E} = \rho
 \quad\quad
-\nabla\cdot\mathbf{B} = 0\\\nabla\times\mathbf{E} = - \partial_t \mathbf{B}
+\nabla\cdot\mathbf{B} &amp; = 0 \\\end{split}\\\nabla\times\mathbf{E} = - \partial_t \mathbf{B}
 \quad\quad
-\nabla\times\mathbf{B} = \mathbf{j} + \partial_t \mathbf{E}\end{aligned}\end{align} \]</div>
+\nabla\times\mathbf{B} = &amp; \; \mathbf{j} + \partial_t \mathbf{E}\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight">
+\[\partial_t \mathbf{p} = Z \mathbf{E} + Z \mathbf{v}\times\mathbf{B}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\mathbf{E}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{B}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{j}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{\rho}\)</span>
 are the electric field, magnetic field, current density and charge density, normalized to
-<span class="math notranslate nohighlight">\(E_r\)</span>, <span class="math notranslate nohighlight">\(B_r\)</span>, <span class="math notranslate nohighlight">\(J_r\)</span> and <span class="math notranslate nohighlight">\(Q_r N_r\)</span>, respectively. Note that the
-temporal and spatial derivatives are also normalized to <span class="math notranslate nohighlight">\(T_r\)</span> and <span class="math notranslate nohighlight">\(L_r\)</span>, respectively.</p>
+<span class="math notranslate nohighlight">\(E_r\)</span>, <span class="math notranslate nohighlight">\(B_r\)</span>, <span class="math notranslate nohighlight">\(J_r\)</span> and <span class="math notranslate nohighlight">\(Q_r N_r\)</span>, respectively. <span class="math notranslate nohighlight">\(Z\)</span> and
+<span class="math notranslate nohighlight">\(\mathbf p\)</span> are a particle’s charge and momentum, normalized to <span class="math notranslate nohighlight">\(Q_r\)</span> and
+<span class="math notranslate nohighlight">\(P_r\)</span>, respectively. Note that the temporal and spatial derivatives are also
+normalized to <span class="math notranslate nohighlight">\(T_r\)</span> and <span class="math notranslate nohighlight">\(L_r\)</span>, respectively.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="tips-for-the-namelist">
@@ -548,7 +552,7 @@ cell hypervolume, i.e. they can be reused in another simulation, as long as
       <a href="site.html">Site index</a>
       </div>
       <div>
-        Last updated on Mar 21, 2019
+        Last updated on Mar 29, 2019
       </div>
       
       <div>

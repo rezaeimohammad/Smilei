@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Write a namelist &#8212; Smilei v4.1-260-g8702acbe documentation</title>
+    <title>Write a namelist &#8212; Smilei v4.1-297-gcf0ca2f3 documentation</title>
     <link rel="stylesheet" href="_static/smilei_theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -3589,7 +3589,7 @@ The full list of fields that are saved by this diagnostic:</p>
 </tbody>
 </table>
 <p>In <code class="docutils literal notranslate"><span class="pre">AMcylindrical</span></code> geometry, the <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code> and <code class="docutils literal notranslate"><span class="pre">z</span></code>
-indices are replaced by <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">r</span></code> and <code class="docutils literal notranslate"><span class="pre">t</span></code> (theta). In addition,
+indices are replaced by <code class="docutils literal notranslate"><span class="pre">l</span></code> (longitudinal), <code class="docutils literal notranslate"><span class="pre">r</span></code> (radial) and <code class="docutils literal notranslate"><span class="pre">t</span></code> (theta). In addition,
 the angular Fourier modes are denoted by the suffix <code class="docutils literal notranslate"><span class="pre">_mode_i</span></code> where <code class="docutils literal notranslate"><span class="pre">i</span></code>
 is the mode number. In summary, the list of fields reads as follows.</p>
 <table border="1" class="nowrap docutils">
@@ -3599,7 +3599,7 @@ is the mode number. In summary, the list of fields reads as follows.</p>
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><div class="first last line-block">
-<div class="line">Bx_mode_0, Bx_mode_1, etc.</div>
+<div class="line">Bl_mode_0, Bl_mode_1, etc.</div>
 <div class="line">Br_mode_0, Br_mode_1, etc.</div>
 <div class="line">Bt_mode_0, Bt_mode_1, etc.</div>
 </div>
@@ -3612,7 +3612,7 @@ is the mode number. In summary, the list of fields reads as follows.</p>
 </td>
 </tr>
 <tr class="row-even"><td><div class="first last line-block">
-<div class="line">Ex_mode_0, Ex_mode_1, etc.</div>
+<div class="line">El_mode_0, El_mode_1, etc.</div>
 <div class="line">Er_mode_0, Er_mode_1, etc.</div>
 <div class="line">Et_mode_0, Et_mode_1, etc.</div>
 </div>
@@ -3624,7 +3624,7 @@ is the mode number. In summary, the list of fields reads as follows.</p>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td colspan="2">The same notation works for Jx, Jr, Jt, and Rho</td>
+<tr class="row-odd"><td colspan="2">The same notation works for Jl, Jr, Jt, and Rho</td>
 </tr>
 </tbody>
 </table>
@@ -3824,6 +3824,8 @@ although they are not included by default. They may be added to the list as
 species name.</p>
 <p>In the case of an envelope model for the laser (see <a class="reference internal" href="laser_envelope.html"><span class="doc">Laser envelope model</span></a>),
 the following fields are also available: <code class="docutils literal notranslate"><span class="pre">&quot;Env_A_abs&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Env_Chi&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Env_E_abs&quot;</span></code>.</p>
+<p>Note that when running a simulation in cylindrical geometry, contrary to the Field diagnostic, Probes are defined as in a
+3D Cartesian geometry and returne Cartesian fields.</p>
 </dd></dl>
 
 <p><strong>Examples of probe diagnostics</strong></p>
@@ -4349,7 +4351,7 @@ for each MPI process  or for each patch in the simulation.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DiagPerformances</span><span class="p">(</span>
     <span class="n">every</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
 <span class="c1">#    flush_every = 100,</span>
-    <span class="n">patch_information</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+<span class="c1">#    patch_information = True,</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -4394,7 +4396,8 @@ for each MPI process  or for each patch in the simulation.</p>
 </tr>
 </tbody>
 </table>
-<p>Activation of the performance per patch output.</p>
+<p>If <cite>True</cite>, some information is calculated at the patch level (see <a class="reference internal" href="post-processing.html#Performances" title="Performances"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Performances()</span></code></a>)
+but this may impact the code performances.</p>
 </dd></dl>
 
 <hr class="docutils" />
@@ -4621,7 +4624,7 @@ and <strong class="program">Smilei</strong>’s random seeds.</p>
       <a href="site.html">Site index</a>
       </div>
       <div>
-        Last updated on Mar 21, 2019
+        Last updated on Mar 29, 2019
       </div>
       
       <div>
