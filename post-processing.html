@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Post-process &#8212; Smilei v4.1-308-gfcb62cd6 documentation</title>
+    <title>Post-process &#8212; Smilei v4.1-325-g17639880 documentation</title>
     <link rel="stylesheet" href="_static/smilei_theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -802,8 +802,9 @@ A detailed explanation is provided below</p>
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal notranslate"><span class="pre">axes</span></code>: A list of axes for plotting the trajectories or obtaining particle data.</dt>
-<dd><div class="first last line-block">
-<div class="line">Each axis is one of the <a class="reference internal" href="namelist.html#attributes" title="attributes"><code class="xref py py-data docutils literal notranslate"><span class="pre">attributes</span></code></a> defined in the namelist.</div>
+<dd><p class="first">Each axis is one of the <a class="reference internal" href="namelist.html#attributes" title="attributes"><code class="xref py py-data docutils literal notranslate"><span class="pre">attributes</span></code></a> defined in the namelist.
+In addition, when there is a moving window, the axis <code class="docutils literal notranslate"><span class="pre">&quot;moving_x&quot;</span></code> is automatically available.</p>
+<div class="last line-block">
 <div class="line"><strong>Example:</strong> <code class="docutils literal notranslate"><span class="pre">axes</span> <span class="pre">=</span> <span class="pre">[&quot;x&quot;]</span></code> corresponds to <span class="math notranslate nohighlight">\(x\)</span> versus time.</div>
 <div class="line"><strong>Example:</strong> <code class="docutils literal notranslate"><span class="pre">axes</span> <span class="pre">=</span> <span class="pre">[&quot;x&quot;,&quot;y&quot;]</span></code> correspond to 2-D trajectories.</div>
 <div class="line"><strong>Example:</strong> <code class="docutils literal notranslate"><span class="pre">axes</span> <span class="pre">=</span> <span class="pre">[&quot;x&quot;,&quot;px&quot;]</span></code> correspond to phase-space trajectories.</div>
@@ -1397,7 +1398,7 @@ Smilei’s default colormaps are: <code class="docutils literal notranslate"><sp
       <a href="site.html">Site index</a>
       </div>
       <div>
-        Last updated on Apr 04, 2019
+        Last updated on Apr 05, 2019
       </div>
       
       <div>
