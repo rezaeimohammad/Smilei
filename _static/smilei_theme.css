@@ -474,7 +474,7 @@ div.header > * {
 	padding:0.3em 1em;
 }
 #nav_title {
-	line-height: 9.6mm;
+	line-height: 9.600000000000001mm;
 	border-left: 2px solid #aaa;
 	border-right: 2px solid #aaa;
 	background-color: #eee;
@@ -555,7 +555,7 @@ div.header > * {
 }
 
 #smallScreenMenuButton {
-	width: 14.4mm;
+	width: 14.399999999999999mm;
 	height:12mm;
 	cursor:pointer;
 	float:right;
@@ -808,11 +808,11 @@ div.toctree-smilei hr {
 	height:12mm;
 }
 #searchinput {
-	height:7.2mm;
+	height:7.199999999999999mm;
 	width: 80mm;
 	font-size: 1em;
-	padding:1.2mm 0.6em;
-	margin:1.2mm 0;
+	padding:1.2000000000000002mm 0.6em;
+	margin:1.2000000000000002mm 0;
 	border-radius:0.5em;
 	border:0;
 	color: #555;
@@ -875,8 +875,8 @@ div.toctree-smilei hr {
 	}
 	#searchbox {
 		display:block !important;
-		left:33.6mm;
-		right:22.8mm;
+		left:33.599999999999994mm;
+		right:22.799999999999997mm;
 	}
 	#searchinput {
 		display:block !important;

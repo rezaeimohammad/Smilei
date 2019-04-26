@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Post-process &#8212; Smilei v4.1-347-g03064f60 documentation</title>
+    <meta charset="utf-8" />
+    <title>Post-process &#8212; Smilei b&#39;v4.1-362-gdbf16a81\n&#39; documentation</title>
     <link rel="stylesheet" href="_static/smilei_theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -439,22 +437,22 @@ as long as they correspond to several <a class="reference internal" href="nameli
 <dt id="happi.Open">
 <code class="descclassname">happi.</code><code class="descname">Open</code><span class="sig-paren">(</span><em>results_path=&quot;.&quot;</em>, <em>show=True</em>, <em>reference_angular_frequency_SI=None</em>, <em>verbose=True</em><span class="sig-paren">)</span><a class="headerlink" href="#happi.Open" title="Permalink to this definition">¶</a></dt>
 <dd><ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">results_path</span></code>: path or list of paths to the directory-ies
+<li><p><code class="docutils literal notranslate"><span class="pre">results_path</span></code>: path or list of paths to the directory-ies
 where the results of the simulation-s are stored. It can also contain wildcards,
-such as <code class="docutils literal notranslate"><span class="pre">*</span></code> and <code class="docutils literal notranslate"><span class="pre">?</span></code> in order to include several simulations at once.</li>
-<li><code class="docutils literal notranslate"><span class="pre">reference_angular_frequency_SI</span></code>: overrides the value of the simulation parameter
-<a class="reference internal" href="namelist.html#reference_angular_frequency_SI" title="reference_angular_frequency_SI"><code class="xref py py-data docutils literal notranslate"><span class="pre">reference_angular_frequency_SI</span></code></a>, in order to re-scale units.</li>
-<li><code class="docutils literal notranslate"><span class="pre">show</span></code>: if <code class="docutils literal notranslate"><span class="pre">False</span></code>, figures will not plot on screen. Make sure that
+such as <code class="docutils literal notranslate"><span class="pre">*</span></code> and <code class="docutils literal notranslate"><span class="pre">?</span></code> in order to include several simulations at once.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reference_angular_frequency_SI</span></code>: overrides the value of the simulation parameter
+<a class="reference internal" href="namelist.html#reference_angular_frequency_SI" title="reference_angular_frequency_SI"><code class="xref py py-data docutils literal notranslate"><span class="pre">reference_angular_frequency_SI</span></code></a>, in order to re-scale units.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">show</span></code>: if <code class="docutils literal notranslate"><span class="pre">False</span></code>, figures will not plot on screen. Make sure that
 you have not loaded another simulation or the matplotlib package. You may need to
-restart python.</li>
-<li><code class="docutils literal notranslate"><span class="pre">verbose</span></code>: if <code class="docutils literal notranslate"><span class="pre">False</span></code>, less information is printed while post-processing.</li>
-<li><code class="docutils literal notranslate"><span class="pre">scan</span></code>: if <code class="docutils literal notranslate"><span class="pre">False</span></code>, HDF5 output files are not scanned initially.</li>
+restart python.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">verbose</span></code>: if <code class="docutils literal notranslate"><span class="pre">False</span></code>, less information is printed while post-processing.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scan</span></code>: if <code class="docutils literal notranslate"><span class="pre">False</span></code>, HDF5 output files are not scanned initially.</p></li>
 </ul>
 </dd></dl>
 
-<dl class="docutils">
-<dt><strong>Returns:</strong> An object containing various methods to extract and manipulate the simulation</dt>
-<dd>outputs, as described below.</dd>
+<dl class="simple">
+<dt><strong>Returns:</strong> An object containing various methods to extract and manipulate the simulation</dt><dd><p>outputs, as described below.</p>
+</dd>
 </dl>
 <p><strong>Example</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">S</span> <span class="o">=</span> <span class="n">happi</span><span class="o">.</span><span class="n">Open</span><span class="p">(</span><span class="s2">&quot;path/to/my/results&quot;</span><span class="p">)</span>
@@ -502,17 +500,15 @@ several instances may exist, you can directly iterate over them:</p>
 <dt id="Scalar">
 <code class="descname">Scalar</code><span class="sig-paren">(</span><em>scalar=None, timesteps=None, units=[&quot;&quot;], data_log=False, **kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Scalar" title="Permalink to this definition">¶</a></dt>
 <dd><ul>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">scalar</span></code>: The name of the scalar.</dt>
-<dd><div class="first last line-block">
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">scalar</span></code>: The name of the scalar.</dt><dd><div class="line-block">
 <div class="line">If not given, then a list of available scalars is printed.</div>
 </div>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">timesteps</span></code>: The requested timestep(s).</dt>
-<dd><div class="first last line-block">
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">timesteps</span></code>: The requested timestep(s).</dt><dd><div class="line-block">
 <div class="line">If omitted, all timesteps are used.</div>
 <div class="line">If one number  given, the nearest timestep available is used.</div>
 <div class="line">If two numbers given, all the timesteps in between are used.</div>
@@ -520,18 +516,15 @@ several instances may exist, you can directly iterate over them:</p>
 </dd>
 </dl>
 </li>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">units</span></code>: A unit specification (see <a class="reference internal" href="#units"><span class="std std-ref">Specifying units</span></a>)</p>
-</li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">data_log</span></code>:</dt>
-<dd><div class="first last line-block">
+<li><p><code class="docutils literal notranslate"><span class="pre">units</span></code>: A unit specification (see <a class="reference internal" href="#units"><span class="std std-ref">Specifying units</span></a>)</p></li>
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">data_log</span></code>:</dt><dd><div class="line-block">
 <div class="line">If <code class="docutils literal notranslate"><span class="pre">True</span></code>, then <span class="math notranslate nohighlight">\(\log_{10}\)</span> is applied to the output.</div>
 </div>
 </dd>
 </dl>
 </li>
-<li><p class="first">See also <a class="reference internal" href="#otherkwargs"><span class="std std-ref">Other arguments for diagnostics</span></a></p>
-</li>
+<li><p>See also <a class="reference internal" href="#otherkwargs"><span class="std std-ref">Other arguments for diagnostics</span></a></p></li>
 </ul>
 </dd></dl>
 
@@ -548,28 +541,24 @@ several instances may exist, you can directly iterate over them:</p>
 <dt id="Field">
 <code class="descname">Field</code><span class="sig-paren">(</span><em>diagNumber=None, field=None, timesteps=None, subset=None, average=None, units=[&quot;&quot;], data_log=False, moving=False, export_dir=None, **kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Field" title="Permalink to this definition">¶</a></dt>
 <dd><ul>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">timesteps</span></code>, <code class="docutils literal notranslate"><span class="pre">units</span></code>, <code class="docutils literal notranslate"><span class="pre">data_log</span></code>: same as before.</p>
-</li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">diagNumber</span></code>: The number of the fields diagnostic</dt>
-<dd><div class="first last line-block">
+<li><p><code class="docutils literal notranslate"><span class="pre">timesteps</span></code>, <code class="docutils literal notranslate"><span class="pre">units</span></code>, <code class="docutils literal notranslate"><span class="pre">data_log</span></code>: same as before.</p></li>
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">diagNumber</span></code>: The number of the fields diagnostic</dt><dd><div class="line-block">
 <div class="line">If not given, then a list of available diagnostic numbers is printed.</div>
 </div>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">field</span></code>: The name of a field (<code class="docutils literal notranslate"><span class="pre">&quot;Ex&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Ey&quot;</span></code>, etc.)</dt>
-<dd><div class="first last line-block">
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">field</span></code>: The name of a field (<code class="docutils literal notranslate"><span class="pre">&quot;Ex&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Ey&quot;</span></code>, etc.)</dt><dd><div class="line-block">
 <div class="line">If not given, then a list of available fields is printed.</div>
 <div class="line">The string can also be an operation between several fields, such as <code class="docutils literal notranslate"><span class="pre">&quot;Jx+Jy&quot;</span></code>.</div>
 </div>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">subset</span></code>: A selection of coordinates to be extracted.</dt>
-<dd><div class="first last line-block">
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">subset</span></code>: A selection of coordinates to be extracted.</dt><dd><div class="line-block">
 <div class="line">Syntax 1: <code class="docutils literal notranslate"><span class="pre">subset</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">axis</span> <span class="pre">:</span> <span class="pre">location,</span> <span class="pre">...</span> <span class="pre">}</span></code></div>
 <div class="line">Syntax 2: <code class="docutils literal notranslate"><span class="pre">subset</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">axis</span> <span class="pre">:</span> <span class="pre">[start,</span> <span class="pre">stop]</span> <span class="pre">,</span> <span class="pre">...</span> <span class="pre">}</span></code></div>
 <div class="line">Syntax 3: <code class="docutils literal notranslate"><span class="pre">subset</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">axis</span> <span class="pre">:</span> <span class="pre">[start,</span> <span class="pre">stop,</span> <span class="pre">step]</span> <span class="pre">,</span> <span class="pre">...</span> <span class="pre">}</span></code></div>
@@ -581,9 +570,8 @@ several instances may exist, you can directly iterate over them:</p>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">average</span></code>: A selection of coordinates on which to average.</dt>
-<dd><div class="first last line-block">
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">average</span></code>: A selection of coordinates on which to average.</dt><dd><div class="line-block">
 <div class="line">Syntax 1: <code class="docutils literal notranslate"><span class="pre">average</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">axis</span> <span class="pre">:</span> <span class="pre">&quot;all&quot;,</span> <span class="pre">...</span> <span class="pre">}</span></code></div>
 <div class="line">Syntax 2: <code class="docutils literal notranslate"><span class="pre">average</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">axis</span> <span class="pre">:</span> <span class="pre">location,</span> <span class="pre">...</span> <span class="pre">}</span></code></div>
 <div class="line">Syntax 3: <code class="docutils literal notranslate"><span class="pre">average</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">axis</span> <span class="pre">:</span> <span class="pre">[start,</span> <span class="pre">stop]</span> <span class="pre">,</span> <span class="pre">...</span> <span class="pre">}</span></code></div>
@@ -597,31 +585,26 @@ several instances may exist, you can directly iterate over them:</p>
 </dd>
 </dl>
 </li>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">moving</span></code>: If <code class="docutils literal notranslate"><span class="pre">True</span></code>, plots will display the X coordinates evolving according to the
-<a class="reference internal" href="namelist.html#movingwindow"><span class="std std-ref">moving window</span></a></p>
-</li>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">export_dir</span></code>: The directory where to export VTK files.</p>
-</li>
-<li><p class="first">See also <a class="reference internal" href="#otherkwargs"><span class="std std-ref">Other arguments for diagnostics</span></a></p>
-</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">moving</span></code>: If <code class="docutils literal notranslate"><span class="pre">True</span></code>, plots will display the X coordinates evolving according to the
+<a class="reference internal" href="namelist.html#movingwindow"><span class="std std-ref">moving window</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">export_dir</span></code>: The directory where to export VTK files.</p></li>
+<li><p>See also <a class="reference internal" href="#otherkwargs"><span class="std std-ref">Other arguments for diagnostics</span></a></p></li>
 </ul>
 <p>In the case of an azimuthal mode cylindrical geometry (<code class="docutils literal notranslate"><span class="pre">AMcylindrical</span></code>), additional argument are
 available. You must choose one of <code class="docutils literal notranslate"><span class="pre">theta</span></code> or <code class="docutils literal notranslate"><span class="pre">build3d</span></code>, defined below, in order
 to construct fields from their complex angular Fourier modes. In addition, the <code class="docutils literal notranslate"><span class="pre">modes</span></code>
 argument is optional.</p>
 <ul>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">theta</span></code>: An angle (in radians)</dt>
-<dd><div class="first last line-block">
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">theta</span></code>: An angle (in radians)</dt><dd><div class="line-block">
 <div class="line">Calculates the field in a plane passing through the <span class="math notranslate nohighlight">\(r=0\)</span> axis</div>
 <div class="line">and making an angle <code class="docutils literal notranslate"><span class="pre">theta</span></code> with the <span class="math notranslate nohighlight">\(xy\)</span> plane.</div>
 </div>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">build3d</span></code>: A list of three <em>ranges</em></dt>
-<dd><div class="first last line-block">
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">build3d</span></code>: A list of three <em>ranges</em></dt><dd><div class="line-block">
 <div class="line">Calculates the field interpolated in a 3D <span class="math notranslate nohighlight">\(xyz\)</span> grid.</div>
 <div class="line">Each <em>range</em> is a list <code class="docutils literal notranslate"><span class="pre">[start,</span> <span class="pre">stop,</span> <span class="pre">step]</span></code> indicating the beginning,</div>
 <div class="line">the end and the step of this grid.</div>
@@ -629,9 +612,8 @@ argument is optional.</p>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">modes</span></code>: An integer or a list of integers</dt>
-<dd><div class="first last line-block">
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">modes</span></code>: An integer or a list of integers</dt><dd><div class="line-block">
 <div class="line">Only these modes numbers will be used in the calculation. If omited, all modes are used.</div>
 </div>
 </dd>
@@ -653,30 +635,25 @@ argument is optional.</p>
 <dt id="Probe">
 <code class="descname">Probe</code><span class="sig-paren">(</span><em>probeNumber=None, field=None, timesteps=None, subset=None, average=None, units=[&quot;&quot;], data_log=False, **kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Probe" title="Permalink to this definition">¶</a></dt>
 <dd><ul>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">timesteps</span></code>, <code class="docutils literal notranslate"><span class="pre">units</span></code>, <code class="docutils literal notranslate"><span class="pre">data_log</span></code>, <code class="docutils literal notranslate"><span class="pre">export_dir</span></code>: same as before.</p>
-</li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">probeNumber</span></code>: number of the probe (the first one has number 0).</dt>
-<dd><div class="first last line-block">
+<li><p><code class="docutils literal notranslate"><span class="pre">timesteps</span></code>, <code class="docutils literal notranslate"><span class="pre">units</span></code>, <code class="docutils literal notranslate"><span class="pre">data_log</span></code>, <code class="docutils literal notranslate"><span class="pre">export_dir</span></code>: same as before.</p></li>
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">probeNumber</span></code>: number of the probe (the first one has number 0).</dt><dd><div class="line-block">
 <div class="line">If not given, a list of available probes is printed.</div>
 </div>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">field</span></code>: name of the field (<code class="docutils literal notranslate"><span class="pre">&quot;Bx&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;By&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Bz&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Ex&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Ey&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Ez&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Jx&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Jy&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Jz&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;Rho&quot;</span></code>).</dt>
-<dd><div class="first last line-block">
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">field</span></code>: name of the field (<code class="docutils literal notranslate"><span class="pre">&quot;Bx&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;By&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Bz&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Ex&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Ey&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Ez&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Jx&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Jy&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Jz&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;Rho&quot;</span></code>).</dt><dd><div class="line-block">
 <div class="line">If not given, then a list of available fields is printed.</div>
 <div class="line">The string can also be an operation between several fields, such as <code class="docutils literal notranslate"><span class="pre">&quot;Jx+Jy&quot;</span></code>.</div>
 </div>
 </dd>
 </dl>
 </li>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">subset</span></code> and <code class="docutils literal notranslate"><span class="pre">average</span></code> are very similar to those of <a class="reference internal" href="#Field" title="Field"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Field()</span></code></a>, but they can only have the axes: <code class="docutils literal notranslate"><span class="pre">&quot;axis1&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;axis2&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;axis3&quot;</span></code>.
-For instance, <code class="docutils literal notranslate"><span class="pre">average={&quot;axis1&quot;:&quot;all&quot;}</span></code>. Note that the axes are not necessarily <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> or <span class="math notranslate nohighlight">\(z\)</span> because the probe mesh is arbitrary.</p>
-</li>
-<li><p class="first">See also <a class="reference internal" href="#otherkwargs"><span class="std std-ref">Other arguments for diagnostics</span></a></p>
-</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subset</span></code> and <code class="docutils literal notranslate"><span class="pre">average</span></code> are very similar to those of <a class="reference internal" href="#Field" title="Field"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Field()</span></code></a>, but they can only have the axes: <code class="docutils literal notranslate"><span class="pre">&quot;axis1&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;axis2&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;axis3&quot;</span></code>.
+For instance, <code class="docutils literal notranslate"><span class="pre">average={&quot;axis1&quot;:&quot;all&quot;}</span></code>. Note that the axes are not necessarily <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> or <span class="math notranslate nohighlight">\(z\)</span> because the probe mesh is arbitrary.</p></li>
+<li><p>See also <a class="reference internal" href="#otherkwargs"><span class="std std-ref">Other arguments for diagnostics</span></a></p></li>
 </ul>
 </dd></dl>
 
@@ -693,11 +670,9 @@ For instance, <code class="docutils literal notranslate"><span class="pre">avera
 <dt id="ParticleBinning">
 <code class="descname">ParticleBinning</code><span class="sig-paren">(</span><em>diagNumber=None, timesteps=None, subset=None, sum=None, units=[&quot;&quot;], data_log=False, **kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ParticleBinning" title="Permalink to this definition">¶</a></dt>
 <dd><ul>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">timesteps</span></code>, <code class="docutils literal notranslate"><span class="pre">units</span></code>, <code class="docutils literal notranslate"><span class="pre">data_log</span></code>, <code class="docutils literal notranslate"><span class="pre">export_dir</span></code>: same as before.</p>
-</li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">diagNumber</span></code>: number of the particle binning diagnostic (starts at 0).</dt>
-<dd><div class="first last line-block">
+<li><p><code class="docutils literal notranslate"><span class="pre">timesteps</span></code>, <code class="docutils literal notranslate"><span class="pre">units</span></code>, <code class="docutils literal notranslate"><span class="pre">data_log</span></code>, <code class="docutils literal notranslate"><span class="pre">export_dir</span></code>: same as before.</p></li>
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">diagNumber</span></code>: number of the particle binning diagnostic (starts at 0).</dt><dd><div class="line-block">
 <div class="line">If not given, a list of available diagnostics is printed.</div>
 <div class="line">It can also be an operation between several diagnostics.</div>
 <div class="line">For example, <code class="docutils literal notranslate"><span class="pre">&quot;#0/#1&quot;</span></code> computes the division by diagnostics 0 and 1.</div>
@@ -705,23 +680,21 @@ For instance, <code class="docutils literal notranslate"><span class="pre">avera
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">subset</span></code> is similar to that of <a class="reference internal" href="#Field" title="Field"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Field()</span></code></a>, although the axis must be one of</dt>
-<dd><p class="first"><code class="docutils literal notranslate"><span class="pre">&quot;x&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;y&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;z&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;px&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;py&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;pz&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;p&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gamma&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ekin&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;vx&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;vy&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;vz&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;v&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;charge&quot;</span></code>.</p>
-<p class="last"><strong>WARNING:</strong> With the syntax <code class="docutils literal notranslate"><span class="pre">subset={axis:[start,</span> <span class="pre">stop,</span> <span class="pre">step]}</span></code>, the value of <code class="docutils literal notranslate"><span class="pre">step</span></code>
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">subset</span></code> is similar to that of <a class="reference internal" href="#Field" title="Field"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Field()</span></code></a>, although the axis must be one of</dt><dd><p><code class="docutils literal notranslate"><span class="pre">&quot;x&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;y&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;z&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;px&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;py&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;pz&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;p&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gamma&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ekin&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;vx&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;vy&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;vz&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;v&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;charge&quot;</span></code>.</p>
+<p><strong>WARNING:</strong> With the syntax <code class="docutils literal notranslate"><span class="pre">subset={axis:[start,</span> <span class="pre">stop,</span> <span class="pre">step]}</span></code>, the value of <code class="docutils literal notranslate"><span class="pre">step</span></code>
 is a number of bins.</p>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">sum</span></code>: a selection of coordinates on which to sum the data.</dt>
-<dd><div class="first line-block">
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">sum</span></code>: a selection of coordinates on which to sum the data.</dt><dd><div class="line-block">
 <div class="line">Syntax 1: <code class="docutils literal notranslate"><span class="pre">sum</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">axis</span> <span class="pre">:</span> <span class="pre">&quot;all&quot;,</span> <span class="pre">...</span> <span class="pre">}</span></code></div>
 <div class="line">Syntax 2: <code class="docutils literal notranslate"><span class="pre">sum</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">axis</span> <span class="pre">:</span> <span class="pre">location,</span> <span class="pre">...</span> <span class="pre">}</span></code></div>
 <div class="line">Syntax 3: <code class="docutils literal notranslate"><span class="pre">sum</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">axis</span> <span class="pre">:</span> <span class="pre">[begin,</span> <span class="pre">end]</span> <span class="pre">,</span> <span class="pre">...</span> <span class="pre">}</span></code></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">axis</span></code> must be <code class="docutils literal notranslate"><span class="pre">&quot;x&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;y&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;z&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;px&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;py&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;pz&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;p&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;gamma&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;ekin&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;vx&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;vy&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;vz&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;v&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;charge&quot;</span></code>.</p>
-<div class="last line-block">
+<div class="line-block">
 <div class="line">The chosen axes will be removed:</div>
 <div class="line">- With syntax 1, a sum is performed over all the axis.</div>
 <div class="line">- With syntax 2, only the bin closest to <code class="docutils literal notranslate"><span class="pre">location</span></code> is kept.</div>
@@ -731,8 +704,7 @@ is a number of bins.</p>
 </dd>
 </dl>
 </li>
-<li><p class="first">See also <a class="reference internal" href="#otherkwargs"><span class="std std-ref">Other arguments for diagnostics</span></a></p>
-</li>
+<li><p>See also <a class="reference internal" href="#otherkwargs"><span class="std std-ref">Other arguments for diagnostics</span></a></p></li>
 </ul>
 </dd></dl>
 
@@ -755,11 +727,9 @@ definition.</p>
 <dt id="Screen">
 <code class="descname">Screen</code><span class="sig-paren">(</span><em>diagNumber=None, timesteps=None, subset=None, sum=None, units=[&quot;&quot;], data_log=False, **kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Screen" title="Permalink to this definition">¶</a></dt>
 <dd><ul>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">timesteps</span></code>, <code class="docutils literal notranslate"><span class="pre">units</span></code>, <code class="docutils literal notranslate"><span class="pre">data_log</span></code>, <code class="docutils literal notranslate"><span class="pre">export_dir</span></code>: same as before.</p>
-</li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">diagNumber</span></code>: number of the screen diagnostic (the first one has number 0).</dt>
-<dd><div class="first last line-block">
+<li><p><code class="docutils literal notranslate"><span class="pre">timesteps</span></code>, <code class="docutils literal notranslate"><span class="pre">units</span></code>, <code class="docutils literal notranslate"><span class="pre">data_log</span></code>, <code class="docutils literal notranslate"><span class="pre">export_dir</span></code>: same as before.</p></li>
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">diagNumber</span></code>: number of the screen diagnostic (the first one has number 0).</dt><dd><div class="line-block">
 <div class="line">If not given, a list of available screen diagnostics is printed.</div>
 <div class="line">It can also be an operation between several Screen diagnostics.</div>
 <div class="line">For example, <code class="docutils literal notranslate"><span class="pre">&quot;#0/#1&quot;</span></code> computes the division by diagnostics 0 and 1.</div>
@@ -767,10 +737,8 @@ definition.</p>
 </dd>
 </dl>
 </li>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">subset</span></code> and <code class="docutils literal notranslate"><span class="pre">sum</span></code>: identical to that of ParticleBinning diagnostics.</p>
-</li>
-<li><p class="first">See also <a class="reference internal" href="#otherkwargs"><span class="std std-ref">Other arguments for diagnostics</span></a></p>
-</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subset</span></code> and <code class="docutils literal notranslate"><span class="pre">sum</span></code>: identical to that of ParticleBinning diagnostics.</p></li>
+<li><p>See also <a class="reference internal" href="#otherkwargs"><span class="std std-ref">Other arguments for diagnostics</span></a></p></li>
 </ul>
 </dd></dl>
 
@@ -787,24 +755,20 @@ definition.</p>
 <dt id="TrackParticles">
 <code class="descname">TrackParticles</code><span class="sig-paren">(</span><em>species=None, select=&quot;&quot;, axes=[], timesteps=None, sort=True, length=None, units=[&quot;&quot;], **kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#TrackParticles" title="Permalink to this definition">¶</a></dt>
 <dd><ul>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">timesteps</span></code>, <code class="docutils literal notranslate"><span class="pre">units</span></code>, <code class="docutils literal notranslate"><span class="pre">export_dir</span></code>: same as before.</p>
-</li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">species</span></code>: the name of a tracked-particle species.</dt>
-<dd><div class="first last line-block">
+<li><p><code class="docutils literal notranslate"><span class="pre">timesteps</span></code>, <code class="docutils literal notranslate"><span class="pre">units</span></code>, <code class="docutils literal notranslate"><span class="pre">export_dir</span></code>: same as before.</p></li>
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">species</span></code>: the name of a tracked-particle species.</dt><dd><div class="line-block">
 <div class="line">If omitted, a list of available tracked-particle species is printed.</div>
 </div>
 </dd>
 </dl>
 </li>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">select</span></code>: Instructions for selecting particles among those available.
-A detailed explanation is provided below</p>
-</li>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">axes</span></code>: A list of axes for plotting the trajectories or obtaining particle data.</dt>
-<dd><p class="first">Each axis is one of the <a class="reference internal" href="namelist.html#attributes" title="attributes"><code class="xref py py-data docutils literal notranslate"><span class="pre">attributes</span></code></a> defined in the namelist.
+<li><p><code class="docutils literal notranslate"><span class="pre">select</span></code>: Instructions for selecting particles among those available.
+A detailed explanation is provided below</p></li>
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">axes</span></code>: A list of axes for plotting the trajectories or obtaining particle data.</dt><dd><p>Each axis is one of the <a class="reference internal" href="namelist.html#attributes" title="attributes"><code class="xref py py-data docutils literal notranslate"><span class="pre">attributes</span></code></a> defined in the namelist.
 In addition, when there is a moving window, the axis <code class="docutils literal notranslate"><span class="pre">&quot;moving_x&quot;</span></code> is automatically available.</p>
-<div class="last line-block">
+<div class="line-block">
 <div class="line"><strong>Example:</strong> <code class="docutils literal notranslate"><span class="pre">axes</span> <span class="pre">=</span> <span class="pre">[&quot;x&quot;]</span></code> corresponds to <span class="math notranslate nohighlight">\(x\)</span> versus time.</div>
 <div class="line"><strong>Example:</strong> <code class="docutils literal notranslate"><span class="pre">axes</span> <span class="pre">=</span> <span class="pre">[&quot;x&quot;,&quot;y&quot;]</span></code> correspond to 2-D trajectories.</div>
 <div class="line"><strong>Example:</strong> <code class="docutils literal notranslate"><span class="pre">axes</span> <span class="pre">=</span> <span class="pre">[&quot;x&quot;,&quot;px&quot;]</span></code> correspond to phase-space trajectories.</div>
@@ -812,15 +776,12 @@ In addition, when there is a moving window, the axis <code class="docutils liter
 </dd>
 </dl>
 </li>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">sort</span></code>: If <code class="docutils literal notranslate"><span class="pre">False</span></code>, the particles are not sorted by ID. This can save significant
+<li><p><code class="docutils literal notranslate"><span class="pre">sort</span></code>: If <code class="docutils literal notranslate"><span class="pre">False</span></code>, the particles are not sorted by ID. This can save significant
 time, but prevents plotting, exporting to VTK, and the <code class="docutils literal notranslate"><span class="pre">select</span></code> argument. Only
 <code class="docutils literal notranslate"><span class="pre">getData()</span></code> is available in this mode. Read <a class="reference internal" href="ids.html"><span class="doc">this</span></a> for more information
-on particle IDs.</p>
-</li>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">length</span></code>: The length of each plotted trajectory, in number of timesteps.</p>
-</li>
-<li><p class="first">See also <a class="reference internal" href="#otherkwargs"><span class="std std-ref">Other arguments for diagnostics</span></a></p>
-</li>
+on particle IDs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">length</span></code>: The length of each plotted trajectory, in number of timesteps.</p></li>
+<li><p>See also <a class="reference internal" href="#otherkwargs"><span class="std std-ref">Other arguments for diagnostics</span></a></p></li>
 </ul>
 </dd></dl>
 
@@ -835,24 +796,24 @@ on particle IDs.</p>
 <div class="line">Say <code class="docutils literal notranslate"><span class="pre">condition</span></code> is a condition on particles properties  (<code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, <code class="docutils literal notranslate"><span class="pre">z</span></code>, <code class="docutils literal notranslate"><span class="pre">px</span></code>, <code class="docutils literal notranslate"><span class="pre">py</span></code>, <code class="docutils literal notranslate"><span class="pre">pz</span></code>), for instance <code class="docutils literal notranslate"><span class="pre">px&gt;0</span></code>.</div>
 </div>
 <ul>
-<li><div class="first line-block">
+<li><div class="line-block">
 <div class="line"><strong>Syntax 1:</strong> <code class="docutils literal notranslate"><span class="pre">select=&quot;any(times,</span> <span class="pre">condition)&quot;</span></code></div>
 <div class="line">Selects particles satisfying <code class="docutils literal notranslate"><span class="pre">condition</span></code> for at least one of the <code class="docutils literal notranslate"><span class="pre">times</span></code>.</div>
 <div class="line">For example, <code class="docutils literal notranslate"><span class="pre">select=&quot;any(t&gt;0,</span> <span class="pre">px&gt;1.)&quot;</span></code> selects those reaching <span class="math notranslate nohighlight">\(p_x&gt;1\)</span> at some point.</div>
 </div>
 </li>
-<li><div class="first line-block">
+<li><div class="line-block">
 <div class="line"><strong>Syntax 2:</strong> <code class="docutils literal notranslate"><span class="pre">select=&quot;all(times,</span> <span class="pre">condition)&quot;</span></code></div>
 <div class="line">Selects particles satisfying <code class="docutils literal notranslate"><span class="pre">condition</span></code> at all <code class="docutils literal notranslate"><span class="pre">times</span></code>.</div>
 <div class="line">For example, <code class="docutils literal notranslate"><span class="pre">select=&quot;all(t&lt;40,</span> <span class="pre">px&lt;1)&quot;</span></code> selects those having <span class="math notranslate nohighlight">\(p_x&lt;1\)</span> until timestep 40.</div>
 </div>
 </li>
-<li><div class="first line-block">
+<li><div class="line-block">
 <div class="line"><strong>Syntax 3:</strong> <code class="docutils literal notranslate"><span class="pre">select=[ID1,</span> <span class="pre">ID2,</span> <span class="pre">...]</span></code></div>
 <div class="line">Selects the provided particle IDs.</div>
 </div>
 </li>
-<li><div class="first line-block">
+<li><div class="line-block">
 <div class="line">It is possible to make logical operations: <code class="docutils literal notranslate"><span class="pre">+</span></code> is <em>OR</em>; <code class="docutils literal notranslate"><span class="pre">*</span></code> is <em>AND</em>; <code class="docutils literal notranslate"><span class="pre">~</span></code> is <em>NOT</em>.</div>
 <div class="line">For example, <code class="docutils literal notranslate"><span class="pre">select=&quot;any((t&gt;30)*(t&lt;60),</span> <span class="pre">px&gt;1)</span> <span class="pre">+</span> <span class="pre">all(t&gt;0,</span> <span class="pre">(x&gt;1)*(x&lt;2))&quot;</span></code></div>
 </div>
@@ -869,39 +830,39 @@ and only one mode between those three.</p>
 <dt id="Performances">
 <code class="descname">Performances</code><span class="sig-paren">(</span><em>raw=None, map=None, histogram=None, timesteps=None, units=[&quot;&quot;], data_log=False, species=None, **kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Performances" title="Permalink to this definition">¶</a></dt>
 <dd><ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">timesteps</span></code>, <code class="docutils literal notranslate"><span class="pre">units</span></code>, <code class="docutils literal notranslate"><span class="pre">data_log</span></code>, <code class="docutils literal notranslate"><span class="pre">export_dir</span></code>: same as before.</li>
-<li><code class="docutils literal notranslate"><span class="pre">raw</span></code> : The name of a quantity, or an operation between them (see quantities below).
-The requested quantity is listed for each process.</li>
-<li><code class="docutils literal notranslate"><span class="pre">map</span></code> : The name of a quantity, or an operation between them (see quantities below).
-The requested quantity is mapped vs. space coordinates (1D and 2D only).</li>
-<li><code class="docutils literal notranslate"><span class="pre">histogram</span></code> : the list <code class="docutils literal notranslate"><span class="pre">[&quot;quantity&quot;,</span> <span class="pre">min,</span> <span class="pre">max,</span> <span class="pre">nsteps]</span></code>.
+<li><p><code class="docutils literal notranslate"><span class="pre">timesteps</span></code>, <code class="docutils literal notranslate"><span class="pre">units</span></code>, <code class="docutils literal notranslate"><span class="pre">data_log</span></code>, <code class="docutils literal notranslate"><span class="pre">export_dir</span></code>: same as before.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raw</span></code> : The name of a quantity, or an operation between them (see quantities below).
+The requested quantity is listed for each process.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">map</span></code> : The name of a quantity, or an operation between them (see quantities below).
+The requested quantity is mapped vs. space coordinates (1D and 2D only).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">histogram</span></code> : the list <code class="docutils literal notranslate"><span class="pre">[&quot;quantity&quot;,</span> <span class="pre">min,</span> <span class="pre">max,</span> <span class="pre">nsteps]</span></code>.
 Makes a histogram of the requested quantity between <code class="docutils literal notranslate"><span class="pre">min</span></code> an <code class="docutils literal notranslate"><span class="pre">max</span></code>, with <code class="docutils literal notranslate"><span class="pre">nsteps</span></code> bins.
-The <code class="docutils literal notranslate"><span class="pre">&quot;quantity&quot;</span></code> may be an operation between the quantities listed further below.</li>
-<li>See also <a class="reference internal" href="#otherkwargs"><span class="std std-ref">Other arguments for diagnostics</span></a></li>
+The <code class="docutils literal notranslate"><span class="pre">&quot;quantity&quot;</span></code> may be an operation between the quantities listed further below.</p></li>
+<li><p>See also <a class="reference internal" href="#otherkwargs"><span class="std std-ref">Other arguments for diagnostics</span></a></p></li>
 </ul>
 </dd></dl>
 
 <p><strong>Quantities at the MPI-process level</strong> (contain many patches):</p>
 <blockquote>
 <div><ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">hindex</span></code>                     : the starting index of each proc in the hilbert curve</li>
-<li><code class="docutils literal notranslate"><span class="pre">number_of_cells</span></code>            : the number of cells in each proc</li>
-<li><code class="docutils literal notranslate"><span class="pre">number_of_particles</span></code>        : the number of particles in each proc (except frozen ones)</li>
-<li><code class="docutils literal notranslate"><span class="pre">number_of_frozen_particles</span></code> : the number of frozen particles in each proc</li>
-<li><code class="docutils literal notranslate"><span class="pre">total_load</span></code>                 : the <cite>load</cite> of each proc (number of particles and cells with cell_load coefficient)</li>
-<li><code class="docutils literal notranslate"><span class="pre">timer_global</span></code>               : global simulation time (only available for proc 0)</li>
-<li><code class="docutils literal notranslate"><span class="pre">timer_particles</span></code>            : time spent computing particles by each proc</li>
-<li><code class="docutils literal notranslate"><span class="pre">timer_maxwell</span></code>              : time spent solving maxwell by each proc</li>
-<li><code class="docutils literal notranslate"><span class="pre">timer_densities</span></code>            : time spent projecting densities by each proc</li>
-<li><code class="docutils literal notranslate"><span class="pre">timer_collisions</span></code>           : time spent computing collisions by each proc</li>
-<li><code class="docutils literal notranslate"><span class="pre">timer_movWindow</span></code>            : time spent handling the moving window by each proc</li>
-<li><code class="docutils literal notranslate"><span class="pre">timer_loadBal</span></code>              : time spent balancing the load by each proc</li>
-<li><code class="docutils literal notranslate"><span class="pre">timer_syncPart</span></code>             : time spent synchronzing particles by each proc</li>
-<li><code class="docutils literal notranslate"><span class="pre">timer_syncField</span></code>            : time spent synchronzing fields by each proc</li>
-<li><code class="docutils literal notranslate"><span class="pre">timer_syncDens</span></code>             : time spent synchronzing densities by each proc</li>
-<li><code class="docutils literal notranslate"><span class="pre">timer_diags</span></code>                : time spent by each proc calculating and writing diagnostics</li>
-<li><code class="docutils literal notranslate"><span class="pre">timer_total</span></code>                : the sum of all timers above (except timer_global)</li>
-<li><code class="docutils literal notranslate"><span class="pre">memory_total</span></code>               : the total memory used by the process</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hindex</span></code>                     : the starting index of each proc in the hilbert curve</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">number_of_cells</span></code>            : the number of cells in each proc</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">number_of_particles</span></code>        : the number of particles in each proc (except frozen ones)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">number_of_frozen_particles</span></code> : the number of frozen particles in each proc</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">total_load</span></code>                 : the <cite>load</cite> of each proc (number of particles and cells with cell_load coefficient)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timer_global</span></code>               : global simulation time (only available for proc 0)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timer_particles</span></code>            : time spent computing particles by each proc</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timer_maxwell</span></code>              : time spent solving maxwell by each proc</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timer_densities</span></code>            : time spent projecting densities by each proc</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timer_collisions</span></code>           : time spent computing collisions by each proc</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timer_movWindow</span></code>            : time spent handling the moving window by each proc</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timer_loadBal</span></code>              : time spent balancing the load by each proc</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timer_syncPart</span></code>             : time spent synchronzing particles by each proc</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timer_syncField</span></code>            : time spent synchronzing fields by each proc</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timer_syncDens</span></code>             : time spent synchronzing densities by each proc</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timer_diags</span></code>                : time spent by each proc calculating and writing diagnostics</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timer_total</span></code>                : the sum of all timers above (except timer_global)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">memory_total</span></code>               : the total memory used by the process</p></li>
 </ul>
 <p><strong>WARNING</strong>: The timers <code class="docutils literal notranslate"><span class="pre">loadBal</span></code> and <code class="docutils literal notranslate"><span class="pre">diags</span></code> include <em>global</em> communications.
 This means they might contain time doing nothing, waiting for other processes.
@@ -912,9 +873,9 @@ some waiting time.</p>
 <blockquote>
 <div><p>This requires <a class="reference internal" href="namelist.html#patch_information" title="patch_information"><code class="xref py py-data docutils literal notranslate"><span class="pre">patch_information</span></code></a> in the namelist.</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">mpi_rank</span></code>                   : the MPI rank that contains the current patch</li>
-<li><code class="docutils literal notranslate"><span class="pre">vecto</span></code>                      : the mode of the specified species in the current patch
-(vectorized of scalar) when the adaptive mode is activated. Here the <code class="docutils literal notranslate"><span class="pre">species</span></code> argument has to be specified.</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mpi_rank</span></code>                   : the MPI rank that contains the current patch</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vecto</span></code>                      : the mode of the specified species in the current patch
+(vectorized of scalar) when the adaptive mode is activated. Here the <code class="docutils literal notranslate"><span class="pre">species</span></code> argument has to be specified.</p></li>
 </ul>
 <p><strong>WARNING</strong>: The patch quantities are only compatible with the <code class="docutils literal notranslate"><span class="pre">raw</span></code> mode
 and only in <code class="docutils literal notranslate"><span class="pre">3Dcartesian</span></code> <a class="reference internal" href="namelist.html#geometry" title="geometry"><code class="xref py py-data docutils literal notranslate"><span class="pre">geometry</span></code></a>. The result is a patch matrix with the
@@ -941,25 +902,25 @@ quantity on each patch.</p>
 <a class="reference internal" href="#TrackParticles" title="TrackParticles"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TrackParticles()</span></code></a> support a <code class="docutils literal notranslate"><span class="pre">units</span></code> argument.
 It has three different syntaxes:</p>
 <ol class="arabic">
-<li><p class="first"><strong>A list</strong>, for example <code class="docutils literal notranslate"><span class="pre">units</span> <span class="pre">=</span> <span class="pre">[&quot;um/ns&quot;,</span> <span class="pre">&quot;feet&quot;,</span> <span class="pre">&quot;W/cm^2&quot;]</span></code></p>
+<li><p><strong>A list</strong>, for example <code class="docutils literal notranslate"><span class="pre">units</span> <span class="pre">=</span> <span class="pre">[&quot;um/ns&quot;,</span> <span class="pre">&quot;feet&quot;,</span> <span class="pre">&quot;W/cm^2&quot;]</span></code></p>
 <p>In this case, any quantity found to be of the same dimension as one of these units
 will be converted.</p>
 </li>
-<li><p class="first"><strong>A dictionary</strong>, for example <code class="docutils literal notranslate"><span class="pre">units</span> <span class="pre">=</span> <span class="pre">{&quot;x&quot;:&quot;um&quot;,</span> <span class="pre">&quot;y&quot;:&quot;um&quot;,</span> <span class="pre">&quot;v&quot;:&quot;Joule&quot;}</span></code></p>
+<li><p><strong>A dictionary</strong>, for example <code class="docutils literal notranslate"><span class="pre">units</span> <span class="pre">=</span> <span class="pre">{&quot;x&quot;:&quot;um&quot;,</span> <span class="pre">&quot;y&quot;:&quot;um&quot;,</span> <span class="pre">&quot;v&quot;:&quot;Joule&quot;}</span></code></p>
 <p>In this case, we specify the units separately for axes <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>, and for the
 data values <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
 </li>
-<li><p class="first"><strong>A</strong> <code class="docutils literal notranslate"><span class="pre">Units</span></code> <strong>object</strong>, for example <code class="docutils literal notranslate"><span class="pre">units</span> <span class="pre">=</span> <span class="pre">happi.Units(&quot;um/ns&quot;,</span> <span class="pre">&quot;feet&quot;,</span> <span class="pre">x=&quot;um&quot;)</span></code></p>
+<li><p><strong>A</strong> <code class="docutils literal notranslate"><span class="pre">Units</span></code> <strong>object</strong>, for example <code class="docutils literal notranslate"><span class="pre">units</span> <span class="pre">=</span> <span class="pre">happi.Units(&quot;um/ns&quot;,</span> <span class="pre">&quot;feet&quot;,</span> <span class="pre">x=&quot;um&quot;)</span></code></p>
 <p>This version combines the two previous ones.</p>
 </li>
 </ol>
 <p class="rubric">Requirements for changing units</p>
 <ul class="simple">
-<li>The <a class="reference external" href="https://pypi.python.org/pypi/Pint/">Pint module</a>.</li>
-<li>To obtain units in a non-normalized system (e.g. SI), the simulation must have the
+<li><p>The <a class="reference external" href="https://pypi.python.org/pypi/Pint/">Pint module</a>.</p></li>
+<li><p>To obtain units in a non-normalized system (e.g. SI), the simulation must have the
 parameter <a class="reference internal" href="namelist.html#reference_angular_frequency_SI" title="reference_angular_frequency_SI"><code class="xref py py-data docutils literal notranslate"><span class="pre">reference_angular_frequency_SI</span></code></a> set to a finite value.
 Otherwise, this parameter can be set during post-processing as an argument to the
-<a class="reference internal" href="#happi.Open" title="happi.Open"><code class="xref py py-meth docutils literal notranslate"><span class="pre">happi.Open()</span></code></a> function.</li>
+<a class="reference internal" href="#happi.Open" title="happi.Open"><code class="xref py py-meth docutils literal notranslate"><span class="pre">happi.Open()</span></code></a> function.</p></li>
 </ul>
 <hr class="docutils" />
 </div>
@@ -968,13 +929,13 @@ Otherwise, this parameter can be set during post-processing as an argument to th
 <p>All diagnostics above can use additional keyword arguments (<code class="docutils literal notranslate"><span class="pre">kwargs</span></code>)
 to manipulate the plotting options:</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">figure</span></code>: The figure number that is passed to matplotlib.</li>
-<li><code class="docutils literal notranslate"><span class="pre">vmin</span></code>, <code class="docutils literal notranslate"><span class="pre">vmax</span></code>: data value limits.</li>
-<li><code class="docutils literal notranslate"><span class="pre">xmin</span></code>, <code class="docutils literal notranslate"><span class="pre">xmax</span></code>, <code class="docutils literal notranslate"><span class="pre">ymin</span></code>, <code class="docutils literal notranslate"><span class="pre">ymax</span></code>: axes limits.</li>
-<li><code class="docutils literal notranslate"><span class="pre">xfactor</span></code>, <code class="docutils literal notranslate"><span class="pre">yfactor</span></code>: factors to rescale axes.</li>
-<li><code class="docutils literal notranslate"><span class="pre">side</span></code>: <code class="docutils literal notranslate"><span class="pre">&quot;left&quot;</span></code> (by default) or <code class="docutils literal notranslate"><span class="pre">&quot;right&quot;</span></code> puts the y-axis on the left- or the right-hand-side.</li>
-<li><code class="docutils literal notranslate"><span class="pre">transparent</span></code>: <code class="docutils literal notranslate"><span class="pre">None</span></code> (by default), <code class="docutils literal notranslate"><span class="pre">&quot;over&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;under&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;both&quot;</span></code> makes the colormap transparent outside the requested boundary.</li>
-<li>Many Matplotlib arguments listed in <a class="reference internal" href="#advancedoptions"><span class="std std-ref">Advanced plotting options</span></a>.</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">figure</span></code>: The figure number that is passed to matplotlib.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vmin</span></code>, <code class="docutils literal notranslate"><span class="pre">vmax</span></code>: data value limits.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">xmin</span></code>, <code class="docutils literal notranslate"><span class="pre">xmax</span></code>, <code class="docutils literal notranslate"><span class="pre">ymin</span></code>, <code class="docutils literal notranslate"><span class="pre">ymax</span></code>: axes limits.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">xfactor</span></code>, <code class="docutils literal notranslate"><span class="pre">yfactor</span></code>: factors to rescale axes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">side</span></code>: <code class="docutils literal notranslate"><span class="pre">&quot;left&quot;</span></code> (by default) or <code class="docutils literal notranslate"><span class="pre">&quot;right&quot;</span></code> puts the y-axis on the left- or the right-hand-side.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">transparent</span></code>: <code class="docutils literal notranslate"><span class="pre">None</span></code> (by default), <code class="docutils literal notranslate"><span class="pre">&quot;over&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;under&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;both&quot;</span></code> makes the colormap transparent outside the requested boundary.</p></li>
+<li><p>Many Matplotlib arguments listed in <a class="reference internal" href="#advancedoptions"><span class="std std-ref">Advanced plotting options</span></a>.</p></li>
 </ul>
 </div>
 <hr class="docutils" />
@@ -998,7 +959,7 @@ In the case of <code class="docutils literal notranslate"><span class="pre">Trac
 entry for each axis, and if <code class="docutils literal notranslate"><span class="pre">sort==False</span></code>, these entries are included inside an entry
 for each timestep.</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">timestep</span></code>, if specified, is the only timestep number that is read and returned.</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timestep</span></code>, if specified, is the only timestep number that is read and returned.</p></li>
 </ul>
 <p><strong>Example</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">S</span> <span class="o">=</span> <span class="n">happi</span><span class="o">.</span><span class="n">Open</span><span class="p">(</span><span class="s2">&quot;path/to/results&quot;</span><span class="p">)</span> <span class="c1"># Open the simulation</span>
@@ -1058,7 +1019,7 @@ If the axis is not available, returns an empty list.
 By default, axis positions are in the code’s units, but are converted to
 the diagnostic’s units defined by the <code class="docutils literal notranslate"><span class="pre">units</span></code> argument, if provided.</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">axis</span></code>: the name of the requested axis.</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">axis</span></code>: the name of the requested axis.</p></li>
 </ul>
 </dd></dl>
 
@@ -1114,14 +1075,15 @@ window at the required <code class="docutils literal notranslate"><span class="p
 <dd><p>Converts the data from a diagnostic object to the vtk format.
 Note the <code class="docutils literal notranslate"><span class="pre">export_dir</span></code> argument available for each diagnostic (see above).</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">numberOfPieces</span></code>: the number of files into which the data will be split.</li>
-<li><code class="docutils literal notranslate"><span class="pre">rendering</span></code>: the type of output in the case of <a class="reference internal" href="#TrackParticles" title="TrackParticles"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TrackParticles()</span></code></a>:<ul>
-<li><code class="docutils literal notranslate"><span class="pre">&quot;trajectory&quot;</span></code>: show particle trajectories. One file is generated for all trajectories.</li>
-<li><code class="docutils literal notranslate"><span class="pre">&quot;cloud&quot;</span></code>: show a cloud of particles. One file is generated for each iteration.</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfPieces</span></code>: the number of files into which the data will be split.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rendering</span></code>: the type of output in the case of <a class="reference internal" href="#TrackParticles" title="TrackParticles"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TrackParticles()</span></code></a>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;trajectory&quot;</span></code>: show particle trajectories. One file is generated for all trajectories.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;cloud&quot;</span></code>: show a cloud of particles. One file is generated for each iteration.</p></li>
 </ul>
 </li>
-<li><code class="docutils literal notranslate"><span class="pre">data_format</span></code>: the data formatting in the case of <a class="reference internal" href="#TrackParticles" title="TrackParticles"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TrackParticles()</span></code></a>,
-either <code class="docutils literal notranslate"><span class="pre">&quot;vtk&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;xml&quot;</span></code>. The format <code class="docutils literal notranslate"><span class="pre">&quot;vtk&quot;</span></code> results in ascii.</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data_format</span></code>: the data formatting in the case of <a class="reference internal" href="#TrackParticles" title="TrackParticles"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TrackParticles()</span></code></a>,
+either <code class="docutils literal notranslate"><span class="pre">&quot;vtk&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;xml&quot;</span></code>. The format <code class="docutils literal notranslate"><span class="pre">&quot;vtk&quot;</span></code> results in ascii.</p></li>
 </ul>
 <p><strong>Example for tracked particles</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">S</span> <span class="o">=</span> <span class="n">happi</span><span class="o">.</span><span class="n">Open</span><span class="p">(</span><span class="s2">&quot;path/to/my/results&quot;</span><span class="p">)</span>
@@ -1165,12 +1127,12 @@ at one given timestep.</p>
 <div class="line">If the data is 0D, it is plotted as a <strong>curve</strong> as function of time.</div>
 </div>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">timestep</span></code>: The iteration number at which to plot the data.</li>
-<li><code class="docutils literal notranslate"><span class="pre">saveAs</span></code>: name of a directory where to save each frame as figures.
+<li><p><code class="docutils literal notranslate"><span class="pre">timestep</span></code>: The iteration number at which to plot the data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">saveAs</span></code>: name of a directory where to save each frame as figures.
 You can even specify a filename such as <code class="docutils literal notranslate"><span class="pre">mydir/prefix.png</span></code> and it will automatically
 make successive files showing the timestep: <code class="docutils literal notranslate"><span class="pre">mydir/prefix0.png</span></code>, <code class="docutils literal notranslate"><span class="pre">mydir/prefix1.png</span></code>,
-etc.</li>
-<li><code class="docutils literal notranslate"><span class="pre">axes</span></code>: Matplotlib’s axes handle on which to plot. If None, make new axes.</li>
+etc.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">axes</span></code>: Matplotlib’s axes handle on which to plot. If None, make new axes.</p></li>
 </ul>
 <p>You may also have keyword-arguments (<code class="docutils literal notranslate"><span class="pre">kwargs</span></code>) described in <a class="reference internal" href="#otherkwargs"><span class="std std-ref">Other arguments for diagnostics</span></a>.</p>
 </dd></dl>
@@ -1239,10 +1201,10 @@ are streaked to produce a 2D image where the second axis is time.</p>
 <code class="descname">animate</code><span class="sig-paren">(</span><em>movie=&quot;&quot;</em>, <em>fps=15</em>, <em>dpi=200</em>, <em>saveAs=None</em>, <em>axes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#animate" title="Permalink to this definition">¶</a></dt>
 <dd><p>All arguments are identical to those of <code class="docutils literal notranslate"><span class="pre">streak</span></code>, with the addition of:</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">movie</span></code>: name of a file to create a movie, such as <code class="docutils literal notranslate"><span class="pre">&quot;movie.avi&quot;</span></code> or  <code class="docutils literal notranslate"><span class="pre">&quot;movie.gif&quot;</span></code>.
-If <code class="docutils literal notranslate"><span class="pre">movie=&quot;&quot;</span></code> no movie is created.</li>
-<li><code class="docutils literal notranslate"><span class="pre">fps</span></code>: number of frames per second (only if movie requested).</li>
-<li><code class="docutils literal notranslate"><span class="pre">dpi</span></code>: number of dots per inch (only if movie requested).</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">movie</span></code>: name of a file to create a movie, such as <code class="docutils literal notranslate"><span class="pre">&quot;movie.avi&quot;</span></code> or  <code class="docutils literal notranslate"><span class="pre">&quot;movie.gif&quot;</span></code>.
+If <code class="docutils literal notranslate"><span class="pre">movie=&quot;&quot;</span></code> no movie is created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fps</span></code>: number of frames per second (only if movie requested).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dpi</span></code>: number of dots per inch (only if movie requested).</p></li>
 </ul>
 </dd></dl>
 
@@ -1261,9 +1223,8 @@ If <code class="docutils literal notranslate"><span class="pre">movie=&quot;&quo
 <dd><p>Makes an animated figure containing several plots (one for each diagnostic).
 If all diagnostics are of similar type, they may be overlayed on only one plot.</p>
 <ul>
-<li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">diag1</span></code>, <code class="docutils literal notranslate"><span class="pre">diag2</span></code>, etc.</dt>
-<dd><div class="first last line-block">
+<li><dl>
+<dt><code class="docutils literal notranslate"><span class="pre">diag1</span></code>, <code class="docutils literal notranslate"><span class="pre">diag2</span></code>, etc.</dt><dd><div class="line-block">
 <div class="line">Diagnostics prepared by <code class="docutils literal notranslate"><span class="pre">Scalar()</span></code>, <code class="docutils literal notranslate"><span class="pre">Field()</span></code>, <code class="docutils literal notranslate"><span class="pre">Probe()</span></code>, etc.</div>
 </div>
 </dd>
@@ -1272,18 +1233,18 @@ If all diagnostics are of similar type, they may be overlayed on only one plot.<
 </ul>
 <p>Keyword-arguments <code class="docutils literal notranslate"><span class="pre">kwargs</span></code> are:</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">figure</span></code>: The figure number that is passed to matplotlib (default is 1).</li>
-<li><code class="docutils literal notranslate"><span class="pre">shape</span></code>: The arrangement of plots inside the figure. For instance, <code class="docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">1]</span></code>
+<li><p><code class="docutils literal notranslate"><span class="pre">figure</span></code>: The figure number that is passed to matplotlib (default is 1).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shape</span></code>: The arrangement of plots inside the figure. For instance, <code class="docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">1]</span></code>
 makes two plots stacked vertically, and <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2]</span></code> makes two plots stacked horizontally.
-If absent, stacks plots vertically.</li>
-<li><code class="docutils literal notranslate"><span class="pre">movie</span></code> : filename to create a movie.</li>
-<li><code class="docutils literal notranslate"><span class="pre">fps</span></code> : frames per second for the movie.</li>
-<li><code class="docutils literal notranslate"><span class="pre">dpi</span></code> : resolution of the movie.</li>
-<li><code class="docutils literal notranslate"><span class="pre">saveAs</span></code>: name of a directory where to save each frame as figures.
+If absent, stacks plots vertically.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">movie</span></code> : filename to create a movie.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fps</span></code> : frames per second for the movie.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dpi</span></code> : resolution of the movie.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">saveAs</span></code>: name of a directory where to save each frame as figures.
 You can even specify a filename such as <code class="docutils literal notranslate"><span class="pre">mydir/prefix.png</span></code> and it will automatically
-make successive files showing the timestep: <code class="docutils literal notranslate"><span class="pre">mydir/prefix0.png</span></code>, <code class="docutils literal notranslate"><span class="pre">mydir/prefix1.png</span></code>, etc.</li>
-<li><code class="docutils literal notranslate"><span class="pre">skipAnimation</span></code> : if True, plots only the last frame.</li>
-<li><code class="docutils literal notranslate"><span class="pre">timesteps</span></code>: same as the <code class="docutils literal notranslate"><span class="pre">timesteps</span></code> argument of the <a class="reference internal" href="#plot" title="plot"><code class="xref py py-func docutils literal notranslate"><span class="pre">plot()</span></code></a> method.</li>
+make successive files showing the timestep: <code class="docutils literal notranslate"><span class="pre">mydir/prefix0.png</span></code>, <code class="docutils literal notranslate"><span class="pre">mydir/prefix1.png</span></code>, etc.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skipAnimation</span></code> : if True, plots only the last frame.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timesteps</span></code>: same as the <code class="docutils literal notranslate"><span class="pre">timesteps</span></code> argument of the <a class="reference internal" href="#plot" title="plot"><code class="xref py py-func docutils literal notranslate"><span class="pre">plot()</span></code></a> method.</p></li>
 </ul>
 </dd></dl>
 
@@ -1295,10 +1256,11 @@ make successive files showing the timestep: <code class="docutils literal notran
 </pre></div>
 </div>
 <blockquote>
-<div>This plots a Probe and a ParticleBinning on the same figure, and makes an animation for all available timesteps.</div></blockquote>
+<div><p>This plots a Probe and a ParticleBinning on the same figure, and makes an animation for all available timesteps.</p>
+</div></blockquote>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">To plot several quantities on the same graph, you can try <code class="docutils literal notranslate"><span class="pre">shape=[1,1]</span></code>.
+<p class="admonition-title">Note</p>
+<p>To plot several quantities on the same graph, you can try <code class="docutils literal notranslate"><span class="pre">shape=[1,1]</span></code>.
 One diagnostic may have the option <code class="docutils literal notranslate"><span class="pre">side=&quot;right&quot;</span></code> to use the right-hand-side axis.</p>
 </div>
 <hr class="docutils" />
@@ -1308,26 +1270,26 @@ One diagnostic may have the option <code class="docutils literal notranslate"><s
 <p>In addition to <code class="docutils literal notranslate"><span class="pre">figure</span></code>, <code class="docutils literal notranslate"><span class="pre">vmin</span></code>, <code class="docutils literal notranslate"><span class="pre">vmax</span></code>, <code class="docutils literal notranslate"><span class="pre">xmin</span></code>, <code class="docutils literal notranslate"><span class="pre">xmax</span></code>, <code class="docutils literal notranslate"><span class="pre">ymin</span></code> and <code class="docutils literal notranslate"><span class="pre">ymax</span></code>,
 there are many more optional arguments. They are directly passed to the <em>matplotlib</em> package.</p>
 <ul>
-<li><p class="first">Options for the figure: <code class="docutils literal notranslate"><span class="pre">figsize</span></code>, <code class="docutils literal notranslate"><span class="pre">dpi</span></code>, <code class="docutils literal notranslate"><span class="pre">facecolor</span></code>, <code class="docutils literal notranslate"><span class="pre">edgecolor</span></code></p>
+<li><p>Options for the figure: <code class="docutils literal notranslate"><span class="pre">figsize</span></code>, <code class="docutils literal notranslate"><span class="pre">dpi</span></code>, <code class="docutils literal notranslate"><span class="pre">facecolor</span></code>, <code class="docutils literal notranslate"><span class="pre">edgecolor</span></code></p>
 <p>Please refer to <a class="reference external" href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.figure">matplotlib’s figure options</a>.</p>
 </li>
-<li><p class="first">Options for the axes frame: <code class="docutils literal notranslate"><span class="pre">aspect</span></code>, <code class="docutils literal notranslate"><span class="pre">axis_bgcolor</span></code>, <code class="docutils literal notranslate"><span class="pre">frame_on</span></code>, <code class="docutils literal notranslate"><span class="pre">position</span></code>, <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">visible</span></code>,
+<li><p>Options for the axes frame: <code class="docutils literal notranslate"><span class="pre">aspect</span></code>, <code class="docutils literal notranslate"><span class="pre">axis_bgcolor</span></code>, <code class="docutils literal notranslate"><span class="pre">frame_on</span></code>, <code class="docutils literal notranslate"><span class="pre">position</span></code>, <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">visible</span></code>,
 <code class="docutils literal notranslate"><span class="pre">xlabel</span></code>, <code class="docutils literal notranslate"><span class="pre">xscale</span></code>, <code class="docutils literal notranslate"><span class="pre">xticklabels</span></code>, <code class="docutils literal notranslate"><span class="pre">xticks</span></code>, <code class="docutils literal notranslate"><span class="pre">ylabel</span></code>, <code class="docutils literal notranslate"><span class="pre">yscale</span></code>, <code class="docutils literal notranslate"><span class="pre">yticklabels</span></code>, <code class="docutils literal notranslate"><span class="pre">yticks</span></code>, <code class="docutils literal notranslate"><span class="pre">zorder</span></code></p>
 <p>Please refer to matplotlib’s axes options: the same as functions starting with <code class="docutils literal notranslate"><span class="pre">set_</span></code> listed <a class="reference external" href="http://matplotlib.org/api/axes_api.html">here</a>.</p>
 </li>
-<li><p class="first">Options for the lines: <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">dashes</span></code>, <code class="docutils literal notranslate"><span class="pre">drawstyle</span></code>, <code class="docutils literal notranslate"><span class="pre">fillstyle</span></code>, <code class="docutils literal notranslate"><span class="pre">label</span></code>, <code class="docutils literal notranslate"><span class="pre">linestyle</span></code>, <code class="docutils literal notranslate"><span class="pre">linewidth</span></code>,
+<li><p>Options for the lines: <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">dashes</span></code>, <code class="docutils literal notranslate"><span class="pre">drawstyle</span></code>, <code class="docutils literal notranslate"><span class="pre">fillstyle</span></code>, <code class="docutils literal notranslate"><span class="pre">label</span></code>, <code class="docutils literal notranslate"><span class="pre">linestyle</span></code>, <code class="docutils literal notranslate"><span class="pre">linewidth</span></code>,
 <code class="docutils literal notranslate"><span class="pre">marker</span></code>, <code class="docutils literal notranslate"><span class="pre">markeredgecolor</span></code>, <code class="docutils literal notranslate"><span class="pre">markeredgewidth</span></code>, <code class="docutils literal notranslate"><span class="pre">markerfacecolor</span></code>, <code class="docutils literal notranslate"><span class="pre">markerfacecoloralt</span></code>,
 <code class="docutils literal notranslate"><span class="pre">markersize</span></code>, <code class="docutils literal notranslate"><span class="pre">markevery</span></code>, <code class="docutils literal notranslate"><span class="pre">visible</span></code>, <code class="docutils literal notranslate"><span class="pre">zorder</span></code></p>
 <p>Please refer to <a class="reference external" href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.plot">matplotlib’s line options</a>.</p>
 </li>
-<li><p class="first">Options for the image: <code class="docutils literal notranslate"><span class="pre">cmap</span></code>, <code class="docutils literal notranslate"><span class="pre">aspect</span></code>, <code class="docutils literal notranslate"><span class="pre">interpolation</span></code></p>
+<li><p>Options for the image: <code class="docutils literal notranslate"><span class="pre">cmap</span></code>, <code class="docutils literal notranslate"><span class="pre">aspect</span></code>, <code class="docutils literal notranslate"><span class="pre">interpolation</span></code></p>
 <p>Please refer to <a class="reference external" href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.imshow">matplotlib’s image options</a>.</p>
 </li>
-<li><p class="first">Options for the colorbar: <code class="docutils literal notranslate"><span class="pre">cbaspect</span></code>, <code class="docutils literal notranslate"><span class="pre">orientation</span></code>, <code class="docutils literal notranslate"><span class="pre">fraction</span></code>, <code class="docutils literal notranslate"><span class="pre">pad</span></code>, <code class="docutils literal notranslate"><span class="pre">shrink</span></code>, <code class="docutils literal notranslate"><span class="pre">anchor</span></code>, <code class="docutils literal notranslate"><span class="pre">panchor</span></code>,
+<li><p>Options for the colorbar: <code class="docutils literal notranslate"><span class="pre">cbaspect</span></code>, <code class="docutils literal notranslate"><span class="pre">orientation</span></code>, <code class="docutils literal notranslate"><span class="pre">fraction</span></code>, <code class="docutils literal notranslate"><span class="pre">pad</span></code>, <code class="docutils literal notranslate"><span class="pre">shrink</span></code>, <code class="docutils literal notranslate"><span class="pre">anchor</span></code>, <code class="docutils literal notranslate"><span class="pre">panchor</span></code>,
 <code class="docutils literal notranslate"><span class="pre">extend</span></code>, <code class="docutils literal notranslate"><span class="pre">extendfrac</span></code>, <code class="docutils literal notranslate"><span class="pre">extendrect</span></code>, <code class="docutils literal notranslate"><span class="pre">spacing</span></code>, <code class="docutils literal notranslate"><span class="pre">ticks</span></code>, <code class="docutils literal notranslate"><span class="pre">format</span></code>, <code class="docutils literal notranslate"><span class="pre">drawedges</span></code></p>
 <p>Please refer to <a class="reference external" href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.colorbar">matplotlib’s colorbar options</a>.</p>
 </li>
-<li><p class="first">Options for the tick labels: <code class="docutils literal notranslate"><span class="pre">style_x</span></code>, <code class="docutils literal notranslate"><span class="pre">scilimits_x</span></code>, <code class="docutils literal notranslate"><span class="pre">useOffset_x</span></code>, <code class="docutils literal notranslate"><span class="pre">style_y</span></code>, <code class="docutils literal notranslate"><span class="pre">scilimits_y</span></code>, <code class="docutils literal notranslate"><span class="pre">useOffset_y</span></code></p>
+<li><p>Options for the tick labels: <code class="docutils literal notranslate"><span class="pre">style_x</span></code>, <code class="docutils literal notranslate"><span class="pre">scilimits_x</span></code>, <code class="docutils literal notranslate"><span class="pre">useOffset_x</span></code>, <code class="docutils literal notranslate"><span class="pre">style_y</span></code>, <code class="docutils literal notranslate"><span class="pre">scilimits_y</span></code>, <code class="docutils literal notranslate"><span class="pre">useOffset_y</span></code></p>
 <p>Please refer to <a class="reference external" href="http://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.ticklabel_format.html">matplotlib’s tick label format</a>.</p>
 </li>
 </ul>
@@ -1340,8 +1302,9 @@ there are many more optional arguments. They are directly passed to the <em>matp
 </div>
 </div></blockquote>
 <blockquote>
-<div>Many colormaps are available from the <em>matplotlib</em> package. With <code class="docutils literal notranslate"><span class="pre">cmap=&quot;&quot;</span></code>, you will get a list of available colormaps.
-Smilei’s default colormaps are: <code class="docutils literal notranslate"><span class="pre">smilei</span></code>, <code class="docutils literal notranslate"><span class="pre">smilei_r</span></code>, <code class="docutils literal notranslate"><span class="pre">smileiD</span></code> and <code class="docutils literal notranslate"><span class="pre">smileiD_r</span></code>.</div></blockquote>
+<div><p>Many colormaps are available from the <em>matplotlib</em> package. With <code class="docutils literal notranslate"><span class="pre">cmap=&quot;&quot;</span></code>, you will get a list of available colormaps.
+Smilei’s default colormaps are: <code class="docutils literal notranslate"><span class="pre">smilei</span></code>, <code class="docutils literal notranslate"><span class="pre">smilei_r</span></code>, <code class="docutils literal notranslate"><span class="pre">smileiD</span></code> and <code class="docutils literal notranslate"><span class="pre">smileiD_r</span></code>.</p>
+</div></blockquote>
 </div>
 <hr class="docutils" />
 <div class="section" id="update-the-plotting-options">
@@ -1376,7 +1339,7 @@ Smilei’s default colormaps are: <code class="docutils literal notranslate"><sp
 <code class="descclassname">happi.</code><code class="descname">openNamelist</code><span class="sig-paren">(</span><em>namelist</em><span class="sig-paren">)</span><a class="headerlink" href="#happi.openNamelist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads a namelist and stores all its content in the returned object.</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">namelist</span></code>: the path to the namelist.</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namelist</span></code>: the path to the namelist.</p></li>
 </ul>
 </dd></dl>
 
@@ -1398,11 +1361,11 @@ Smilei’s default colormaps are: <code class="docutils literal notranslate"><sp
       <a href="site.html">Site index</a>
       </div>
       <div>
-        Last updated on Apr 16, 2019
+        Last updated on Apr 26, 2019
       </div>
       
       <div>
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
       </div>
       
     </div>

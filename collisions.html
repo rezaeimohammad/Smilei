@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Binary collisions &#8212; Smilei v4.1-347-g03064f60 documentation</title>
+    <meta charset="utf-8" />
+    <title>Binary collisions &#8212; Smilei b&#39;v4.1-362-gdbf16a81\n&#39; documentation</title>
     <link rel="stylesheet" href="_static/smilei_theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -400,9 +398,9 @@
 code <strong class="program">Calder</strong>. The following references describe the physics
 and numerics of this implementation.</p>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="#perez2012" id="id1">[Perez2012]</a> gives an overview of the technique.</div>
-<div class="line"><a class="reference internal" href="#nanbu1997" id="id2">[Nanbu1997]</a> and <a class="reference internal" href="#nanbu1998" id="id3">[Nanbu1998]</a> give the original technique from which <a class="reference internal" href="#perez2012" id="id4">[Perez2012]</a> was developed.</div>
-<div class="line"><a class="reference internal" href="#sentoku2008" id="id5">[Sentoku2008]</a>, <a class="reference internal" href="#lee1984" id="id6">[Lee1984]</a> and <a class="reference internal" href="#frankel1979" id="id7">[Frankel1979]</a> provide additional information.</div>
+<div class="line"><a class="reference internal" href="#perez2012" id="id1"><span>[Perez2012]</span></a> gives an overview of the technique.</div>
+<div class="line"><a class="reference internal" href="#nanbu1997" id="id2"><span>[Nanbu1997]</span></a> and <a class="reference internal" href="#nanbu1998" id="id3"><span>[Nanbu1998]</span></a> give the original technique from which <a class="reference internal" href="#perez2012" id="id4"><span>[Perez2012]</span></a> was developed.</div>
+<div class="line"><a class="reference internal" href="#sentoku2008" id="id5"><span>[Sentoku2008]</span></a>, <a class="reference internal" href="#lee1984" id="id6"><span>[Lee1984]</span></a> and <a class="reference internal" href="#frankel1979" id="id7"><span>[Frankel1979]</span></a> provide additional information.</div>
 </div>
 <p>Please refer to <a class="reference internal" href="namelist.html#collisions"><span class="std std-ref">that doc</span></a> for an explanation of how to add collisions in the namelist file.</p>
 <hr class="docutils" />
@@ -423,7 +421,7 @@ given in the input file.</p>
 <div><div class="line-block">
 <div class="line">Create two arrays of indices pointing to all particles of each species group.</div>
 <div class="line">Shuffle the largest array. The other array is not shuffled.</div>
-<div class="line">=&gt; The two resulting arrays represent pairs of particles (see algorithm in <a class="reference internal" href="#nanbu1998" id="id8">[Nanbu1998]</a>).</div>
+<div class="line">=&gt; The two resulting arrays represent pairs of particles (see algorithm in <a class="reference internal" href="#nanbu1998" id="id8"><span>[Nanbu1998]</span></a>).</div>
 </div>
 </div></blockquote>
 <p>Calculate a few intermediate quantities:</p>
@@ -431,7 +429,7 @@ given in the input file.</p>
 <div><div class="line-block">
 <div class="line">Particle density <span class="math notranslate nohighlight">\(n_1\)</span> of group 1.</div>
 <div class="line">Particle density <span class="math notranslate nohighlight">\(n_2\)</span>  of group 2.</div>
-<div class="line"><em>Crossed</em> particle density <span class="math notranslate nohighlight">\(n_{12}\)</span> (see <a class="reference internal" href="#perez2012" id="id9">[Perez2012]</a>).</div>
+<div class="line"><em>Crossed</em> particle density <span class="math notranslate nohighlight">\(n_{12}\)</span> (see <a class="reference internal" href="#perez2012" id="id9"><span>[Perez2012]</span></a>).</div>
 <div class="line">Other constants.</div>
 </div>
 </div></blockquote>
@@ -439,14 +437,14 @@ given in the input file.</p>
 <blockquote>
 <div><div class="line-block">
 <div class="line">Calculate the momenta in the center-of-mass (COM) frame.</div>
-<div class="line">Calculate the coulomb log if requested (see <a class="reference internal" href="#perez2012" id="id10">[Perez2012]</a>).</div>
-<div class="line">Calculate the parameter <span class="math notranslate nohighlight">\(s\)</span> and its correction at low temperature (see <a class="reference internal" href="#perez2012" id="id11">[Perez2012]</a>).</div>
-<div class="line">Pick the deflection angle (see <a class="reference internal" href="#nanbu1997" id="id12">[Nanbu1997]</a>).</div>
+<div class="line">Calculate the coulomb log if requested (see <a class="reference internal" href="#perez2012" id="id10"><span>[Perez2012]</span></a>).</div>
+<div class="line">Calculate the parameter <span class="math notranslate nohighlight">\(s\)</span> and its correction at low temperature (see <a class="reference internal" href="#perez2012" id="id11"><span>[Perez2012]</span></a>).</div>
+<div class="line">Pick the deflection angle (see <a class="reference internal" href="#nanbu1997" id="id12"><span>[Nanbu1997]</span></a>).</div>
 <div class="line">Deflect particles in the COM frame and go back to the laboratory frame.</div>
 </div>
 </div></blockquote>
 <p class="rubric">Modification in Smilei</p>
-<p>A typo has been introduced in <a class="reference internal" href="#perez2012" id="id13">[Perez2012]</a>, Eq. (22), corresponding to the calculation of
+<p>A typo has been introduced in <a class="reference internal" href="#perez2012" id="id13"><span>[Perez2012]</span></a>, Eq. (22), corresponding to the calculation of
 the Coulomb Logarithm: the last parenthesis is written as a squared expression,
 but should not. This was corrected in <strong class="program">Smilei</strong>.</p>
 </div>
@@ -461,23 +459,23 @@ The beam gets strong isotropization =&gt; the average velocity relaxes to zero.<
 <p>Three figures show the time-evolution of the longitudinal <span class="math notranslate nohighlight">\(\left&lt;v_\|\right&gt;\)</span>
 and transverse velocity <span class="math notranslate nohighlight">\(\sqrt{\left&lt;v_\perp^2\right&gt;}\)</span></p>
 <ul class="simple">
-<li><a class="reference internal" href="#beam1"><span class="std std-numref">Fig. 9</span></a> : initial velocity = 0.05, ion charge = 1</li>
-<li><a class="reference internal" href="#beam2"><span class="std std-numref">Fig. 10</span></a> : initial velocity = 0.01, ion charge = 1</li>
-<li><a class="reference internal" href="#beam3"><span class="std std-numref">Fig. 11</span></a> : initial velocity = 0.01, ion charge = 3</li>
+<li><p><a class="reference internal" href="#beam1"><span class="std std-numref">Fig. 9</span></a> : initial velocity = 0.05, ion charge = 1</p></li>
+<li><p><a class="reference internal" href="#beam2"><span class="std std-numref">Fig. 10</span></a> : initial velocity = 0.01, ion charge = 1</p></li>
+<li><p><a class="reference internal" href="#beam3"><span class="std std-numref">Fig. 11</span></a> : initial velocity = 0.01, ion charge = 3</p></li>
 </ul>
 <p>Each of these figures show 3 different blue and red curves which correspond to different
 ratios of particle weights: 0.1, 1, and 10.</p>
-<div class="figure" id="id23">
+<div class="figure align-center" id="id23">
 <span id="beam1"></span><a class="reference internal image-reference" href="_images/beam_relaxation123.png"><img alt="_images/beam_relaxation123.png" src="_images/beam_relaxation123.png" style="width: 10cm;" /></a>
-<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Relaxation of an electron beam. Initial velocity = 0.05, ion charge = 1.</span></p>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Relaxation of an electron beam. Initial velocity = 0.05, ion charge = 1.</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure" id="id24">
+<div class="figure align-center" id="id24">
 <span id="beam2"></span><a class="reference internal image-reference" href="_images/beam_relaxation456.png"><img alt="_images/beam_relaxation456.png" src="_images/beam_relaxation456.png" style="width: 10cm;" /></a>
-<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Relaxation of an electron beam. Initial velocity = 0.01, ion charge = 1.</span></p>
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Relaxation of an electron beam. Initial velocity = 0.01, ion charge = 1.</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure" id="id25">
+<div class="figure align-center" id="id25">
 <span id="beam3"></span><a class="reference internal image-reference" href="_images/beam_relaxation789.png"><img alt="_images/beam_relaxation789.png" src="_images/beam_relaxation789.png" style="width: 10cm;" /></a>
-<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Relaxation of an electron beam. Initial velocity = 0.01, ion charge = 3.</span></p>
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Relaxation of an electron beam. Initial velocity = 0.01, ion charge = 3.</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
 </div>
 <p>The black lines correspond to the theoretical rates taken from the NRL formulary:</p>
 <div class="math notranslate nohighlight">
@@ -493,9 +491,9 @@ Through e-i collisions, the two temperatures become equal.
 The ions are of very small mass <span class="math notranslate nohighlight">\(m_i=10 m_e\)</span> to speed-up the calculation.
 Three cases are simulated, corresponding to different ratios of weights: 0.2, 1 and 5.
 They are plotted in <a class="reference internal" href="#thermalization"><span class="std std-numref">Fig. 12</span></a>.</p>
-<div class="figure" id="id26">
+<div class="figure align-center" id="id26">
 <span id="thermalization"></span><a class="reference internal image-reference" href="_images/thermalisation_ei123.png"><img alt="_images/thermalisation_ei123.png" src="_images/thermalisation_ei123.png" style="width: 9cm;" /></a>
-<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Thermalization between two species.</span></p>
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Thermalization between two species.</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
 </div>
 <p>The black lines correspond to the theoretical rates taken from the NRL formulary:</p>
 <div class="math notranslate nohighlight">
@@ -506,9 +504,9 @@ They are plotted in <a class="reference internal" href="#thermalization"><span c
 <p>Electrons have a longitudinal temperature different from their transverse temperature.
 They collide only with themselves (intra-collisions) and the anisotropy disappears
 as shown in <a class="reference internal" href="#temperature-isotropization"><span class="std std-numref">Fig. 13</span></a>.</p>
-<div class="figure" id="id27">
+<div class="figure align-center" id="id27">
 <span id="temperature-isotropization"></span><a class="reference internal image-reference" href="_images/temperature_isotropization1.png"><img alt="_images/temperature_isotropization1.png" src="_images/temperature_isotropization1.png" style="width: 10cm;" /></a>
-<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Temperature isotropization of an electron population.</span></p>
+<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Temperature isotropization of an electron population.</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
 </div>
 <p>The black lines correspond to the theoretical rates taken from the NRL formulary:</p>
 <div class="math notranslate nohighlight">
@@ -520,21 +518,21 @@ A^{-2} \left[-3+(3-A)\frac{\rm{arctanh}(\sqrt{A})}{\sqrt{A}}\right]
 Their velocity distribution along <span class="math notranslate nohighlight">\(x\)</span> is rectangular.
 They collide only with themselves and the rectangle becomes a maxwellian
 as shown in <a class="reference internal" href="#maxwellianization"><span class="std std-numref">Fig. 14</span></a>.</p>
-<div class="figure" id="id28">
+<div class="figure align-center" id="id28">
 <span id="maxwellianization"></span><a class="reference internal image-reference" href="_images/Maxwellianization1.png"><img alt="_images/Maxwellianization1.png" src="_images/Maxwellianization1.png" style="width: 10cm;" /></a>
 <p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">Maxwellianization of an electron population.
 Each blue curve is the distribution at a given time.
-The red curve is an example of a gaussian function.</span></p>
+The red curve is an example of a gaussian function.</span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
 </div>
 <p class="rubric">5. Stopping power</p>
 <p>Test electrons (very low density) collide with background electrons of density
 <span class="math notranslate nohighlight">\(10\,n_c\)</span> and <span class="math notranslate nohighlight">\(T_e=5\)</span> keV.
 Depending on their initial velocity, they are slowed down at different rates,
 as shown in <a class="reference internal" href="#stoppingpower"><span class="std std-numref">Fig. 15</span></a>.</p>
-<div class="figure" id="id29">
+<div class="figure align-center" id="id29">
 <span id="stoppingpower"></span><a class="reference internal image-reference" href="_images/Stopping_power123.png"><img alt="_images/Stopping_power123.png" src="_images/Stopping_power123.png" style="width: 10cm;" /></a>
 <p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">Stopping power of test electrons into a background electron population.
-Each point is one simulation. The black line is Frankel’s theory <a class="reference internal" href="#frankel1979" id="id14">[Frankel1979]</a>.</span></p>
+Each point is one simulation. The black line is Frankel’s theory <a class="reference internal" href="#frankel1979" id="id14"><span>[Frankel1979]</span></a>.</span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
 </div>
 <p class="rubric">6. Conductivity</p>
 <p>Solid-density Cu is simulated at different temperatures (e-i equilibrium) with only
@@ -542,36 +540,36 @@ e-i collisions. An electric field of <span class="math notranslate nohighlight">
 applied using two charged layers on each side of the solid Cu.
 The electron velocity increases until a limit value <span class="math notranslate nohighlight">\(v_f\)</span>.
 The resulting conductivity <span class="math notranslate nohighlight">\(\sigma=en_ev_f/E\)</span> is compared in
-<a class="reference internal" href="#conductivity"><span class="std std-numref">Fig. 16</span></a> to the models in <a class="reference internal" href="#lee1984" id="id15">[Lee1984]</a> and <a class="reference internal" href="#perez2012" id="id16">[Perez2012]</a>.</p>
-<div class="figure" id="id30">
+<a class="reference internal" href="#conductivity"><span class="std std-numref">Fig. 16</span></a> to the models in <a class="reference internal" href="#lee1984" id="id15"><span>[Lee1984]</span></a> and <a class="reference internal" href="#perez2012" id="id16"><span>[Perez2012]</span></a>.</p>
+<div class="figure align-center" id="id30">
 <span id="conductivity"></span><a class="reference internal image-reference" href="_images/conductivity.png"><img alt="_images/conductivity.png" src="_images/conductivity.png" style="width: 10cm;" /></a>
-<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">Conductivity of solid-density copper. Each point is one simulation.</span></p>
+<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">Conductivity of solid-density copper. Each point is one simulation.</span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
 </div>
 <hr class="docutils" />
 </div>
 <div class="section" id="collisional-ionization">
 <span id="collionization"></span><h2>Collisional ionization<a class="headerlink" href="#collisional-ionization" title="Permalink to this headline">¶</a></h2>
 <p>The binary collisions can also be ionizing if they are <strong>electron-ion</strong> collisions.
-The approach is almost the same as that provided in <a class="reference internal" href="#perez2012" id="id17">[Perez2012]</a>.</p>
+The approach is almost the same as that provided in <a class="reference internal" href="#perez2012" id="id17"><span>[Perez2012]</span></a>.</p>
 <p>When ionization is requested by setting <code class="docutils literal notranslate"><span class="pre">ionizing=True</span></code>, a few additional operations
 are executed:</p>
 <ul class="simple">
-<li>At the beginning of the run, cross-sections are calculated from tabulated binding
+<li><p>At the beginning of the run, cross-sections are calculated from tabulated binding
 energies (available for ions up to atomic number 100). These cross-sections are then
-tabulated for each requested ion species.</li>
-<li>Each timestep, the particle density <span class="math notranslate nohighlight">\(n = n_e n_i/n_{ei}\)</span>
-(similar to the densities above for collisions) is calculated.</li>
-<li>During each collision, a probability for ionization is computed. If successful,
+tabulated for each requested ion species.</p></li>
+<li><p>Each timestep, the particle density <span class="math notranslate nohighlight">\(n = n_e n_i/n_{ei}\)</span>
+(similar to the densities above for collisions) is calculated.</p></li>
+<li><p>During each collision, a probability for ionization is computed. If successful,
 the ion charge is increased, the incident electron is slowed down, and a new electron
-is created.</li>
+is created.</p></li>
 </ul>
 <p class="rubric">Warnings</p>
 <ul class="simple">
-<li>This scheme does not account for recombination, which would balance ionization
-over long time scales.</li>
+<li><p>This scheme does not account for recombination, which would balance ionization
+over long time scales.</p></li>
 </ul>
 <p class="rubric">Relativistic change of frame</p>
-<p>A modification has been added to the theory of <a class="reference internal" href="#perez2012" id="id18">[Perez2012]</a> in order to account for the
+<p>A modification has been added to the theory of <a class="reference internal" href="#perez2012" id="id18"><span>[Perez2012]</span></a> in order to account for the
 laboratory frame being different from the ion frame. Considering <span class="math notranslate nohighlight">\(\overrightarrow{p_e}\)</span>
 and <span class="math notranslate nohighlight">\(\overrightarrow{p_i}\)</span> the electron and ion momenta in the laboratory frame,
 and their associated Lorentz factors <span class="math notranslate nohighlight">\(\gamma_e\)</span> and <span class="math notranslate nohighlight">\(\gamma_i\)</span>, we define
@@ -598,7 +596,7 @@ It is created with energy <span class="math notranslate nohighlight">\(m_ec^2 (\
 In the laboratory frame, it becomes
 <span class="math notranslate nohighlight">\(\overrightarrow{q_w}=\alpha_w\overrightarrow{q_e}+(\gamma_w-\alpha_w\gamma_e^\star)\overrightarrow{q_i}\)</span>.</p>
 <p class="rubric">Multiple ionization</p>
-<p>A modification has been added to the theory of <a class="reference internal" href="#perez2012" id="id19">[Perez2012]</a> in order to account for
+<p>A modification has been added to the theory of <a class="reference internal" href="#perez2012" id="id19"><span>[Perez2012]</span></a> in order to account for
 multiple ionization in a single timestep. The approach for field ionization
 by <a class="reference external" href="http://dx.doi.org/10.1063/1.3559494">Nuter et al</a>
 has been adapted to calculate the successive impact ionization probabilities
@@ -638,9 +636,9 @@ loop from <span class="math notranslate nohighlight">\(k=0\)</span> to <span cla
 and with all electrons drifting at a velocity <span class="math notranslate nohighlight">\(v_e=0.03\,c\)</span>. The charge state of ions
 versus time is shown in <a class="reference internal" href="#ionizationrate"><span class="std std-numref">Fig. 17</span></a> where the three dotted curves correspond
 to three different weight ratios between electrons and ions.</p>
-<div class="figure" id="id31">
+<div class="figure align-center" id="id31">
 <span id="ionizationrate"></span><a class="reference internal image-reference" href="_images/ionization_rate.png"><img alt="_images/ionization_rate.png" src="_images/ionization_rate.png" style="width: 10cm;" /></a>
-<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">Ionization of an aluminium plasma by drifting electrons.</span></p>
+<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">Ionization of an aluminium plasma by drifting electrons.</span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
 </div>
 <p>The theoretical curve (in black) corresponds to <span class="math notranslate nohighlight">\(1-\exp\left(v_en_e\sigma t\right)\)</span>
 where <span class="math notranslate nohighlight">\(\sigma\)</span> is the ionization cross section of <span class="math notranslate nohighlight">\(\mathrm{Al}^{3+}\)</span> at the
@@ -651,13 +649,13 @@ distributions and to the next level starting to ionize.</p>
 Electrons of various initial velocities are slowed down by ionizing collisions and their
 energy loss is recorded as a function of time.</p>
 <p>A few examples are given in the left graph of <a class="reference internal" href="#ionizationstoppinpower"><span class="std std-numref">Fig. 18</span></a>.
-The theoretical curve is obtained from <a class="reference internal" href="#rohrlich1954" id="id20">[Rohrlich1954]</a>. Note that this theory does not
+The theoretical curve is obtained from <a class="reference internal" href="#rohrlich1954" id="id20"><span>[Rohrlich1954]</span></a>. Note that this theory does not
 work below a certain average ionization energy, in our case <span class="math notranslate nohighlight">\(\sim 200\)</span> eV.</p>
-<div class="figure" id="id32">
+<div class="figure align-center" id="id32">
 <span id="ionizationstoppinpower"></span><a class="reference internal image-reference" href="_images/ionization_stopping_power.png"><img alt="_images/ionization_stopping_power.png" src="_images/ionization_stopping_power.png" style="width: 14cm;" /></a>
 <p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">Left: ionization slowing down versus time, for electrons injected at various
 initial energies into cold Al. Right: corresponding stopping power versus initial
-electron energy.</span></p>
+electron energy.</span><a class="headerlink" href="#id32" title="Permalink to this image">¶</a></p>
 </div>
 <p>In the same figure, the graph on the right-hand-side provides the stopping power value
 in the same context, at different electron energies. It is compared to the same theory.</p>
@@ -668,9 +666,9 @@ as it does not shuffle the particles for each ionization. Thus, good statistical
 sampling is reached after several timesteps. To test the potential error,
 we ran simulations of electrons at 1 MeV incident on cold atoms. The evolution of the
 secondary electron density is monitored versus time in <a class="reference internal" href="#ionizationmultiple"><span class="std std-numref">Fig. 19</span></a>.</p>
-<div class="figure" id="id33">
+<div class="figure align-center" id="id33">
 <span id="ionizationmultiple"></span><a class="reference internal image-reference" href="_images/ionization_multiple.png"><img alt="_images/ionization_multiple.png" src="_images/ionization_multiple.png" style="width: 10cm;" /></a>
-<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">Secondary electron density <em>vs</em> time, for cold plasmas traversed by a 1 MeV electron beam.</span></p>
+<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">Secondary electron density <em>vs</em> time, for cold plasmas traversed by a 1 MeV electron beam.</span><a class="headerlink" href="#id33" title="Permalink to this image">¶</a></p>
 </div>
 <p>The solid lines correspond to a very-well resolved ionization, whereas the dashed lines
 correspond to a large timestep. A difference is visible initially, but decreases
@@ -685,10 +683,10 @@ a density of 10 times the critical density are given various initial temperature
 Ionization initially increases while the temperature decreases, until, after a while,
 their charge state stagnates (it still increases, but very slowly).
 In <a class="reference internal" href="#ionizationrecombination"><span class="std std-numref">Fig. 20</span></a>, these results are compared to a Thomas-Fermi model
-from <a class="reference internal" href="#desjarlais2001" id="id21">[Desjarlais2001]</a>.</p>
-<div class="figure" id="id34">
+from <a class="reference internal" href="#desjarlais2001" id="id21"><span>[Desjarlais2001]</span></a>.</p>
+<div class="figure align-center" id="id34">
 <span id="ionizationrecombination"></span><a class="reference internal image-reference" href="_images/ionization_recombination.png"><img alt="_images/ionization_recombination.png" src="_images/ionization_recombination.png" style="width: 12cm;" /></a>
-<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">Final charge state of various plasmas at various temperatures.</span></p>
+<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">Final charge state of various plasmas at various temperatures.</span><a class="headerlink" href="#id34" title="Permalink to this image">¶</a></p>
 </div>
 <p>The model does not account for detailed ionization potentials. It provides a rough
 approximation, and is particularly questionable for low temperatures or high Z.
@@ -701,23 +699,23 @@ of the ionization state. Detailed comparison to atomic codes has not been done y
 <p>Using the parameter <code class="docutils literal notranslate"><span class="pre">debug_every</span></code> in a <code class="docutils literal notranslate"><span class="pre">Collisions()</span></code> group (see <a class="reference internal" href="namelist.html#collisions"><span class="std std-ref">Collisions</span></a>)
 will create a file with info about these collisions.
 These information are stored in the files “Collisions0.h5”, “Collisions1.h5”, etc.</p>
-<dl class="docutils">
-<dt>The <em>hdf5</em> files are structured as follows:</dt>
-<dd>One HDF5 file contains several groups called <code class="docutils literal notranslate"><span class="pre">&quot;t********&quot;</span></code> where <code class="docutils literal notranslate"><span class="pre">&quot;********&quot;</span></code>
+<dl class="simple">
+<dt>The <em>hdf5</em> files are structured as follows:</dt><dd><p>One HDF5 file contains several groups called <code class="docutils literal notranslate"><span class="pre">&quot;t********&quot;</span></code> where <code class="docutils literal notranslate"><span class="pre">&quot;********&quot;</span></code>
 is the timestep. Each of these groups contains several arrays, which represent
-quantities <em>vs.</em> space.</dd>
+quantities <em>vs.</em> space.</p>
+</dd>
 </dl>
 <p>The available arrays are:</p>
 <blockquote>
 <div><ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">s</span></code>: defined in <a class="reference internal" href="#perez2012" id="id22">[Perez2012]</a>: <span class="math notranslate nohighlight">\(s=N\left&lt;\theta^2\right&gt;\)</span>, where <span class="math notranslate nohighlight">\(N\)</span> is
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: defined in <a class="reference internal" href="#perez2012" id="id22"><span>[Perez2012]</span></a>: <span class="math notranslate nohighlight">\(s=N\left&lt;\theta^2\right&gt;\)</span>, where <span class="math notranslate nohighlight">\(N\)</span> is
 the typical number of real collisions during a timestep, and
 <span class="math notranslate nohighlight">\(\left&lt;\theta^2\right&gt;\)</span> is the average square deviation of individual
 real collisions. This quantity somewhat represents the typical amount of angular
 deflection accumulated during one timestep.
-<strong>It is recommended that</strong> <span class="math notranslate nohighlight">\(s&lt;1\)</span> <strong>in order to have realistic collisions.</strong></li>
-<li><code class="docutils literal notranslate"><span class="pre">coulomb_log</span></code>: average Coulomb logarithm.</li>
-<li><code class="docutils literal notranslate"><span class="pre">debyelength</span></code>: Debye length (not provided if all Coulomb logs are manually defined).</li>
+<strong>It is recommended that</strong> <span class="math notranslate nohighlight">\(s&lt;1\)</span> <strong>in order to have realistic collisions.</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">coulomb_log</span></code>: average Coulomb logarithm.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">debyelength</span></code>: Debye length (not provided if all Coulomb logs are manually defined).</p></li>
 </ul>
 </div></blockquote>
 <p>The arrays have the same dimension as the plasma, but each element of these arrays
@@ -726,54 +724,32 @@ is an average over all the collisions occurring in a single <em>patch</em>.</p>
 <hr class="docutils" />
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<table class="docutils citation" frame="void" id="desjarlais2001" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id21">[Desjarlais2001]</a></td><td><a class="reference external" href="http://dx.doi.org/10.1002/1521-3986%28200103%2941%3A2%2F3%3C267%3A%3AAID-CTPP267%3E3.0.CO%3B2-P">M. Desjarlais, Contrib. Plasma Phys. 41, 267 (2001)</a></td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="frankel1979" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[Frankel1979]</td><td><em>(<a class="fn-backref" href="#id7">1</a>, <a class="fn-backref" href="#id14">2</a>)</em> <a class="reference external" href="http://dx.doi.org/10.1143/JPSJ.67.4084">N. E. Frankel, K. C. Hines, and R. L. Dewar, Phys. Rev. A 20, 2120 (1979)</a></td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="lee1984" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[Lee1984]</td><td><em>(<a class="fn-backref" href="#id6">1</a>, <a class="fn-backref" href="#id15">2</a>)</em> <a class="reference external" href="http://dx.doi.org/10.1063/1.864744">Y. T. Lee and R. M. More, Phys. Fluids 27, 1273 (1984)</a></td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="nanbu1997" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[Nanbu1997]</td><td><em>(<a class="fn-backref" href="#id2">1</a>, <a class="fn-backref" href="#id12">2</a>)</em> <a class="reference external" href="http://dx.doi.org/10.1103/PhysRevE.55.4642">K. Nanbu, Phys. Rev. E 55, 4642 (1997)</a></td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="nanbu1998" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[Nanbu1998]</td><td><em>(<a class="fn-backref" href="#id3">1</a>, <a class="fn-backref" href="#id8">2</a>)</em> <a class="reference external" href="http://dx.doi.org/10.1006/jcph.1998.6049">K. Nanbu and S. Yonemura, J. Comput. Phys. 145, 639 (1998)</a></td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="perez2012" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[Perez2012]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id4">2</a>, <a class="fn-backref" href="#id9">3</a>, <a class="fn-backref" href="#id10">4</a>, <a class="fn-backref" href="#id11">5</a>, <a class="fn-backref" href="#id13">6</a>, <a class="fn-backref" href="#id16">7</a>, <a class="fn-backref" href="#id17">8</a>, <a class="fn-backref" href="#id18">9</a>, <a class="fn-backref" href="#id19">10</a>, <a class="fn-backref" href="#id22">11</a>)</em> <a class="reference external" href="http://dx.doi.org/10.1063/1.4742167">F. Pérez et al., Phys. Plasmas 19, 083104 (2012)</a></td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="rohrlich1954" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id20">[Rohrlich1954]</a></td><td><a class="reference external" href="http://journals.aps.org/pr/abstract/10.1103/PhysRev.93.38">F. Rohrlich and B. C. Carlson, Phys. Rev. 93, 38 (1954)</a></td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="sentoku2008" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id5">[Sentoku2008]</a></td><td><a class="reference external" href="http://dx.doi.org/10.1016/j.jcp.2008.03.043">Y. Sentoku and A. J. Kemp, J. Comput. Phys. 227, 6846 (2008)</a></td></tr>
-</tbody>
-</table>
+<dl class="citation">
+<dt class="label" id="desjarlais2001"><span class="brackets"><a class="fn-backref" href="#id21">Desjarlais2001</a></span></dt>
+<dd><p><a class="reference external" href="http://dx.doi.org/10.1002/1521-3986%28200103%2941%3A2%2F3%3C267%3A%3AAID-CTPP267%3E3.0.CO%3B2-P">M. Desjarlais, Contrib. Plasma Phys. 41, 267 (2001)</a></p>
+</dd>
+<dt class="label" id="frankel1979"><span class="brackets">Frankel1979</span><span class="fn-backref">(<a href="#id7">1</a>,<a href="#id14">2</a>)</span></dt>
+<dd><p><a class="reference external" href="http://dx.doi.org/10.1143/JPSJ.67.4084">N. E. Frankel, K. C. Hines, and R. L. Dewar, Phys. Rev. A 20, 2120 (1979)</a></p>
+</dd>
+<dt class="label" id="lee1984"><span class="brackets">Lee1984</span><span class="fn-backref">(<a href="#id6">1</a>,<a href="#id15">2</a>)</span></dt>
+<dd><p><a class="reference external" href="http://dx.doi.org/10.1063/1.864744">Y. T. Lee and R. M. More, Phys. Fluids 27, 1273 (1984)</a></p>
+</dd>
+<dt class="label" id="nanbu1997"><span class="brackets">Nanbu1997</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id12">2</a>)</span></dt>
+<dd><p><a class="reference external" href="http://dx.doi.org/10.1103/PhysRevE.55.4642">K. Nanbu, Phys. Rev. E 55, 4642 (1997)</a></p>
+</dd>
+<dt class="label" id="nanbu1998"><span class="brackets">Nanbu1998</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id8">2</a>)</span></dt>
+<dd><p><a class="reference external" href="http://dx.doi.org/10.1006/jcph.1998.6049">K. Nanbu and S. Yonemura, J. Comput. Phys. 145, 639 (1998)</a></p>
+</dd>
+<dt class="label" id="perez2012"><span class="brackets">Perez2012</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id4">2</a>,<a href="#id9">3</a>,<a href="#id10">4</a>,<a href="#id11">5</a>,<a href="#id13">6</a>,<a href="#id16">7</a>,<a href="#id17">8</a>,<a href="#id18">9</a>,<a href="#id19">10</a>,<a href="#id22">11</a>)</span></dt>
+<dd><p><a class="reference external" href="http://dx.doi.org/10.1063/1.4742167">F. Pérez et al., Phys. Plasmas 19, 083104 (2012)</a></p>
+</dd>
+<dt class="label" id="rohrlich1954"><span class="brackets"><a class="fn-backref" href="#id20">Rohrlich1954</a></span></dt>
+<dd><p><a class="reference external" href="http://journals.aps.org/pr/abstract/10.1103/PhysRev.93.38">F. Rohrlich and B. C. Carlson, Phys. Rev. 93, 38 (1954)</a></p>
+</dd>
+<dt class="label" id="sentoku2008"><span class="brackets"><a class="fn-backref" href="#id5">Sentoku2008</a></span></dt>
+<dd><p><a class="reference external" href="http://dx.doi.org/10.1016/j.jcp.2008.03.043">Y. Sentoku and A. J. Kemp, J. Comput. Phys. 227, 6846 (2008)</a></p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -787,11 +763,11 @@ is an average over all the collisions occurring in a single <em>patch</em>.</p>
       <a href="site.html">Site index</a>
       </div>
       <div>
-        Last updated on Apr 16, 2019
+        Last updated on Apr 26, 2019
       </div>
       
       <div>
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
       </div>
       
     </div>

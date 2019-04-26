@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Run &#8212; Smilei v4.1-347-g03064f60 documentation</title>
+    <meta charset="utf-8" />
+    <title>Run &#8212; Smilei b&#39;v4.1-362-gdbf16a81\n&#39; documentation</title>
     <link rel="stylesheet" href="_static/smilei_theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -409,8 +407,8 @@ containing all the information of your simulation (grid shape, particles, lasers
 </div>
 <p>The command-line arguments <code class="docutils literal notranslate"><span class="pre">arg1</span></code>, <code class="docutils literal notranslate"><span class="pre">arg2</span></code>, <code class="docutils literal notranslate"><span class="pre">arg3</span></code> (etc.) can be:</p>
 <ul class="simple">
-<li>the path to a namelist</li>
-<li>any <em>python</em> instruction that you want to execute during the namelist reading.</li>
+<li><p>the path to a namelist</p></li>
+<li><p>any <em>python</em> instruction that you want to execute during the namelist reading.</p></li>
 </ul>
 <p>The simplest example, to run your namelist <code class="docutils literal notranslate"><span class="pre">my_namelist.py</span></code>, is</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./smilei  my_namelist.py
@@ -500,15 +498,15 @@ But to check only a particular file for errors, first compile the code with <cod
 modify the file, and recompile in debug mode.</p>
 <p>In debug mode, these C++ macros are activated:</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">DEBUG(&quot;some</span> <span class="pre">text&quot;</span> <span class="pre">[&lt;&lt;</span> <span class="pre">other</span> <span class="pre">streamable])</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">HEREIAM(&quot;some</span> <span class="pre">text&quot;</span> <span class="pre">[&lt;&lt;</span> <span class="pre">other</span> <span class="pre">streamable])</span></code></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DEBUG(&quot;some</span> <span class="pre">text&quot;</span> <span class="pre">[&lt;&lt;</span> <span class="pre">other</span> <span class="pre">streamable])</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HEREIAM(&quot;some</span> <span class="pre">text&quot;</span> <span class="pre">[&lt;&lt;</span> <span class="pre">other</span> <span class="pre">streamable])</span></code></p></li>
 </ul>
 </div>
 <hr class="docutils" />
 <div class="section" id="known-issues">
 <h2>Known issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p class="first">OpenMPI <code class="docutils literal notranslate"><span class="pre">2.*</span></code> often causes unstable behavior in Smilei.
+<li><p>OpenMPI <code class="docutils literal notranslate"><span class="pre">2.*</span></code> often causes unstable behavior in Smilei.
 For instance, with <code class="docutils literal notranslate"><span class="pre">openmpi</span> <span class="pre">2.1</span></code>, the <cite>vader</cite> protocol seems to interfere with Smilei’s
 memory management and comunications. We therefore recommend to disable this
 protocol when running <code class="docutils literal notranslate"><span class="pre">mpirun</span></code>, as follows:</p>
@@ -530,11 +528,11 @@ protocol when running <code class="docutils literal notranslate"><span class="pr
       <a href="site.html">Site index</a>
       </div>
       <div>
-        Last updated on Apr 16, 2019
+        Last updated on Apr 26, 2019
       </div>
       
       <div>
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
       </div>
       
     </div>

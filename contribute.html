@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Contribute &#8212; Smilei v4.1-347-g03064f60 documentation</title>
+    <meta charset="utf-8" />
+    <title>Contribute &#8212; Smilei b&#39;v4.1-362-gdbf16a81\n&#39; documentation</title>
     <link rel="stylesheet" href="_static/smilei_theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -396,9 +394,9 @@ your modifications to the code are ready, you can make a <a class="reference ext
 merge with the main repository.</p>
 <p>Guidelines for new developments are:</p>
 <ul class="simple">
-<li>Write clear, commented code, or self-explanatory.</li>
-<li>Write the documentation corresponding to the new features, if any.</li>
-<li>Make validation cases, and reference data, corresponding to the added features.</li>
+<li><p>Write clear, commented code, or self-explanatory.</p></li>
+<li><p>Write the documentation corresponding to the new features, if any.</p></li>
+<li><p>Make validation cases, and reference data, corresponding to the added features.</p></li>
 </ul>
 <hr class="docutils" />
 <div class="section" id="write-documentation">
@@ -444,9 +442,9 @@ analysis and reference file</strong></p>
 <p class="rubric">How do I use the <code class="docutils literal notranslate"><span class="pre">validation.py</span></code> script?</p>
 <p>The script <code class="docutils literal notranslate"><span class="pre">validation/validation.py</span></code> can do three things:</p>
 <ul class="simple">
-<li>generate validation reference(s) for given benchmark(s)</li>
-<li>compare benchmark(s) to their reference(s)</li>
-<li>show visually differences between benchmark(s) and their reference(s)</li>
+<li><p>generate validation reference(s) for given benchmark(s)</p></li>
+<li><p>compare benchmark(s) to their reference(s)</p></li>
+<li><p>show visually differences between benchmark(s) and their reference(s)</p></li>
 </ul>
 <p>Usage:</p>
 <blockquote>
@@ -454,47 +452,41 @@ analysis and reference file</strong></p>
 </pre></div>
 </div>
 <ul>
-<li><div class="first line-block">
+<li><div class="line-block">
 <div class="line">Option <code class="docutils literal notranslate"><span class="pre">-b</span> <span class="pre">&lt;bench&gt;</span></code>:</div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">&lt;bench&gt;</span></code> : benchmark(s) to validate. Accepts wildcards.</div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">&lt;bench&gt;=?</span></code> : ask input for a benchmark</div>
 <div class="line">DEFAULT : All benchmarks are validated.</div>
 </div>
 </li>
-<li><div class="first line-block">
+<li><div class="line-block">
 <div class="line">Option <code class="docutils literal notranslate"><span class="pre">-o</span> <span class="pre">&lt;nOMP&gt;</span></code>:</div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">&lt;nOMP&gt;</span></code> : number of OpenMP threads used for the execution</div>
 <div class="line">DEFAULT : 4</div>
 </div>
 </li>
-<li><div class="first line-block">
+<li><div class="line-block">
 <div class="line">Option <code class="docutils literal notranslate"><span class="pre">-m</span> <span class="pre">&lt;nMPI&gt;</span></code>:</div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">&lt;nMPI&gt;</span></code> : number of MPI processes used for the execution</div>
 <div class="line">DEFAULT : 4</div>
 </div>
 </li>
-<li><p class="first">Option <code class="docutils literal notranslate"><span class="pre">-g</span></code>: Generation of references only (no validation)</p>
-</li>
-<li><p class="first">Option <code class="docutils literal notranslate"><span class="pre">-s</span></code>: Plot differences with references only (no validation)</p>
-</li>
-<li><p class="first">Option <code class="docutils literal notranslate"><span class="pre">-c</span></code>: Compilation only (no run, no validation)</p>
-</li>
-<li><p class="first">Option <code class="docutils literal notranslate"><span class="pre">-r</span> <span class="pre">&lt;nRrestarts&gt;</span></code>: Force the simulation to be broken in several restarts.</p>
-</li>
-<li><p class="first">Option <code class="docutils literal notranslate"><span class="pre">-v</span></code>: Verbose</p>
-</li>
-<li><p class="first">Option <code class="docutils literal notranslate"><span class="pre">-h</span></code>: Help</p>
-</li>
+<li><p>Option <code class="docutils literal notranslate"><span class="pre">-g</span></code>: Generation of references only (no validation)</p></li>
+<li><p>Option <code class="docutils literal notranslate"><span class="pre">-s</span></code>: Plot differences with references only (no validation)</p></li>
+<li><p>Option <code class="docutils literal notranslate"><span class="pre">-c</span></code>: Compilation only (no run, no validation)</p></li>
+<li><p>Option <code class="docutils literal notranslate"><span class="pre">-r</span> <span class="pre">&lt;nRrestarts&gt;</span></code>: Force the simulation to be broken in several restarts.</p></li>
+<li><p>Option <code class="docutils literal notranslate"><span class="pre">-v</span></code>: Verbose</p></li>
+<li><p>Option <code class="docutils literal notranslate"><span class="pre">-h</span></code>: Help</p></li>
 </ul>
 </div></blockquote>
 <p>Exit status of the script:</p>
 <blockquote>
 <div><ul class="simple">
-<li>0  validated</li>
-<li>1  validation fails</li>
-<li>2  execution fails</li>
-<li>3  compilation fails</li>
-<li>4  bad option</li>
+<li><p>0  validated</p></li>
+<li><p>1  validation fails</p></li>
+<li><p>2  execution fails</p></li>
+<li><p>3  compilation fails</p></li>
+<li><p>4  bad option</p></li>
 </ul>
 </div></blockquote>
 <p>Examples:</p>
@@ -520,28 +512,29 @@ analysis and reference file</strong></p>
 <p>It creates a new <code class="docutils literal notranslate"><span class="pre">validation/workdirs</span></code> directory (that may be freely deleted later).</p>
 <p>It compiles the code:</p>
 <blockquote>
-<div>If the “workdirs” directory lacks a smilei binary, or it is too old,
+<div><p>If the “workdirs” directory lacks a smilei binary, or it is too old,
 then the “workdirs” is backed up, and a new compilation occurs.
 The compilation output is logged in <code class="docutils literal notranslate"><span class="pre">compilation_output</span></code>.
-If compiling errors occur, <code class="docutils literal notranslate"><span class="pre">compilation_errors</span></code> is created and the script exits with status 3.</div></blockquote>
+If compiling errors occur, <code class="docutils literal notranslate"><span class="pre">compilation_errors</span></code> is created and the script exits with status 3.</p>
+</div></blockquote>
 <p>It runs each benchmark:</p>
 <blockquote>
 <div><p>If the directory <code class="docutils literal notranslate"><span class="pre">wd_&lt;benchmark&gt;/&lt;o&gt;/&lt;m&gt;</span></code> does not exist then:</p>
 <ul class="simple">
-<li>it is created.</li>
-<li><code class="docutils literal notranslate"><span class="pre">smilei</span></code> is executed in that directory for the requested benchmark.</li>
-<li>if execution fails, the script exits with status 2.</li>
+<li><p>it is created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smilei</span></code> is executed in that directory for the requested benchmark.</p></li>
+<li><p>if execution fails, the script exits with status 2.</p></li>
 </ul>
 </div></blockquote>
 <p>It analyses the results (for each requested benchmark) using the <code class="docutils literal notranslate"><span class="pre">validate_*</span></code> script:</p>
 <blockquote>
 <div><ul class="simple">
-<li>If requested to compare to previous references (default option), the analysis
-is compared to the reference data.</li>
-<li>If requested to generate references (option <code class="docutils literal notranslate"><span class="pre">-g</span></code>), the analysis is stored
-as reference data.</li>
-<li>If requested to show differences to previous references (option <code class="docutils literal notranslate"><span class="pre">-s</span></code>),
-the analysis is plotted vs. the reference data.</li>
+<li><p>If requested to compare to previous references (default option), the analysis
+is compared to the reference data.</p></li>
+<li><p>If requested to generate references (option <code class="docutils literal notranslate"><span class="pre">-g</span></code>), the analysis is stored
+as reference data.</p></li>
+<li><p>If requested to show differences to previous references (option <code class="docutils literal notranslate"><span class="pre">-s</span></code>),
+the analysis is plotted vs. the reference data.</p></li>
 </ul>
 </div></blockquote>
 <p class="rubric">How should I make the <code class="docutils literal notranslate"><span class="pre">validate_*</span></code> script?</p>
@@ -555,9 +548,9 @@ following predefined function:</p>
 <dt id="Validate">
 <code class="descname">Validate</code><span class="sig-paren">(</span><em>description</em>, <em>data</em>, <em>epsilon</em><span class="sig-paren">)</span><a class="headerlink" href="#Validate" title="Permalink to this definition">¶</a></dt>
 <dd><ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">description</span></code>: a string describing the data</li>
-<li><code class="docutils literal notranslate"><span class="pre">data</span></code>: a float, a <em>numpy</em> float array, or any other python data</li>
-<li><code class="docutils literal notranslate"><span class="pre">epsilon</span></code> (optional): acceptable difference between data and reference</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code>: a string describing the data</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code>: a float, a <em>numpy</em> float array, or any other python data</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">epsilon</span></code> (optional): acceptable difference between data and reference</p></li>
 </ul>
 </dd></dl>
 
@@ -577,11 +570,11 @@ in the first place.</p>
       <a href="site.html">Site index</a>
       </div>
       <div>
-        Last updated on Apr 16, 2019
+        Last updated on Apr 26, 2019
       </div>
       
       <div>
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
       </div>
       
     </div>

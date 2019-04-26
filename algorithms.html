@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>PIC algorithms &#8212; Smilei v4.1-347-g03064f60 documentation</title>
+    <meta charset="utf-8" />
+    <title>PIC algorithms &#8212; Smilei b&#39;v4.1-362-gdbf16a81\n&#39; documentation</title>
     <link rel="stylesheet" href="_static/smilei_theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -509,9 +507,9 @@ time-steps, respectively.</p>
 <h2>Initialization of the simulation<a class="headerlink" href="#initialization-of-the-simulation" title="Permalink to this headline">¶</a></h2>
 <p>The initialization of a PIC simulation is a three-step process consisting in</p>
 <ol class="arabic simple">
-<li>loading particles,</li>
-<li>computing the initial total charge and current densities on the grid,</li>
-<li>computing the initial electric and magnetic field at the grid points.</li>
+<li><p>loading particles,</p></li>
+<li><p>computing the initial total charge and current densities on the grid,</p></li>
+<li><p>computing the initial electric and magnetic field at the grid points.</p></li>
 </ol>
 <p>In <strong class="program">Smilei</strong>, all three steps can be done either as a restart of a previous simulation
 (in which case the particles, charge and current densities and electromagnetic fields are
@@ -557,10 +555,10 @@ in the simulation have been loaded and the electromagnetic fields have been comp
 over the whole simulation grid. The PIC loop is then started over <span class="math notranslate nohighlight">\(N\)</span> time-steps
 each consisting in</p>
 <ol class="arabic simple">
-<li>interpolating the electromagnetic fields at the particle positions,</li>
-<li>computing the new particle velocities and positions,</li>
-<li>projecting the new charge and current densities on the grid,</li>
-<li>computing the new electromagnetic fields on the grid.</li>
+<li><p>interpolating the electromagnetic fields at the particle positions,</p></li>
+<li><p>computing the new particle velocities and positions,</p></li>
+<li><p>projecting the new charge and current densities on the grid,</p></li>
+<li><p>computing the new electromagnetic fields on the grid.</p></li>
 </ol>
 <p>In this section, we describe these four steps which advance the time from
 time-step <span class="math notranslate nohighlight">\((n)\)</span> to time-step <span class="math notranslate nohighlight">\((n+1)\)</span>.</p>
@@ -748,11 +746,11 @@ Therefore, each of them is only two dimensional.</p>
       <a href="site.html">Site index</a>
       </div>
       <div>
-        Last updated on Apr 16, 2019
+        Last updated on Apr 26, 2019
       </div>
       
       <div>
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
       </div>
       
     </div>

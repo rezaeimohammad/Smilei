@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Releases &#8212; Smilei v4.1-347-g03064f60 documentation</title>
+    <meta charset="utf-8" />
+    <title>Releases &#8212; Smilei b&#39;v4.1-362-gdbf16a81\n&#39; documentation</title>
     <link rel="stylesheet" href="_static/smilei_theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -422,11 +420,11 @@ the GitHub page.</p>
 <div class="section" id="upcoming-changes">
 <h2>Upcoming changes<a class="headerlink" href="#upcoming-changes" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Interface with the PICSAR library (currently experimental)</li>
-<li>Cylindrical geometry with Fourier decomposition in azimuthal direction</li>
-<li>Different convention for circular polarization amplitude</li>
-<li>Bugfix: <cite>LaserGaussian2D</cite> when focused far from boundary</li>
-<li>Bugfix: laser <a class="reference internal" href="namelist.html#a0" title="a0"><code class="xref py py-data docutils literal notranslate"><span class="pre">a0</span></code></a> normalization to <a class="reference internal" href="namelist.html#omega" title="omega"><code class="xref py py-data docutils literal notranslate"><span class="pre">omega</span></code></a></li>
+<li><p>Interface with the PICSAR library (currently experimental)</p></li>
+<li><p>Cylindrical geometry with Fourier decomposition in azimuthal direction</p></li>
+<li><p>Different convention for circular polarization amplitude</p></li>
+<li><p>Bugfix: <cite>LaserGaussian2D</cite> when focused far from boundary</p></li>
+<li><p>Bugfix: laser <a class="reference internal" href="namelist.html#a0" title="a0"><code class="xref py py-data docutils literal notranslate"><span class="pre">a0</span></code></a> normalization to <a class="reference internal" href="namelist.html#omega" title="omega"><code class="xref py py-data docutils literal notranslate"><span class="pre">omega</span></code></a></p></li>
 </ul>
 <hr class="docutils" />
 </div>
@@ -434,29 +432,29 @@ the GitHub page.</p>
 <span id="latestversion"></span><h2>Release 4.1<a class="headerlink" href="#release-4-1" title="Permalink to this headline">¶</a></h2>
 <p><strong>Download</strong>: <a class="reference external" href="_downloads/smilei-v4.1.tar.gz">Smilei v4.1</a></p>
 <ul class="simple">
-<li>Probe diagnostics of currents and density per species</li>
-<li>Field diagnostics with more than 2^32 points</li>
-<li>Bugfixes:</li>
+<li><p>Probe diagnostics of currents and density per species</p></li>
+<li><p>Field diagnostics with more than 2^32 points</p></li>
+<li><p>Bugfixes:</p></li>
 </ul>
 <blockquote>
 <div><ul class="simple">
-<li>collisions (badly affected by vectorization)</li>
-<li>adaptive vectorization with dynamic load balancing</li>
-<li>memory leak in the laser envelope model</li>
+<li><p>collisions (badly affected by vectorization)</p></li>
+<li><p>adaptive vectorization with dynamic load balancing</p></li>
+<li><p>memory leak in the laser envelope model</p></li>
 </ul>
 </div></blockquote>
 <ul class="simple">
-<li>Disable usage of <cite>-ipo</cite> to compile on supercomputers despite of saving time simulation</li>
+<li><p>Disable usage of <cite>-ipo</cite> to compile on supercomputers despite of saving time simulation</p></li>
 </ul>
 <blockquote>
 <div><ul class="simple">
-<li>it needs too many resources (time and memory) to link</li>
-<li>it is recommended to do some tests on a new supercomputer without and then to re-establish it</li>
+<li><p>it needs too many resources (time and memory) to link</p></li>
+<li><p>it is recommended to do some tests on a new supercomputer without and then to re-establish it</p></li>
 </ul>
 </div></blockquote>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Since version 4.1, the <a class="reference internal" href="units.html#weights"><span class="std std-ref">definition of macro-particle weights</span></a>
+<p class="admonition-title">Warning</p>
+<p>Since version 4.1, the <a class="reference internal" href="units.html#weights"><span class="std std-ref">definition of macro-particle weights</span></a>
 has changed to ensure they do not depend on the cell volume. This impacts
 only the users working directly with values of weights. Other simulation
 results should be unchanged.</p>
@@ -467,11 +465,11 @@ results should be unchanged.</p>
 <h2>Release 4.0<a class="headerlink" href="#release-4-0" title="Permalink to this headline">¶</a></h2>
 <p><strong>Download</strong>: <a class="reference external" href="_downloads/smilei-v4.0.tar.gz">Smilei v4.0</a></p>
 <ul class="simple">
-<li><a class="reference internal" href="namelist.html#vectorization"><span class="std std-ref">Vectorization</span></a></li>
-<li><a class="reference internal" href="namelist.html#laser-envelope"><span class="std std-ref">Laser envelope model</span></a></li>
-<li>MPI option <cite>MPI_THREAD_MULTIPLE</cite> is now optional (but recommended)</li>
-<li>Faster collisions</li>
-<li>Bugfixes: handling <cite>sum</cite> for happi’s <cite>ParticleBinning</cite></li>
+<li><p><a class="reference internal" href="namelist.html#vectorization"><span class="std std-ref">Vectorization</span></a></p></li>
+<li><p><a class="reference internal" href="namelist.html#laser-envelope"><span class="std std-ref">Laser envelope model</span></a></p></li>
+<li><p>MPI option <cite>MPI_THREAD_MULTIPLE</cite> is now optional (but recommended)</p></li>
+<li><p>Faster collisions</p></li>
+<li><p>Bugfixes: handling <cite>sum</cite> for happi’s <cite>ParticleBinning</cite></p></li>
 </ul>
 </div>
 <hr class="docutils" />
@@ -479,8 +477,8 @@ results should be unchanged.</p>
 <h2>Release 3.5<a class="headerlink" href="#release-3-5" title="Permalink to this headline">¶</a></h2>
 <p><strong>Download</strong>: <a class="reference external" href="_downloads/smilei-v3.5.tar.gz">Smilei v3.5</a></p>
 <ul class="simple">
-<li><a class="reference internal" href="laser_offset.html"><span class="doc">Laser defined in tilted plane</span></a></li>
-<li>Bugfixes: Field diagnostic subgrid, Scalar diagnostic PoyInst, MPI tags for large number of patches</li>
+<li><p><a class="reference internal" href="laser_offset.html"><span class="doc">Laser defined in tilted plane</span></a></p></li>
+<li><p>Bugfixes: Field diagnostic subgrid, Scalar diagnostic PoyInst, MPI tags for large number of patches</p></li>
 </ul>
 </div>
 <hr class="docutils" />
@@ -488,7 +486,7 @@ results should be unchanged.</p>
 <h2>Release 3.4.1<a class="headerlink" href="#release-3-4-1" title="Permalink to this headline">¶</a></h2>
 <p><strong>Download</strong>: <a class="reference external" href="_downloads/smilei-v3.4.1.tar.gz">Smilei v3.4.1</a></p>
 <ul class="simple">
-<li>Ionization considering a user-defined rate</li>
+<li><p>Ionization considering a user-defined rate</p></li>
 </ul>
 </div>
 <hr class="docutils" />
@@ -496,17 +494,17 @@ results should be unchanged.</p>
 <h2>Release 3.4<a class="headerlink" href="#release-3-4" title="Permalink to this headline">¶</a></h2>
 <p><strong>Download</strong>: <a class="reference external" href="_downloads/smilei-v3.4.tar.gz">Smilei v3.4</a></p>
 <ul class="simple">
-<li>Compatibility with Python 3</li>
-<li>New ‘Performances’ diagnostic</li>
-<li>Tracked particles may output the fields at their location</li>
-<li>‘subgrid’ option in Fields diagnostics</li>
-<li>Printout of the expected disk usage</li>
-<li>Laser propagation pre-processing</li>
-<li>More flexible domain decomposition</li>
-<li>Relativistic initialization</li>
-<li>Particles injection using Numpy arrays</li>
-<li>Possibility to use user-defined ionization rates</li>
-<li>Bugfixes: circular polarization, collisional ionization</li>
+<li><p>Compatibility with Python 3</p></li>
+<li><p>New ‘Performances’ diagnostic</p></li>
+<li><p>Tracked particles may output the fields at their location</p></li>
+<li><p>‘subgrid’ option in Fields diagnostics</p></li>
+<li><p>Printout of the expected disk usage</p></li>
+<li><p>Laser propagation pre-processing</p></li>
+<li><p>More flexible domain decomposition</p></li>
+<li><p>Relativistic initialization</p></li>
+<li><p>Particles injection using Numpy arrays</p></li>
+<li><p>Possibility to use user-defined ionization rates</p></li>
+<li><p>Bugfixes: circular polarization, collisional ionization</p></li>
 </ul>
 </div>
 <hr class="docutils" />
@@ -514,12 +512,12 @@ results should be unchanged.</p>
 <h2>Release 3.3<a class="headerlink" href="#release-3-3" title="Permalink to this headline">¶</a></h2>
 <p><strong>Download</strong>: <a class="reference external" href="_downloads/smilei-v3.3.tar.gz">Smilei v3.3</a></p>
 <ul class="simple">
-<li><strong>Major</strong> <a class="reference internal" href="syntax_changes.html"><span class="doc">syntax changes</span></a> in the namelist</li>
-<li>QED radiation reaction</li>
-<li>Monte-Carlo QED photon emission</li>
-<li><em>Test mode</em> to quickly check the namelist consistency</li>
-<li><em>ParticleBinning</em> and <em>Screen</em> diagnostics accept a python function as their <code class="docutils literal notranslate"><span class="pre">deposited_quantity</span></code> and <code class="docutils literal notranslate"><span class="pre">axis</span></code>.</li>
-<li>Bugfixes: 4th order, field ionization</li>
+<li><p><strong>Major</strong> <a class="reference internal" href="syntax_changes.html"><span class="doc">syntax changes</span></a> in the namelist</p></li>
+<li><p>QED radiation reaction</p></li>
+<li><p>Monte-Carlo QED photon emission</p></li>
+<li><p><em>Test mode</em> to quickly check the namelist consistency</p></li>
+<li><p><em>ParticleBinning</em> and <em>Screen</em> diagnostics accept a python function as their <code class="docutils literal notranslate"><span class="pre">deposited_quantity</span></code> and <code class="docutils literal notranslate"><span class="pre">axis</span></code>.</p></li>
+<li><p>Bugfixes: 4th order, field ionization</p></li>
 </ul>
 </div>
 <hr class="docutils" />
@@ -527,13 +525,13 @@ results should be unchanged.</p>
 <h2>Release 3.2<a class="headerlink" href="#release-3-2" title="Permalink to this headline">¶</a></h2>
 <p><strong>Download</strong>: <a class="reference external" href="_downloads/smilei-v3.2.tar.gz">Smilei v3.2</a></p>
 <ul class="simple">
-<li>New pushers (Vay’s and Higuera-Cary’s)</li>
-<li><em>Numpy</em> used for filtering track particles</li>
-<li>Fourth order in 3D</li>
-<li>Add some missing 3D features: external fields management, boundary conditions and non-neutral plasma initialization</li>
-<li>OpenMP support in moving window</li>
-<li>Tracked particles post-processing improved for large files</li>
-<li>Bugfixes: energy computation in 3D or with moving window, random number seed</li>
+<li><p>New pushers (Vay’s and Higuera-Cary’s)</p></li>
+<li><p><em>Numpy</em> used for filtering track particles</p></li>
+<li><p>Fourth order in 3D</p></li>
+<li><p>Add some missing 3D features: external fields management, boundary conditions and non-neutral plasma initialization</p></li>
+<li><p>OpenMP support in moving window</p></li>
+<li><p>Tracked particles post-processing improved for large files</p></li>
+<li><p>Bugfixes: energy computation in 3D or with moving window, random number seed</p></li>
 </ul>
 </div>
 <hr class="docutils" />
@@ -541,16 +539,16 @@ results should be unchanged.</p>
 <h2>Release 3.1<a class="headerlink" href="#release-3-1" title="Permalink to this headline">¶</a></h2>
 <p><strong>Download</strong>: <a class="reference external" href="_downloads/smilei-v3.1.tar.gz">Smilei v3.1</a></p>
 <ul class="simple">
-<li><em>Screen</em> diagnostics</li>
-<li>Exporting 3D diagnostics to VTK for reading in ParaView or VisIt</li>
-<li>Partial support of the <a class="reference external" href="https://www.openpmd.org">OpenPMD</a> standard</li>
-<li>Improvements: moving window (OpenMP), 3D projection</li>
-<li>Bugfixes: tracked particles, walls, collisional ionization, etc.</li>
+<li><p><em>Screen</em> diagnostics</p></li>
+<li><p>Exporting 3D diagnostics to VTK for reading in ParaView or VisIt</p></li>
+<li><p>Partial support of the <a class="reference external" href="https://www.openpmd.org">OpenPMD</a> standard</p></li>
+<li><p>Improvements: moving window (OpenMP), 3D projection</p></li>
+<li><p>Bugfixes: tracked particles, walls, collisional ionization, etc.</p></li>
 </ul>
 <p>Notes:</p>
 <ul class="simple">
-<li>Outputs of Fields and Tracks are incompatible with 3.0</li>
-<li>The input “output_dir” is not supported anymore</li>
+<li><p>Outputs of Fields and Tracks are incompatible with 3.0</p></li>
+<li><p>The input “output_dir” is not supported anymore</p></li>
 </ul>
 </div>
 <hr class="docutils" />
@@ -558,11 +556,11 @@ results should be unchanged.</p>
 <h2>Release 3.0<a class="headerlink" href="#release-3-0" title="Permalink to this headline">¶</a></h2>
 <p><strong>Download</strong>: <a class="reference external" href="_downloads/smilei-v3.0.tar.gz">Smilei v3.0</a></p>
 <ul class="simple">
-<li><strong>3D geometry</strong></li>
-<li>Field and scalar diagnostics improved for more flexibility and memory saving</li>
-<li>Faster initialization (including Maxwell-Jüttner sampling)</li>
-<li>Post-processing handles restarts</li>
-<li>Bugfixes in checkpoints, timers, memory profile</li>
+<li><p><strong>3D geometry</strong></p></li>
+<li><p>Field and scalar diagnostics improved for more flexibility and memory saving</p></li>
+<li><p>Faster initialization (including Maxwell-Jüttner sampling)</p></li>
+<li><p>Post-processing handles restarts</p></li>
+<li><p>Bugfixes in checkpoints, timers, memory profile</p></li>
 </ul>
 </div>
 <hr class="docutils" />
@@ -570,8 +568,8 @@ results should be unchanged.</p>
 <h2>Release 2.3<a class="headerlink" href="#release-2-3" title="Permalink to this headline">¶</a></h2>
 <p><strong>Download</strong>: <a class="reference external" href="_downloads/smilei-v2.3.tar.gz">Smilei v2.3</a></p>
 <ul class="simple">
-<li>Post-processing scripts have been turned into a <em>python</em> module</li>
-<li>Many bugfixes, such as addressing diagnostics efficiency</li>
+<li><p>Post-processing scripts have been turned into a <em>python</em> module</p></li>
+<li><p>Many bugfixes, such as addressing diagnostics efficiency</p></li>
 </ul>
 </div>
 <hr class="docutils" />
@@ -579,12 +577,12 @@ results should be unchanged.</p>
 <h2>Release 2.2<a class="headerlink" href="#release-2-2" title="Permalink to this headline">¶</a></h2>
 <p><strong>Download</strong>: <a class="reference external" href="_downloads/smilei-v2.2.tar.gz">Smilei v2.2</a></p>
 <ul class="simple">
-<li><strong>state-of-the-art dynamic load balancing</strong></li>
-<li>full <em>python</em> namelist, allowing for complex, user-friendly input</li>
-<li>external fields and antennas</li>
-<li>binary Coulomb collisions</li>
-<li>new diagnostics</li>
-<li><em>python</em> scripts for post-processing</li>
+<li><p><strong>state-of-the-art dynamic load balancing</strong></p></li>
+<li><p>full <em>python</em> namelist, allowing for complex, user-friendly input</p></li>
+<li><p>external fields and antennas</p></li>
+<li><p>binary Coulomb collisions</p></li>
+<li><p>new diagnostics</p></li>
+<li><p><em>python</em> scripts for post-processing</p></li>
 </ul>
 </div>
 <hr class="docutils" />
@@ -592,11 +590,11 @@ results should be unchanged.</p>
 <h2>Release 1.0<a class="headerlink" href="#release-1-0" title="Permalink to this headline">¶</a></h2>
 <p><strong>Download</strong>: <a class="reference external" href="_downloads/smilei-v1.0.tar.gz">Smilei v1.0</a></p>
 <ul class="simple">
-<li>1D &amp; 2D cartesian geometries</li>
-<li>Moving window</li>
-<li>Hybrid MPI-OpenMP parallelization</li>
-<li>Field ionization</li>
-<li>Some python diagnostics</li>
+<li><p>1D &amp; 2D cartesian geometries</p></li>
+<li><p>Moving window</p></li>
+<li><p>Hybrid MPI-OpenMP parallelization</p></li>
+<li><p>Field ionization</p></li>
+<li><p>Some python diagnostics</p></li>
 </ul>
 </div>
 </div>
@@ -611,11 +609,11 @@ results should be unchanged.</p>
       <a href="site.html">Site index</a>
       </div>
       <div>
-        Last updated on Apr 16, 2019
+        Last updated on Apr 26, 2019
       </div>
       
       <div>
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
       </div>
       
     </div>

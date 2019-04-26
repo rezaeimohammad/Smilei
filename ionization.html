@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Ionization &#8212; Smilei v4.1-347-g03064f60 documentation</title>
+    <meta charset="utf-8" />
+    <title>Ionization &#8212; Smilei b&#39;v4.1-362-gdbf16a81\n&#39; documentation</title>
     <link rel="stylesheet" href="_static/smilei_theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -419,11 +417,11 @@ the accelerating field in laser wakefield acceleration.
 This process is not described in the standard PIC (Vlasov-Maxwell) formulation,
 and an <em>ad hoc</em> description needs to be implemented.
 A Monte-Carlo module for field ionization has thus been developed in <strong class="program">Smilei</strong>,
-closely following the method proposed in <a class="reference internal" href="#nuter2011" id="id2">[Nuter2011]</a>.</p>
+closely following the method proposed in <a class="reference internal" href="#nuter2011" id="id2"><span>[Nuter2011]</span></a>.</p>
 <div class="section" id="physical-model-for-field-ionization">
 <h3>Physical model for field ionization<a class="headerlink" href="#physical-model-for-field-ionization" title="Permalink to this headline">¶</a></h3>
 <p>This scheme relies on the quasi-static rate for tunnel ionization derived in
-<a class="reference internal" href="#perelomov1966" id="id3">[Perelomov1966]</a>, <a class="reference internal" href="#perelomov1967" id="id4">[Perelomov1967]</a> and <a class="reference internal" href="#ammosov1986" id="id5">[Ammosov1986]</a>.
+<a class="reference internal" href="#perelomov1966" id="id3"><span>[Perelomov1966]</span></a>, <a class="reference internal" href="#perelomov1967" id="id4"><span>[Perelomov1967]</span></a> and <a class="reference internal" href="#ammosov1986" id="id5"><span>[Ammosov1986]</span></a>.
 Considering an ion with atomic number <span class="math notranslate nohighlight">\(Z\)</span> being ionized from charge state
 <span class="math notranslate nohighlight">\(Z^\star-1\)</span> to <span class="math notranslate nohighlight">\(Z^\star \le Z\)</span> in an electric field <span class="math notranslate nohighlight">\(\mathbf{E}\)</span>
 of magnitude <span class="math notranslate nohighlight">\(\vert E\vert\)</span>, the ionization rate reads:</p>
@@ -451,9 +449,9 @@ over a period <span class="math notranslate nohighlight">\(2\pi/\omega\)</span> 
 <span class="eqno">(7)<a class="headerlink" href="#equation-adkrate" title="Permalink to this equation">¶</a></span>\[\Gamma_{\rm ADK} = \sqrt{\frac{6}{\pi}}A_{n^\star,l^\star}\,B_{l,\vert m\vert}
 \,I_p\,\left( \frac{2 (2 I_p)^{3/2}}{\vert E\vert} \right)^{2n^\star-\vert m \vert -3/2}\,
 \exp\!\left( -\frac{2 (2 I_p)^{3/2}}{3 \vert E\vert}  \right)\,.\]</div>
-<p>In <strong class="program">Smilei</strong>, following <a class="reference internal" href="#nuter2011" id="id6">[Nuter2011]</a>, the ionization rate of <a class="reference internal" href="#equation-ionizationrate">(6)</a>
+<p>In <strong class="program">Smilei</strong>, following <a class="reference internal" href="#nuter2011" id="id6"><span>[Nuter2011]</span></a>, the ionization rate of <a class="reference internal" href="#equation-ionizationrate">(6)</a>
 is computed for <span class="math notranslate nohighlight">\(\vert m \vert=0\)</span> only.
-Indeed, as shown in <a class="reference internal" href="#ammosov1986" id="id7">[Ammosov1986]</a>, the ratio <span class="math notranslate nohighlight">\(R\)</span> of the ionization rate
+Indeed, as shown in <a class="reference internal" href="#ammosov1986" id="id7"><span>[Ammosov1986]</span></a>, the ratio <span class="math notranslate nohighlight">\(R\)</span> of the ionization rate
 computed for <span class="math notranslate nohighlight">\(\vert m\vert=0\)</span> by the rate computed for <span class="math notranslate nohighlight">\(\vert m\vert=1\)</span> is:</p>
 <div class="math notranslate nohighlight">
 \[R = \frac{\Gamma_{{\rm qs},\vert m \vert = 0}}{\Gamma_{{\rm qs},\vert m \vert = 1}}
@@ -480,7 +478,7 @@ and before applying the pusher.
 For all quasi-particles (henceforth referred to as quasi-ion) of the considered species,
 a Monte-Carlo procedure has been implemented that allows to treat multiple ionization
 events in a single timestep. It relies on the cumulative probability derived
-in Ref. <a class="reference internal" href="#nuter2011" id="id8">[Nuter2011]</a>:</p>
+in Ref. <a class="reference internal" href="#nuter2011" id="id8"><span>[Nuter2011]</span></a>:</p>
 <div class="math notranslate nohighlight">
 \[F_k^{Z^{\star}-1} = \sum_{j=0}^k p_j^{Z^{\star}-1}\,,\]</div>
 <p>to ionize from 0 to <span class="math notranslate nohighlight">\(k\)</span> times a quasi-ion with initial charge state
@@ -508,7 +506,7 @@ The quasi-ion charge is also increased by <span class="math notranslate nohighli
 <p>In what follows, we present two benchmarks of the field ionization model.
 Both benchmarks consist in irradiating a thin (one cell long) neutral material (hydrogen or carbon)
 with a short (few optical-cycle long) laser with wavelength <span class="math notranslate nohighlight">\(\lambda_0 = 0.8~{\mu m}\)</span>.</p>
-<div class="figure" id="id9">
+<div class="figure align-center" id="id9">
 <span id="figfieldionization"></span><img alt="_images/FieldIonization.png" src="_images/FieldIonization.png" />
 <p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text">Results of two benchmarks for the field ionization Model.
 Top: Average charge state of hydrogen ions as a function of time when irradiated by a laser.
@@ -517,7 +515,7 @@ theoretical predictions using the cycle-averaged ADK growth rate of <a class="re
 Bottom: Relative distribution of carbon ions for different charge states as a function
 of time. Dashed lines correspond to PIC results, thin gray lines correspond to
 theoretical predictions obtained from <a class="reference internal" href="#equation-rateeqs">(8)</a>. The Gaussian gray shape
-indicates the laser electric field envelope.</span></p>
+indicates the laser electric field envelope.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 </div>
 <p>In the first benchmark, featuring hydrogen, the laser intensity is kept constant
 at <span class="math notranslate nohighlight">\(I_L = 10^{14}~{\rm W/cm^2}\)</span>, corresponding to a normalized vector
@@ -557,8 +555,8 @@ The ionization rates are defined, for a given <code class="docutils literal notr
 The Monte-Carlo procedure behind the treatment of ionization in this case closely follows
 that developed for field ionization.</p>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Note that, in the case of a user-defined ionization rate, only single ionization event per timestep are possible.</p>
+<p class="admonition-title">Warning</p>
+<p>Note that, in the case of a user-defined ionization rate, only single ionization event per timestep are possible.</p>
 </div>
 <p>Let us introduce two benchmarks for which the rate of ionization is defined by the user.
 The first benchmark considers an initially neutral species that can be potentially ionized twice.
@@ -575,38 +573,28 @@ and reads <span class="math notranslate nohighlight">\(r(x) = r_0 \exp(-(x-x_c)^
 The simulation results presented in Fig. <a class="reference internal" href="#figfromrateionization"><span class="std std-numref">Fig. 22</span></a> (bottom panel) shows,
 at the end of the simulation <span class="math notranslate nohighlight">\(t=20\)</span>, the electron number density as a function of space.
 Super-imposed (in red) is the corresponding theoretical prediction.</p>
-<div class="figure" id="id10">
+<div class="figure align-center" id="id10">
 <span id="figfromrateionization"></span><img alt="_images/userDefinedRate.png" src="_images/userDefinedRate.png" />
-<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Results of the two benchmarks for the ionization model using user-defined rates as described above.</span></p>
+<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">Results of the two benchmarks for the ionization model using user-defined rates as described above.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<table class="docutils citation" frame="void" id="ammosov1986" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[Ammosov1986]</td><td><em>(<a class="fn-backref" href="#id5">1</a>, <a class="fn-backref" href="#id7">2</a>)</em> <a class="reference external" href="http://www.jetp.ac.ru/cgi-bin/dn/e_064_06_1191.pdf">M. V. Ammosov, N. B. Delone, and V. P. Krainov, Sov. Phys. JETP 64, 1191 (1986)</a></td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="nuter2011" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[Nuter2011]</td><td><em>(<a class="fn-backref" href="#id2">1</a>, <a class="fn-backref" href="#id6">2</a>, <a class="fn-backref" href="#id8">3</a>)</em> <a class="reference external" href="http://dx.doi.org/10.1063/1.3559494">R. Nuter et al., Phys. of Plasmas 19, 033107 (2011)</a></td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="perelomov1966" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id3">[Perelomov1966]</a></td><td><a class="reference external" href="http://www.jetp.ac.ru/cgi-bin/dn/e_023_05_0924.pdf">A. M. Perelomov, V. S. Popov, and M. V. Terent’ev, Sov. Phys. JETP 23, 924 (1966)</a></td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="perelomov1967" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id4">[Perelomov1967]</a></td><td><a class="reference external" href="http://www.jetp.ac.ru/cgi-bin/dn/e_024_01_0207.pdf">A. M. Perelomov, V. S. Popov, and M. V. Terent’ev, Sov. Phys. JETP 24, 207 (1967)</a></td></tr>
-</tbody>
-</table>
+<dl class="citation">
+<dt class="label" id="ammosov1986"><span class="brackets">Ammosov1986</span><span class="fn-backref">(<a href="#id5">1</a>,<a href="#id7">2</a>)</span></dt>
+<dd><p><a class="reference external" href="http://www.jetp.ac.ru/cgi-bin/dn/e_064_06_1191.pdf">M. V. Ammosov, N. B. Delone, and V. P. Krainov, Sov. Phys. JETP 64, 1191 (1986)</a></p>
+</dd>
+<dt class="label" id="nuter2011"><span class="brackets">Nuter2011</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id6">2</a>,<a href="#id8">3</a>)</span></dt>
+<dd><p><a class="reference external" href="http://dx.doi.org/10.1063/1.3559494">R. Nuter et al., Phys. of Plasmas 19, 033107 (2011)</a></p>
+</dd>
+<dt class="label" id="perelomov1966"><span class="brackets"><a class="fn-backref" href="#id3">Perelomov1966</a></span></dt>
+<dd><p><a class="reference external" href="http://www.jetp.ac.ru/cgi-bin/dn/e_023_05_0924.pdf">A. M. Perelomov, V. S. Popov, and M. V. Terent’ev, Sov. Phys. JETP 23, 924 (1966)</a></p>
+</dd>
+<dt class="label" id="perelomov1967"><span class="brackets"><a class="fn-backref" href="#id4">Perelomov1967</a></span></dt>
+<dd><p><a class="reference external" href="http://www.jetp.ac.ru/cgi-bin/dn/e_024_01_0207.pdf">A. M. Perelomov, V. S. Popov, and M. V. Terent’ev, Sov. Phys. JETP 24, 207 (1967)</a></p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -620,11 +608,11 @@ Super-imposed (in red) is the corresponding theoretical prediction.</p>
       <a href="site.html">Site index</a>
       </div>
       <div>
-        Last updated on Apr 16, 2019
+        Last updated on Apr 26, 2019
       </div>
       
       <div>
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
       </div>
       
     </div>

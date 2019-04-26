@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Install &#8212; Smilei v4.1-347-g03064f60 documentation</title>
+    <meta charset="utf-8" />
+    <title>Install &#8212; Smilei b&#39;v4.1-362-gdbf16a81\n&#39; documentation</title>
     <link rel="stylesheet" href="_static/smilei_theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -403,26 +401,26 @@
 <h1>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h1>
 <p>Before installing <strong class="program">Smilei</strong>, you need to install a few dependencies:</p>
 <ul class="simple">
-<li>A C++11 compiler, optionally implementing openMP</li>
-<li>an MPI library (by default a version supporting <code class="docutils literal notranslate"><span class="pre">MPI_THREAD_MULTIPLE</span></code> is required)</li>
-<li>an HDF5 library compatible with your versions of C++ and MPI</li>
-<li>Python 2.7 or Python 3 (with header files)</li>
+<li><p>A C++11 compiler, optionally implementing openMP</p></li>
+<li><p>an MPI library (by default a version supporting <code class="docutils literal notranslate"><span class="pre">MPI_THREAD_MULTIPLE</span></code> is required)</p></li>
+<li><p>an HDF5 library compatible with your versions of C++ and MPI</p></li>
+<li><p>Python 2.7 or Python 3 (with header files)</p></li>
 </ul>
 <p>Optional dependencies are:</p>
 <ul class="simple">
-<li>Git</li>
-<li>Python modules: sphinx, h5py, numpy, matplotlib, pylab, pint</li>
-<li>ffmpeg</li>
-<li>the <a class="reference external" href="http://picsar.net">Picsar</a> library: see <a class="reference internal" href="install_PICSAR.html"><span class="doc">this documentation</span></a></li>
+<li><p>Git</p></li>
+<li><p>Python modules: sphinx, h5py, numpy, matplotlib, pylab, pint</p></li>
+<li><p>ffmpeg</p></li>
+<li><p>the <a class="reference external" href="http://picsar.net">Picsar</a> library: see <a class="reference internal" href="install_PICSAR.html"><span class="doc">this documentation</span></a></p></li>
 </ul>
 <hr class="docutils" />
 <div class="section" id="install-the-dependencies">
 <h2>Install the dependencies<a class="headerlink" href="#install-the-dependencies" title="Permalink to this headline">¶</a></h2>
 <p>There are various ways to install all dependencies, depending on the platform:</p>
 <ul class="simple">
-<li><a class="reference internal" href="install_macos.html"><span class="doc">On MacOs</span></a></li>
-<li><a class="reference internal" href="install_linux.html"><span class="doc">On Linux</span></a></li>
-<li><a class="reference internal" href="install_supercomputer.html"><span class="doc">On a supercomputer</span></a></li>
+<li><p><a class="reference internal" href="install_macos.html"><span class="doc">On MacOs</span></a></p></li>
+<li><p><a class="reference internal" href="install_linux.html"><span class="doc">On Linux</span></a></p></li>
+<li><p><a class="reference internal" href="install_supercomputer.html"><span class="doc">On a supercomputer</span></a></p></li>
 </ul>
 <p>The command <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">help</span></code> can give you some information about your environment.</p>
 <p>If you have successfully installed these dependencies on other platforms, please
@@ -432,19 +430,16 @@
 <div class="section" id="download-and-compile">
 <span id="compile"></span><h2>Download and compile<a class="headerlink" href="#download-and-compile" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
-<li><p class="first">Download the latest <strong class="program">Smilei</strong> tarball <a class="reference internal" href="releases.html#latestversion"><span class="std std-ref">here</span></a>.</p>
-</li>
-<li><p class="first">Extract the tarball at the location of your choice.
-Let us assume it is located in your home directory <code class="docutils literal notranslate"><span class="pre">~/smilei/</span></code>.</p>
-</li>
-<li><p class="first">In a terminal, go to that location and compile:</p>
+<li><p>Download the latest <strong class="program">Smilei</strong> tarball <a class="reference internal" href="releases.html#latestversion"><span class="std std-ref">here</span></a>.</p></li>
+<li><p>Extract the tarball at the location of your choice.
+Let us assume it is located in your home directory <code class="docutils literal notranslate"><span class="pre">~/smilei/</span></code>.</p></li>
+<li><p>In a terminal, go to that location and compile:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/smilei
 make
 </pre></div>
 </div>
 </li>
-<li><p class="first">The next step is to <a class="reference internal" href="namelist.html"><span class="doc">write a namelist</span></a>.</p>
-</li>
+<li><p>The next step is to <a class="reference internal" href="namelist.html"><span class="doc">write a namelist</span></a>.</p></li>
 </ol>
 </div>
 <hr class="docutils" />
@@ -496,10 +491,10 @@ with developpers so that it can be included in the next release of <strong class
 <p>Several <code class="docutils literal notranslate"><span class="pre">make</span></code> options are available in order to compile Smilei ready for
 specific performance analysis and debugging tools:</p>
 <ul class="simple">
-<li>Scalasca</li>
-<li>Intel Advisor</li>
-<li>Intel Vtune</li>
-<li>Intel Inspector</li>
+<li><p>Scalasca</p></li>
+<li><p>Intel Advisor</p></li>
+<li><p>Intel Vtune</p></li>
+<li><p>Intel Inspector</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make <span class="nv">config</span><span class="o">=</span><span class="s2">&quot;scalasca&quot;</span>   <span class="c1"># compilation for scalasca (required the Scalasca profiler)</span>
 make <span class="nv">config</span><span class="o">=</span><span class="s2">&quot;advisor&quot;</span>    <span class="c1"># compilation for Intel Advisor (required the Intel suite)</span>
@@ -537,7 +532,7 @@ in <code class="docutils literal notranslate"><span class="pre">profile.txt</spa
 all the diagnostics.
 There are several ways to load this module in python.</p>
 <ol class="arabic simple">
-<li>Recommended:</li>
+<li><p>Recommended:</p></li>
 </ol>
 <blockquote>
 <div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make happi
@@ -553,7 +548,7 @@ To remove it use the command <code class="docutils literal notranslate"><span cl
 </div>
 </div></blockquote>
 <ol class="arabic simple" start="2">
-<li>Alternative: Execute the <code class="docutils literal notranslate"><span class="pre">Diagnostics.py</span></code> script from python</li>
+<li><p>Alternative: Execute the <code class="docutils literal notranslate"><span class="pre">Diagnostics.py</span></code> script from python</p></li>
 </ol>
 <blockquote>
 <div><p>Adding a new <em>python</em> module is not always possible.
@@ -577,11 +572,11 @@ module and import it into <em>python</em>.</p>
       <a href="site.html">Site index</a>
       </div>
       <div>
-        Last updated on Apr 16, 2019
+        Last updated on Apr 26, 2019
       </div>
       
       <div>
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
       </div>
       
     </div>

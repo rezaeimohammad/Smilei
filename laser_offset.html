@@ -1,12 +1,10 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Laser propagation preprocessing &#8212; Smilei v4.1-347-g03064f60 documentation</title>
+    <meta charset="utf-8" />
+    <title>Laser propagation preprocessing &#8212; Smilei b&#39;v4.1-362-gdbf16a81\n&#39; documentation</title>
     <link rel="stylesheet" href="_static/smilei_theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -391,7 +389,7 @@ a laser <em>backwards</em> propagation from an arbitrary plane to the box bounda
 calculated field is then injected from then boundary like a normal laser. From the user’s
 perspective, this simply requires the definition of the laser profile at some arbitrary
 plane.</p>
-<p>The general technique is taken from <a class="reference internal" href="#thiele2016" id="id1">[Thiele2016]</a> but it has been improved for parallel
+<p>The general technique is taken from <a class="reference internal" href="#thiele2016" id="id1"><span>[Thiele2016]</span></a> but it has been improved for parallel
 computation in both 2D and 3D geometries. Further below, another improvement is presented:
 the propagation towards a tilted plane.</p>
 <hr class="docutils" />
@@ -440,36 +438,43 @@ timesteps.</p>
 <p><strong>The points 1 to 7 are realized during initialization.</strong></p>
 <p class="rubric">1. The user profile <span class="math notranslate nohighlight">\(B(y, z, t)\)</span> is sampled</p>
 <blockquote>
-<div>This profile corresponds to the magnetic field at the plane <span class="math notranslate nohighlight">\(x=x_0+\delta\)</span>.
+<div><p>This profile corresponds to the magnetic field at the plane <span class="math notranslate nohighlight">\(x=x_0+\delta\)</span>.
 Smilei calculates an array of size <span class="math notranslate nohighlight">\((N_y, N_z, N_t)\)</span> sampling
-this profile for all points of this plane, and all times of the simulation.</div></blockquote>
+this profile for all points of this plane, and all times of the simulation.</p>
+</div></blockquote>
 <p class="rubric">2. Smilei calculates the 3D Fourier transform along y, z and t</p>
 <blockquote>
-<div>Using the FFT capabilities of the <em>numpy</em> python package, a parallel Fourier transform
+<div><p>Using the FFT capabilities of the <em>numpy</em> python package, a parallel Fourier transform
 is achieved, giving a transformed array of the same size <span class="math notranslate nohighlight">\((N_y, N_z, N_t)\)</span>.
-This array represents <span class="math notranslate nohighlight">\(\hat B(k_y,k_z,\omega)\)</span></div></blockquote>
+This array represents <span class="math notranslate nohighlight">\(\hat B(k_y,k_z,\omega)\)</span></p>
+</div></blockquote>
 <p class="rubric">3. Frequencies with the most intense values are selected</p>
 <blockquote>
-<div>Summing for all <span class="math notranslate nohighlight">\(k_y\)</span> and <span class="math notranslate nohighlight">\(k_z\)</span> provides a (temporal) spectrum of the wave.
+<div><p>Summing for all <span class="math notranslate nohighlight">\(k_y\)</span> and <span class="math notranslate nohighlight">\(k_z\)</span> provides a (temporal) spectrum of the wave.
 By default, the 100 frequencies giving the strongest values of this spectrum are kept,
 but this can be changed in the namelist (see <a class="reference internal" href="namelist.html#keep_n_strongest_modes" title="keep_n_strongest_modes"><code class="xref py py-data docutils literal notranslate"><span class="pre">keep_n_strongest_modes</span></code></a>).
-The resulting array is of size <span class="math notranslate nohighlight">\((N_y, N_z, 100)\)</span>.</div></blockquote>
+The resulting array is of size <span class="math notranslate nohighlight">\((N_y, N_z, 100)\)</span>.</p>
+</div></blockquote>
 <p class="rubric">4. The array is multiplied by the propagation term</p>
 <blockquote>
-<div>This term <span class="math notranslate nohighlight">\(\exp(i k_x \delta)\)</span> depends on the coordinates of the array because
+<div><p>This term <span class="math notranslate nohighlight">\(\exp(i k_x \delta)\)</span> depends on the coordinates of the array because
 <span class="math notranslate nohighlight">\(k_x\)</span> is a function of <span class="math notranslate nohighlight">\(k_y\)</span>, <span class="math notranslate nohighlight">\(k_z\)</span> and <span class="math notranslate nohighlight">\(\omega\)</span>.
-Note that the <span class="math notranslate nohighlight">\(\delta\)</span> corresponds to the attribute <a class="reference internal" href="namelist.html#offset" title="offset"><code class="xref py py-data docutils literal notranslate"><span class="pre">offset</span></code></a>.</div></blockquote>
+Note that the <span class="math notranslate nohighlight">\(\delta\)</span> corresponds to the attribute <a class="reference internal" href="namelist.html#offset" title="offset"><code class="xref py py-data docutils literal notranslate"><span class="pre">offset</span></code></a>.</p>
+</div></blockquote>
 <p class="rubric">5. The inverse 2D Fourier transform is computed</p>
 <blockquote>
-<div>This provides an array representing <span class="math notranslate nohighlight">\(\tilde B(y,z,\omega)\)</span></div></blockquote>
+<div><p>This provides an array representing <span class="math notranslate nohighlight">\(\tilde B(y,z,\omega)\)</span></p>
+</div></blockquote>
 <p class="rubric">6. The array is stored in an HDF5 file</p>
 <blockquote>
-<div>This file is named <code class="docutils literal notranslate"><span class="pre">LaserOffset0.h5</span></code>, <code class="docutils literal notranslate"><span class="pre">LaserOffset1.h5</span></code>, etc. if there are several
-lasers.</div></blockquote>
+<div><p>This file is named <code class="docutils literal notranslate"><span class="pre">LaserOffset0.h5</span></code>, <code class="docutils literal notranslate"><span class="pre">LaserOffset1.h5</span></code>, etc. if there are several
+lasers.</p>
+</div></blockquote>
 <p class="rubric">7. Each patch reads the part of the array that it owns</p>
 <blockquote>
-<div>This means that each patch of the PIC mesh will own a distinct portion of the overall
-array.</div></blockquote>
+<div><p>This means that each patch of the PIC mesh will own a distinct portion of the overall
+array.</p>
+</div></blockquote>
 <p><strong>The point 8 is realized at runtime, for each iteration.</strong></p>
 <p class="rubric">8. For each timestep, the laser profile is calculated</p>
 <blockquote>
@@ -486,7 +491,7 @@ occur due to the limited number of frequencies that are kept.</p>
 <div class="section" id="tilted-plane">
 <h2>Tilted plane<a class="headerlink" href="#tilted-plane" title="Permalink to this headline">¶</a></h2>
 <p>The method above describes a wave propagation between two parallel planes. In Smilei, a
-technique inspired from <a class="reference internal" href="#matsushima2003" id="id2">[Matsushima2003]</a> allows for the propagation from a title plane.</p>
+technique inspired from <a class="reference internal" href="#matsushima2003" id="id2"><span>[Matsushima2003]</span></a> allows for the propagation from a title plane.</p>
 <p>This rotation happens in the Fourier space: wave vectors <span class="math notranslate nohighlight">\(k_x\)</span> and <span class="math notranslate nohighlight">\(k_y\)</span> are
 rotated around <span class="math notranslate nohighlight">\(k_z\)</span> by an angle <span class="math notranslate nohighlight">\(\theta\)</span>, according to</p>
 <div class="math notranslate nohighlight">
@@ -505,26 +510,22 @@ to obtain the transformed values at any point.</p>
 <p>In the end, the prescribed laser profile lies in a plane located at a distance
 <span class="math notranslate nohighlight">\(\delta\)</span> and rotated around <span class="math notranslate nohighlight">\(z\)</span> by an angle <span class="math notranslate nohighlight">\(\theta\)</span>, according to the
 following figure.</p>
-<div class="figure" id="id3">
+<div class="figure align-center" id="id3">
 <a class="reference internal image-reference" href="_images/LaserOffsetAngle.png"><img alt="_images/LaserOffsetAngle.png" src="_images/LaserOffsetAngle.png" style="width: 9cm;" /></a>
-<p class="caption"><span class="caption-text">The position of the plane where the laser profile is defined, with respect to the box.</span></p>
+<p class="caption"><span class="caption-text">The position of the plane where the laser profile is defined, with respect to the box.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<table class="docutils citation" frame="void" id="matsushima2003" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[Matsushima2003]</a></td><td><a class="reference external" href="https://doi.org/10.1364/JOSAA.20.001755">K. Matsushima et al., J. Opt. Soc. Am. A 20, 1755 (2003)</a></td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="thiele2016" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[Thiele2016]</a></td><td><a class="reference external" href="https://doi.org/10.1016/j.jcp.2016.06.004">I. Thiele et al., J. Comput. Phys. 321, 1110 (2016)</a></td></tr>
-</tbody>
-</table>
+<dl class="citation">
+<dt class="label" id="matsushima2003"><span class="brackets"><a class="fn-backref" href="#id2">Matsushima2003</a></span></dt>
+<dd><p><a class="reference external" href="https://doi.org/10.1364/JOSAA.20.001755">K. Matsushima et al., J. Opt. Soc. Am. A 20, 1755 (2003)</a></p>
+</dd>
+<dt class="label" id="thiele2016"><span class="brackets"><a class="fn-backref" href="#id1">Thiele2016</a></span></dt>
+<dd><p><a class="reference external" href="https://doi.org/10.1016/j.jcp.2016.06.004">I. Thiele et al., J. Comput. Phys. 321, 1110 (2016)</a></p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -538,11 +539,11 @@ following figure.</p>
       <a href="site.html">Site index</a>
       </div>
       <div>
-        Last updated on Apr 16, 2019
+        Last updated on Apr 26, 2019
       </div>
       
       <div>
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
       </div>
       
     </div>
